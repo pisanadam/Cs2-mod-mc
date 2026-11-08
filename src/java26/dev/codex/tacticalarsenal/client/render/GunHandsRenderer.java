@@ -243,7 +243,11 @@ public final class GunHandsRenderer {
    ) {
       boolean right = arm == HumanoidArm.RIGHT;
       applyVanillaArmCameraPose(poses, arm);
+      //#if MC >= 26.3
+      AvatarRenderer<AbstractClientPlayer> renderer = (AvatarRenderer<AbstractClientPlayer>)Minecraft.getInstance().getEntityRenderDispatcher().getRenderer(player);
+      //#else
       AvatarRenderer<AbstractClientPlayer> renderer = Minecraft.getInstance().getEntityRenderDispatcher().getPlayerRenderer(player);
+      //#endif
       PlayerModel model = (PlayerModel)renderer.getModel();
       ModelPart armPart = right ? model.rightArm : model.leftArm;
       PartPose originalPose = armPart.getInitialPose();

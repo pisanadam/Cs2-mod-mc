@@ -53,6 +53,7 @@ java {
 
 tasks.withType(JavaCompile).configureEach {
     it.options.encoding = 'UTF-8'
+    it.options.compilerArgs += ['-Xmaxerrs', '2000']
     it.options.release = project.java_version as int
 }
 

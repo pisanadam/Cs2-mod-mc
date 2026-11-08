@@ -275,7 +275,11 @@ public final class CombatantEntity extends Zombie {
       this.getNavigation().moveTo(target, 1.38);
       if (!(this.distanceToSqr(target) > 7.0225) && now >= this.nextMeleeGameTime && this.getSensing().hasLineOfSight(target)) {
          this.getNavigation().stop();
+         //#if MC >= 26.3
+         this.swing(InteractionHand.MAIN_HAND, this.getMainHandItem().getAttackAnimation(), true);
+         //#else
          this.swing(InteractionHand.MAIN_HAND, true);
+         //#endif
          this.nextMeleeGameTime = now + 10L;
          SoundSource soundSource = this.combatantTeam == CombatantTeam.NATURAL ? SoundSource.HOSTILE : SoundSource.PLAYERS;
          level.playSound(null, this.getX(), this.getEyeY(), this.getZ(), ModSounds.KNIFE_SWING, soundSource, 0.3F, 1.01F);
@@ -481,7 +485,7 @@ public final class CombatantEntity extends Zombie {
    private BlockPos findStandPosition(ServerLevel level, BlockPos approximate) {
       for (int dy = 2; dy >= -2; dy--) {
          BlockPos position = approximate.offset(0, dy, 0);
-         if (level.getBlockState(position.below()).blocksMotion()
+         if (dev.codex.tacticalarsenal.compat.CommonCompat.blocksMotion(level.getBlockState(position.below()))
             && level.getBlockState(position).getCollisionShape(level, position).isEmpty()
             && level.getBlockState(position.above()).getCollisionShape(level, position.above()).isEmpty()) {
             return position.immutable();

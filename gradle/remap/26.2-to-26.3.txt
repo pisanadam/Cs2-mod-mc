@@ -1,0 +1,8 @@
+# Renames applied to the shared 26.x sources when building for Minecraft 26.3.
+.mulPose(new Quaternionf => .rotate(new Quaternionf
+.mulPose(Axis. => .rotate(Axis.
+poses.mulPose(rotation) => poses.rotate(rotation)
+DataComponents.SWING_ANIMATION => DataComponents.ATTACK_ANIMATION
+Type.KEYSYM => Type.KEYBOARD
+net.minecraft.client.renderer.ItemInHandRenderer => dev.codex.tacticalarsenal.client.compat.HandItemRenderer
+ItemInHandRenderer => HandItemRenderer
