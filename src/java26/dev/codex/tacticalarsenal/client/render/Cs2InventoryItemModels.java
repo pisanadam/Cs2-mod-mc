@@ -26,6 +26,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.Vec3;
+import org.joml.Matrix4fc;
 import org.joml.Vector3f;
 import org.joml.Vector3fc;
 
@@ -181,6 +182,9 @@ public final class Cs2InventoryItemModels {
             state.appendModelIdentityElement(Cs2MeshManager.renderIdentity(this.weaponId));
             LayerRenderState layer = state.newLayer();
             layer.setUsesBlockLight(held);
+            //#if MC < 26.1
+            dev.codex.tacticalarsenal.client.compat.LocalTransformHolder localTransform = new dev.codex.tacticalarsenal.client.compat.LocalTransformHolder();
+            //#endif
             if (held) {
                boolean leftHand = displayContext == ItemDisplayContext.THIRD_PERSON_LEFT_HAND || displayContext == ItemDisplayContext.FIRST_PERSON_LEFT_HAND;
                ItemTransform heldTransform;
@@ -196,10 +200,19 @@ public final class Cs2InventoryItemModels {
                   heldTransform = Cs2InventoryItemModels.THIRD_PERSON_ITEM_TRANSFORM;
                }
 
+               //#if MC >= 26.1
                layer.setItemTransform(heldTransform);
                layer.setLocalTransform(Cs2MeshManager.thirdPersonTransform(this.weaponId, leftHand));
+               //#else
+               layer.setTransform(heldTransform);
+               localTransform.setLocalTransform(Cs2MeshManager.thirdPersonTransform(this.weaponId, leftHand));
+               //#endif
             } else {
+               //#if MC >= 26.1
                layer.setLocalTransform(ground ? Cs2MeshManager.groundTransform(this.weaponId) : Cs2MeshManager.inventoryTransform(this.weaponId));
+               //#else
+               localTransform.setLocalTransform(ground ? Cs2MeshManager.groundTransform(this.weaponId) : Cs2MeshManager.inventoryTransform(this.weaponId));
+               //#endif
             }
 
             layer.setExtents(() -> Cs2MeshManager.inventoryExtents(this.weaponId));
@@ -209,6 +222,9 @@ public final class Cs2InventoryItemModels {
                   this.weaponId,
                   thirdPerson && livingOwner != null ? livingOwner.getId() : -1,
                   livingOwner == null ? HumanoidArm.RIGHT : livingOwner.getMainArm()
+                  //#if MC < 26.1
+                  , localTransform.get()
+                  //#endif
                )
             );
             if (stack.hasFoil()) {
@@ -228,7 +244,14 @@ public final class Cs2InventoryItemModels {
       KNIFE;
    }
 
-   private record MeshRenderArgument(String weaponId, int entityId, HumanoidArm mainArm) {
+   private record MeshRenderArgument(
+      String weaponId,
+      int entityId,
+      HumanoidArm mainArm
+      //#if MC < 26.1
+      , Matrix4fc localTransform
+      //#endif
+   ) {
    }
 
    private static final class MeshSpecialRenderer implements SpecialModelRenderer<Cs2InventoryItemModels.MeshRenderArgument> {
@@ -242,6 +265,9 @@ public final class Cs2InventoryItemModels {
 
       public void submit(
          Cs2InventoryItemModels.MeshRenderArgument argument,
+         //#if MC < 26.1
+         ItemDisplayContext displayContext,
+         //#endif
          PoseStack poses,
          SubmitNodeCollector collector,
          int light,
@@ -250,10 +276,20 @@ public final class Cs2InventoryItemModels {
          int outlineColor
       ) {
          int meshLight = this.fullBright ? Brightness.FULL_BRIGHT.pack() : light;
+         //#if MC < 26.1
+         if (argument == null) {
+            return;
+         }
+         poses.pushPose();
+         poses.mulPose(new org.joml.Matrix4f(argument.localTransform));
+         //#endif
          Cs2MeshManager.submit(this.weaponId, poses, collector, meshLight);
          if (argument.entityId >= 0 && GunDefinitions.byId(argument.weaponId) != null) {
             Cs2InventoryItemModels.captureHeldMuzzles(argument, poses);
          }
+         //#if MC < 26.1
+         poses.popPose();
+         //#endif
       }
 
       public void getExtents(Consumer<Vector3fc> visitor) {
@@ -261,7 +297,14 @@ public final class Cs2InventoryItemModels {
       }
 
       public Cs2InventoryItemModels.MeshRenderArgument extractArgument(ItemStack stack) {
-         return new Cs2InventoryItemModels.MeshRenderArgument(this.weaponId, -1, HumanoidArm.RIGHT);
+         return new Cs2InventoryItemModels.MeshRenderArgument(
+            this.weaponId,
+            -1,
+            HumanoidArm.RIGHT
+            //#if MC < 26.1
+            , Cs2MeshManager.inventoryTransform(this.weaponId)
+            //#endif
+         );
       }
    }
 }

@@ -78,7 +78,11 @@ public final class TracerRenderer {
       //#else
       LevelRenderEvents.END_EXTRACTION.register(TracerRenderer::extract);
       //#endif
+      //#if MC >= 26.1
       LevelRenderEvents.COLLECT_SUBMITS.register(TracerRenderer::submit);
+      //#else
+      LevelRenderEvents.AFTER_ENTITIES.register(TracerRenderer::submit);
+      //#endif
    }
 
    private static void accept(TracerPayload payload) {
@@ -109,12 +113,18 @@ public final class TracerRenderer {
 
    private static void extract(LevelExtractionContext context) {
       long now = System.nanoTime();
+      //#if MC >= 26.1
       CameraRenderState cameraState = context.levelState().cameraRenderState;
+      float cameraPartialTick = context.camera().getCameraEntityPartialTicks(context.deltaTracker());
+      //#else
+      float cameraPartialTick = context.deltaTracker().getGameTimeDeltaPartialTick(true);
+      CameraRenderState cameraState = CameraRenderState.capture(context.camera(), cameraPartialTick);
+      //#endif
       Minecraft minecraft = Minecraft.getInstance();
       TracerRenderer.MuzzleFrame muzzleFrame = new TracerRenderer.MuzzleFrame(
          minecraft.player,
          minecraft.options.getCameraType().isFirstPerson(),
-         context.camera().getCameraEntityPartialTicks(context.deltaTracker()),
+         cameraPartialTick,
          cameraState,
          cameraMotion(cameraState)
       );

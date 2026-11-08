@@ -13,7 +13,7 @@
     "KeyboardInputMixin",
     "MinecraftInputMixin",
     "PauseScreenMixin",
-    "PlayerModelMixin"
+    "PlayerModelMixin"${extra_client_mixins}
   ],
   "injectors": {
     "defaultRequire": 1

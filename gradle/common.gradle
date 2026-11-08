@@ -20,6 +20,14 @@ sourceSets {
     }
 }
 
+static String packFormatFields(Object fmt, Object style) {
+    switch (style.toString()) {
+        case 'old': return "\"pack_format\": ${fmt}"
+        case 'mixed': return "\"pack_format\": ${fmt},\n    \"supported_formats\": [${fmt}, ${fmt}],\n    \"min_format\": ${fmt},\n    \"max_format\": ${fmt}"
+        default: return "\"min_format\": [${fmt}, 0],\n    \"max_format\": [${fmt}, 0]"
+    }
+}
+
 processResources {
     duplicatesStrategy = DuplicatesStrategy.INCLUDE
     def props = [
@@ -28,7 +36,8 @@ processResources {
             loader_version   : project.loader_version,
             java_version     : project.java_version,
             mixin_java       : "JAVA_${project.java_version}",
-            pack_format      : project.findProperty('pack_format') ?: '0',
+            pack_format_fields: packFormatFields(project.findProperty('pack_format') ?: '0', project.findProperty('pack_style') ?: 'new'),
+            extra_client_mixins: (project.findProperty('extra_client_mixins') ?: '').toString().tokenize(',').collect { ',\n    "' + it.trim() + '"' }.join(''),
     ]
     inputs.properties props
     filesMatching(['fabric.mod.json', '*.mixins.json', 'pack.mcmeta']) {
@@ -113,28 +122,88 @@ static String mcPreprocess(String text, String mc, String name) {
     return out.toString()
 }
 
-def sharedJava = rootProject.file(project.findProperty('java_src') ?: 'src/java26')
+def sharedJavaDirs = ((project.findProperty('java_src') ?: 'src/java26').toString() + ',' + (project.findProperty('extra_java') ?: '')).tokenize(',').collect { rootProject.file(it.trim()) }
 def localJava = project.file('src/main/java')
 def ppOut = layout.buildDirectory.dir('preprocessed/java')
 def mcVer = project.minecraft_version as String
-def ppTask = tasks.register('preprocessJava') {
-    inputs.dir(sharedJava)
-    if (localJava.exists()) inputs.dir(localJava)
-    inputs.property('mc', mcVer)
-    outputs.dir(ppOut)
-    doLast {
-        def outDir = ppOut.get().asFile
-        project.delete(outDir)
-        [sharedJava, localJava].each { root ->
-            if (!root.exists()) return
-            root.eachFileRecurse(groovy.io.FileType.FILES) { f ->
-                if (!f.name.endsWith('.java')) return
-                def rel = root.toPath().relativize(f.toPath()).toString()
-                def dest = new File(outDir, rel)
-                dest.parentFile.mkdirs()
-                dest.setText(mcPreprocess(f.getText('UTF-8'), mcVer, rel), 'UTF-8')
-            }
+// Optional rename tables: lines "old.Name => new.Name" (whole-word, literal), applied in order.
+def remapFiles = (project.findProperty('remaps') ?: '').toString().tokenize(',').collect { rootProject.file(it.trim()) }
+def runPreprocess = { List<File> roots, File outDir ->
+    project.delete(outDir)
+    def renames = []
+    remapFiles.each { rf ->
+        rf.eachLine { l ->
+            def t = l.trim()
+            if (t.isEmpty() || t.startsWith('#')) return
+            def parts = t.split('=>')
+            def from = parts[0].trim()
+            def pre = Character.isJavaIdentifierPart(from.charAt(0)) ? '(?<![\\w$])' : ''
+            def post = Character.isJavaIdentifierPart(from.charAt(from.length() - 1)) ? '(?![\\w$])' : ''
+            renames << [java.util.regex.Pattern.compile(pre + java.util.regex.Pattern.quote(from) + post),
+                        java.util.regex.Matcher.quoteReplacement(parts[1].trim())]
+        }
+    }
+    roots.each { root ->
+        if (!root.exists()) return
+        root.eachFileRecurse(groovy.io.FileType.FILES) { f ->
+            if (!f.name.endsWith('.java')) return
+            def rel = root.toPath().relativize(f.toPath()).toString()
+            def dest = new File(outDir, rel)
+            dest.parentFile.mkdirs()
+            def text = mcPreprocess(f.getText('UTF-8'), mcVer, rel)
+            if (root != localJava) renames.each { r -> text = r[0].matcher(text).replaceAll(r[1]) }
+            dest.setText(text, 'UTF-8')
         }
     }
 }
+def ppTask = tasks.register('preprocessJava') {
+    inputs.files(remapFiles)
+    sharedJavaDirs.each { if (it.exists()) inputs.dir(it) }
+    if (localJava.exists()) inputs.dir(localJava)
+    inputs.property('mc', mcVer)
+    outputs.dir(ppOut)
+    doLast { runPreprocess(sharedJavaDirs + [localJava], ppOut.get().asFile) }
+}
 tasks.named('compileJava') { dependsOn ppTask }
+
+// Dev helper: writes the compile classpath to build/cp.txt
+tasks.register('printCp') {
+    def cp = sourceSets.main.compileClasspath
+    def out = layout.buildDirectory.file('cp.txt')
+    doLast { out.get().asFile.text = cp.files.join('\n') }
+}
+
+// ---------------------------------------------------------------------------
+// Dev-only automated visual test mod (src/testmod). It is only added to the runClient
+// launch, never to the published jar.
+// ---------------------------------------------------------------------------
+def testmodJava = rootProject.file('src/testmod/java')
+def testmodOut = layout.buildDirectory.dir('preprocessed/testmod')
+def ppTestTask = tasks.register('preprocessTestmod') {
+    inputs.dir(testmodJava)
+    inputs.files(remapFiles)
+    inputs.property('mc', mcVer)
+    outputs.dir(testmodOut)
+    doLast { runPreprocess([testmodJava], testmodOut.get().asFile) }
+}
+sourceSets {
+    testmod {
+        java { srcDirs = [testmodOut] }
+        resources { srcDirs = [rootProject.file('src/testmod/resources')] }
+        compileClasspath += main.compileClasspath + main.output
+        runtimeClasspath += main.runtimeClasspath + main.output
+    }
+}
+tasks.named('compileTestmodJava') { dependsOn ppTestTask }
+loom {
+    mods {
+        tactical_arsenal { sourceSet sourceSets.main }
+        tactical_arsenal_autotest { sourceSet sourceSets.testmod }
+    }
+    runs {
+        client {
+            source sourceSets.testmod
+            vmArg '-Dtactical_arsenal.autotest=true'
+        }
+    }
+}

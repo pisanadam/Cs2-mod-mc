@@ -16,6 +16,14 @@ public final class ClientCompat {
       //#endif
    }
 
+   public static void setScreen(Minecraft minecraft, Screen screen) {
+      //#if MC >= 26.2
+      minecraft.gui.setScreen(screen);
+      //#else
+      minecraft.setScreen(screen);
+      //#endif
+   }
+
    public static void showScreen(Minecraft minecraft, Screen screen) {
       //#if MC >= 26.1
       minecraft.setScreenAndShow(screen);

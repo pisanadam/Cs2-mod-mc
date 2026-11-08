@@ -1,7 +1,6 @@
 {
   "pack": {
     "description": "Tactical Arsenal - local CS2 default meshes, textures and sounds",
-    "min_format": [${pack_format}, 0],
-    "max_format": [${pack_format}, 0]
+    ${pack_format_fields}
   }
 }

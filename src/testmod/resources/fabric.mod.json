@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "id": "tactical_arsenal_autotest",
+  "version": "0.0.0",
+  "name": "Tactical Arsenal dev autotest",
+  "environment": "client",
+  "entrypoints": { "client": ["dev.codex.tacticalarsenal.autotest.AutoTestClient"] },
+  "depends": { "tactical_arsenal": "*" }
+}
