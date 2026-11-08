@@ -11,16 +11,28 @@ import dev.codex.tacticalarsenal.gun.GunDefinition;
 import dev.codex.tacticalarsenal.gun.WeaponCategory;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.geom.ModelPart;
+//#if MC >= 1.21.11
 import net.minecraft.client.model.geom.PartPose;
+//#endif
+//#if MC >= 1.21.11
 import net.minecraft.client.model.player.PlayerModel;
+//#endif
 import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.client.renderer.SubmitNodeCollector;
+//#if MC >= 1.21.11
 import net.minecraft.client.renderer.entity.player.AvatarRenderer;
+//#endif
+//#if MC >= 1.21.11
 import net.minecraft.resources.Identifier;
+//#endif
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.HumanoidArm;
+//#if MC >= 1.21.11
 import net.minecraft.world.entity.player.PlayerModelPart;
+//#endif
+//#if MC >= 1.21.11
 import net.minecraft.world.entity.player.PlayerModelType;
+//#endif
 import org.joml.Quaternionf;
 import org.joml.Vector3f;
 import org.joml.Vector3fc;
@@ -235,7 +247,13 @@ public final class GunHandsRenderer {
    }
 
    private static Vector3f palmAnchor(AbstractClientPlayer player, HumanoidArm arm, float thickness) {
+      //#if MC >= 1.21.11
       return calculateVanillaPalmAnchor(arm, thickness, player.getSkin().model() == PlayerModelType.SLIM);
+      //#elif MC >= 1.20.2
+      return calculateVanillaPalmAnchor(arm, thickness, player.getSkin().model() == net.minecraft.client.resources.PlayerSkin.Model.SLIM);
+      //#else
+      return calculateVanillaPalmAnchor(arm, thickness, "slim".equals(player.getModelName()));
+      //#endif
    }
 
    private static void renderVanillaArm(
@@ -243,6 +261,37 @@ public final class GunHandsRenderer {
    ) {
       boolean right = arm == HumanoidArm.RIGHT;
       applyVanillaArmCameraPose(poses, arm);
+      //#if MC < 1.21.11
+      // Before 1.21.9 the player renderer draws the sleeve as a separate part; both get the thickness.
+      net.minecraft.client.renderer.entity.player.PlayerRenderer legacyRenderer =
+         (net.minecraft.client.renderer.entity.player.PlayerRenderer)Minecraft.getInstance().getEntityRenderDispatcher().getRenderer(player);
+      net.minecraft.client.model.PlayerModel<AbstractClientPlayer> legacyModel = legacyRenderer.getModel();
+      ModelPart legacyArm = right ? legacyModel.rightArm : legacyModel.leftArm;
+      ModelPart legacySleeve = right ? legacyModel.rightSleeve : legacyModel.leftSleeve;
+      float[] armScale = {legacyArm.xScale, legacyArm.yScale, legacyArm.zScale};
+      float[] sleeveScale = {legacySleeve.xScale, legacySleeve.yScale, legacySleeve.zScale};
+      legacyArm.xScale *= thickness;
+      legacyArm.yScale *= thickness;
+      legacyArm.zScale *= thickness;
+      legacySleeve.xScale *= thickness;
+      legacySleeve.yScale *= thickness;
+      legacySleeve.zScale *= thickness;
+
+      try {
+         if (right) {
+            legacyRenderer.renderRightHand(poses, collector.buffers(), light, player);
+         } else {
+            legacyRenderer.renderLeftHand(poses, collector.buffers(), light, player);
+         }
+      } finally {
+         legacyArm.xScale = armScale[0];
+         legacyArm.yScale = armScale[1];
+         legacyArm.zScale = armScale[2];
+         legacySleeve.xScale = sleeveScale[0];
+         legacySleeve.yScale = sleeveScale[1];
+         legacySleeve.zScale = sleeveScale[2];
+      }
+      //#else
       //#if MC >= 26.3
       AvatarRenderer<AbstractClientPlayer> renderer = (AvatarRenderer<AbstractClientPlayer>)Minecraft.getInstance().getEntityRenderDispatcher().getRenderer(player);
       //#else
@@ -275,6 +324,7 @@ public final class GunHandsRenderer {
       } finally {
          armPart.setInitialPose(originalPose);
       }
+      //#endif
    }
 
    private static void applyVanillaArmCameraPose(PoseStack poses, HumanoidArm arm) {

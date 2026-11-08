@@ -45,8 +45,13 @@ public final class AutoTestClient implements ClientModInitializer {
          cmd(mc, "gamemode creative");
          cmd(mc, "time set noon");
          cmd(mc, "weather clear");
-         cmd(mc, "tp @s ~ ~ ~ 0 0");
+         cmd(mc, "tp @s 0.5 200 0.5 0 0");
+      });
+      step(40, mc -> {
+         cmd(mc, "fill -12 199 -12 12 199 12 minecraft:stone");
+         cmd(mc, "tp @s 0.5 200 0.5 0 0");
          cmd(mc, "item replace entity @s weapon.mainhand with tactical_arsenal:ak47");
+         cmd(mc, "item replace entity @s armor.head with tactical_arsenal:cs_helmet");
          cmd(mc, "item replace entity @s hotbar.1 with tactical_arsenal:awp");
          cmd(mc, "item replace entity @s hotbar.2 with tactical_arsenal:knife");
          cmd(mc, "item replace entity @s hotbar.3 with tactical_arsenal:elite");
@@ -77,8 +82,8 @@ public final class AutoTestClient implements ClientModInitializer {
       step(40, mc -> shot("fp_awp_scoped"));
       step(40, mc -> {
          mc.options.keyUse.setDown(false);
-         cmd(mc, "summon tactical_arsenal:team_player_tier_1 ~ ~ ~4 {NoAI:1b,Rotation:[180f,0f]}");
-         cmd(mc, "summon tactical_arsenal:team_natural_tier_3 ~2 ~ ~5 {NoAI:1b,Rotation:[180f,0f]}");
+         cmd(mc, "summon tactical_arsenal:team_player_tier_1 0.5 200 7.5 {NoAI:1b,Rotation:[180f,0f]}");
+         cmd(mc, "summon tactical_arsenal:team_natural_tier_3 2.5 200 8.5 {NoAI:1b,Rotation:[180f,0f]}");
          cmd(mc, "item replace entity @s armor.chest with tactical_arsenal:cs_kevlar");
          cmd(mc, "item replace entity @s armor.head with tactical_arsenal:cs_helmet");
          cmd(mc, "item replace entity @s weapon.mainhand with tactical_arsenal:m4a4");
@@ -86,6 +91,18 @@ public final class AutoTestClient implements ClientModInitializer {
       step(60, mc -> shot("npcs"));
       step(40, mc -> mc.options.setCameraType(CameraType.THIRD_PERSON_FRONT));
       step(30, mc -> shot("tp_front_armor_m4a4"));
+      step(40, mc -> cmd(mc, "item replace entity @s weapon.mainhand with minecraft:air"));
+      step(30, mc -> shot("tp_front_armor_empty"));
+      step(40, mc -> {
+         cmd(mc, "item replace entity @s armor.chest with minecraft:air");
+         cmd(mc, "item replace entity @s armor.head with tactical_arsenal:cs_helmet");
+      });
+      step(30, mc -> shot("tp_front_helmet_only"));
+      step(40, mc -> {
+         cmd(mc, "item replace entity @s armor.head with minecraft:air");
+         cmd(mc, "item replace entity @s armor.chest with tactical_arsenal:cs_kevlar");
+      });
+      step(30, mc -> shot("tp_front_kevlar_only"));
       step(40, mc -> {
          mc.options.setCameraType(CameraType.FIRST_PERSON);
          cmd(mc, "item replace entity @s weapon.mainhand with tactical_arsenal:ak47");

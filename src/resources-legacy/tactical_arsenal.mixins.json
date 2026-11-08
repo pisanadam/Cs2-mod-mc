@@ -3,6 +3,7 @@
   "package": "dev.codex.tacticalarsenal.mixin",
   "compatibilityLevel": "${mixin_java}",
   "mixins": [
+    "LivingEntityKnifeSwingMixin",
     "PlayerKnifeCombatMixin"
   ],
   "injectors": {

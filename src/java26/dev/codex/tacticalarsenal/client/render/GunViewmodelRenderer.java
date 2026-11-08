@@ -15,7 +15,9 @@ import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.client.renderer.ItemInHandRenderer;
 import net.minecraft.client.renderer.SubmitNodeCollector;
+//#if MC >= 1.21.2
 import net.minecraft.core.component.DataComponents;
+//#endif
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.HumanoidArm;
 import net.minecraft.world.item.ItemDisplayContext;
@@ -353,7 +355,11 @@ public final class GunViewmodelRenderer {
 
    private static ItemStack part(GunItem gun, String model) {
       ItemStack stack = new ItemStack(gun);
+      //#if MC >= 1.21.2
       stack.set(DataComponents.ITEM_MODEL, TacticalArsenal.id(model));
+      //#else
+      dev.codex.tacticalarsenal.client.compat.LegacyHands.useModel(stack, TacticalArsenal.id("item/" + model));
+      //#endif
       return stack;
    }
 
