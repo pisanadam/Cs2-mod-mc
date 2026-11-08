@@ -33,7 +33,7 @@ processResources {
     def props = [
             version          : rootProject.mod_version,
             minecraft_range  : project.minecraft_range,
-            loader_version   : project.loader_version,
+            loader_version   : project.findProperty('loader_min') ?: project.loader_version,
             java_version     : project.java_version,
             mixin_java       : "JAVA_${project.java_version}",
             pack_format_fields: packFormatFields(project.findProperty('pack_format') ?: '0', project.findProperty('pack_style') ?: 'new'),
