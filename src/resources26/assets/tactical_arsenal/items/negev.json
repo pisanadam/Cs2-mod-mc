@@ -1,0 +1,19 @@
+{
+  "model": {
+    "type": "minecraft:composite",
+    "models": [
+      {
+        "type": "minecraft:model",
+        "model": "tactical_arsenal:item/negev_body"
+      },
+      {
+        "type": "minecraft:model",
+        "model": "tactical_arsenal:item/negev_magazine"
+      },
+      {
+        "type": "minecraft:model",
+        "model": "tactical_arsenal:item/negev_action"
+      }
+    ]
+  }
+}

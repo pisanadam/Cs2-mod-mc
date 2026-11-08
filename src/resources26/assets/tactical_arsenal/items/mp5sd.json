@@ -1,0 +1,19 @@
+{
+  "model": {
+    "type": "minecraft:composite",
+    "models": [
+      {
+        "type": "minecraft:model",
+        "model": "tactical_arsenal:item/mp5sd_body"
+      },
+      {
+        "type": "minecraft:model",
+        "model": "tactical_arsenal:item/mp5sd_magazine"
+      },
+      {
+        "type": "minecraft:model",
+        "model": "tactical_arsenal:item/mp5sd_action"
+      }
+    ]
+  }
+}

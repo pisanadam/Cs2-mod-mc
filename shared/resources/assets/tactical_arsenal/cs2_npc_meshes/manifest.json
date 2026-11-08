@@ -1,0 +1,1364 @@
+{
+  "format": "Tactical Arsenal CS2 NPC rigid mesh manifest",
+  "version": 2,
+  "mesh_format": {
+    "magic": "TAM1",
+    "vertex_layout": "big-endian float32 x,y,z,u,v,nx,ny,nz",
+    "topology": "unindexed triangles"
+  },
+  "coordinate_system": {
+    "units": "metres",
+    "x": "character left",
+    "y": "up",
+    "z": "character forward",
+    "source_units": "inches",
+    "source_to_output": {
+      "x": "source_y * 0.0254",
+      "y": "source_z * 0.0254",
+      "z": "source_x * 0.0254"
+    },
+    "minecraft_neutral_orientation": "rotate X by PI: output +Y up becomes Minecraft -Y/down and output +Z/forward becomes Minecraft -Z/front"
+  },
+  "bind_reconstruction": "world_position = TAM local_position + part.pivot_world_metres; rotate each local mesh around that pivot for animation",
+  "minecraft_runtime": {
+    "recommended_scale": 1.0,
+    "model_part_setup": "Set the six stock HumanoidModel neutral pivots from part.minecraft_neutral_pivot_pixels. Submit upper arms at the stock arm bones. For each lower arm, translate from its upper-arm pivot by pivot_from_parent_metres, apply the runtime elbow rotation, and submit its local TAM mesh. Rotate X by PI at the Source/Minecraft boundary; do not add vanilla pivot translations again."
+  },
+  "teams": {
+    "t": {
+      "display_name": "CS2 Phoenix Terrorist",
+      "source_resource": "agents/models/tm_phoenix/tm_phoenix.vmdl_c",
+      "source_crc": "009a09a707",
+      "source_gltf": "C:\\Users\\cilgi\\Documents\\Codex\\2026-07-25\\peki-bunun-i-inde-d-enleme\\work\\cs2-character-assets\\raw_agents\\terrorist\\agents\\models\\tm_phoenix\\tm_phoenix.gltf",
+      "source_gltf_sha256": "cd6a67623218169dfbfdd613a6ced82df96ed3a04801bdb3fdb9411755137caa",
+      "selected_thirdperson_meshes": [
+        "agents\\models\\tm_phoenix\\tm_phoenix.vmdl_c.thirdperson_body",
+        "agents\\models\\tm_phoenix\\tm_phoenix.vmdl_c.thirdperson_default_gloves"
+      ],
+      "atlas": {
+        "resource": "tactical_arsenal:textures/cs2_npc/t_atlas.png",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "byte_length": 1806560,
+        "sha256": "fb9c5da5578ba01a7919977303e654241ac81935fa5088571a16fa60859cbf2f",
+        "materials": [
+          {
+            "material_index": 0,
+            "material_name": "bare_arm_133",
+            "source_vmat": "characters/models/shared/arms/bare_arms/materials/bare_arm_133.vmat",
+            "source_texture": "bare_arm_133_color_psd_5b76e0cf.png",
+            "source_dimensions": [
+              1024,
+              2048
+            ],
+            "source_sha256": "2c08de61beddd53cc3272b731207c57647e05bfea2173dd46097f051dea79773",
+            "atlas_rectangle": [
+              130,
+              4,
+              252,
+              504
+            ]
+          },
+          {
+            "material_index": 1,
+            "material_name": "tm_phoenix_v2_balaclava_varianta",
+            "source_vmat": "characters/models/tm_phoenix/materials/tm_phoenix_v2_balaclava_varianta.vmat",
+            "source_texture": "tm_phoenix_v2_balaclava_varianta_color_psd_3019cf96.png",
+            "source_dimensions": [
+              1024,
+              1024
+            ],
+            "source_sha256": "13309a24c945cc3195f56e45988e7a8413a5514a57b2ad8b5895aba9ef6b9398",
+            "atlas_rectangle": [
+              516,
+              4,
+              504,
+              504
+            ]
+          },
+          {
+            "material_index": 2,
+            "material_name": "tm_phoenix_v2_legs_variantb",
+            "source_vmat": "characters/models/tm_phoenix/materials/tm_phoenix_v2_legs_variantb.vmat",
+            "source_texture": "tm_phoenix_v2_legs_variantb_color_psd_74802a99.png",
+            "source_dimensions": [
+              2048,
+              1024
+            ],
+            "source_sha256": "0c237c544a8f2235e042dee992208ae4b4b998ffb3960510974f62d069bac382",
+            "atlas_rectangle": [
+              1028,
+              130,
+              504,
+              252
+            ]
+          },
+          {
+            "material_index": 3,
+            "material_name": "tm_phoenix_v2_body_variante",
+            "source_vmat": "characters/models/tm_phoenix/materials/tm_phoenix_v2_body_variante.vmat",
+            "source_texture": "tm_phoenix_v2_body_variante_color_psd_a036cb51.png",
+            "source_dimensions": [
+              2048,
+              2048
+            ],
+            "source_sha256": "eaaae1e1f31b00d12e6b10e8acad3f176c76aee0be076cdf5c6e20c8d05dd543",
+            "atlas_rectangle": [
+              4,
+              516,
+              504,
+              504
+            ]
+          },
+          {
+            "material_index": 4,
+            "material_name": "glove_fullfinger",
+            "source_vmat": "characters/models/shared/arms/glove_fullfinger/materials/glove_fullfinger.vmat",
+            "source_texture": "glove_fullfinger_color_psd_935f70c2.png",
+            "source_dimensions": [
+              2048,
+              2048
+            ],
+            "source_sha256": "e7b48204da8707cb8baab94180d3ff2a6db909f41689d60e0b27ec99021f1816",
+            "atlas_rectangle": [
+              516,
+              516,
+              504,
+              504
+            ]
+          }
+        ]
+      },
+      "bind_world_bounds_min": [
+        -0.6150555764444148,
+        -0.004799232658969421,
+        -0.2351305149447641
+      ],
+      "bind_world_bounds_max": [
+        0.615054465051695,
+        1.9805696885170965,
+        0.16782112729730359
+      ],
+      "bind_height_metres": 1.985368921176066,
+      "parts": {
+        "head": {
+          "mesh_id": "t_head",
+          "resource": "tactical_arsenal:cs2_npc_meshes/t_head.tam",
+          "texture": "tactical_arsenal:textures/cs2_npc/t_atlas.png",
+          "pivot_joint": "neck_0",
+          "parent_part": "body",
+          "pivot_world_metres": [
+            1.360603352040679e-08,
+            1.6582527383399825,
+            -0.07838592147061078
+          ],
+          "pivot_from_parent_metres": [
+            7.115414716978185e-09,
+            0.16519752513316166,
+            0.00979481422788614
+          ],
+          "pivot_from_body_metres": [
+            7.115414716978185e-09,
+            0.16519752513316166,
+            0.00979481422788614
+          ],
+          "minecraft_neutral_pivot_pixels": [
+            1.1384663547165096e-07,
+            -2.6431604021305866,
+            -0.15671702764617823
+          ],
+          "local_bounds_min": [
+            -0.1002976356685402,
+            -0.016024944306759714,
+            -0.06616501635773196
+          ],
+          "local_bounds_max": [
+            0.0991418008023741,
+            0.3223169501771139,
+            0.19073153857551445
+          ],
+          "bind_world_bounds_min": [
+            -0.10029762206250668,
+            1.6422277940332228,
+            -0.14455093782834275
+          ],
+          "bind_world_bounds_max": [
+            0.09914181440840762,
+            1.9805696885170965,
+            0.11234561710490366
+          ],
+          "triangle_count": 2368,
+          "vertex_count": 7104,
+          "byte_length": 227336,
+          "sha256": "435c8e3663d0535b9e0f0ba40235a134ad583c0740827d0944937559dca0e767",
+          "material_triangle_counts": {
+            "tm_phoenix_v2_balaclava_varianta": 2368
+          }
+        },
+        "body": {
+          "mesh_id": "t_body",
+          "resource": "tactical_arsenal:cs2_npc_meshes/t_body.tam",
+          "texture": "tactical_arsenal:textures/cs2_npc/t_atlas.png",
+          "pivot_joint": "spine_3",
+          "parent_part": null,
+          "pivot_world_metres": [
+            6.490618803428604e-09,
+            1.4930552132068209,
+            -0.08818073569849692
+          ],
+          "pivot_from_parent_metres": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "pivot_from_body_metres": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "minecraft_neutral_pivot_pixels": [
+            0.0,
+            -0.0,
+            -0.0
+          ],
+          "local_bounds_min": [
+            -0.24897148250754136,
+            -0.6079446513467915,
+            -0.14694977924626718
+          ],
+          "local_bounds_max": [
+            0.2791216247772222,
+            0.2690681562648354,
+            0.23577640983724296
+          ],
+          "bind_world_bounds_min": [
+            -0.24897147601692257,
+            0.8851105618600293,
+            -0.2351305149447641
+          ],
+          "bind_world_bounds_max": [
+            0.279121631267841,
+            1.7621233694716563,
+            0.14759567413874602
+          ],
+          "triangle_count": 5840,
+          "vertex_count": 17520,
+          "byte_length": 560648,
+          "sha256": "f6e1c9780d008d9f68ec6a266c36fb8035e841372afb095d7c4472e8c32f52a7",
+          "material_triangle_counts": {
+            "tm_phoenix_v2_balaclava_varianta": 38,
+            "tm_phoenix_v2_legs_variantb": 1964,
+            "tm_phoenix_v2_body_variante": 3838
+          }
+        },
+        "right_upper_arm": {
+          "mesh_id": "t_right_upper_arm",
+          "resource": "tactical_arsenal:cs2_npc_meshes/t_right_upper_arm.tam",
+          "texture": "tactical_arsenal:textures/cs2_npc/t_atlas.png",
+          "pivot_joint": "arm_upper_R",
+          "parent_part": "body",
+          "pivot_world_metres": [
+            -0.1823710109599482,
+            1.5660509403960308,
+            -0.08480269689948275
+          ],
+          "pivot_from_parent_metres": [
+            -0.182371017450567,
+            0.07299572718920988,
+            0.003378038799014174
+          ],
+          "pivot_from_body_metres": [
+            -0.182371017450567,
+            0.07299572718920988,
+            0.003378038799014174
+          ],
+          "minecraft_neutral_pivot_pixels": [
+            -2.917936279209072,
+            -1.167931635027358,
+            -0.054048620784226786
+          ],
+          "local_bounds_min": [
+            -0.23398220230932318,
+            -0.25022045640045,
+            -0.1316863600066058
+          ],
+          "local_bounds_max": [
+            0.09240394545198095,
+            0.13757502172362757,
+            0.1667768312644399
+          ],
+          "bind_world_bounds_min": [
+            -0.4163532132692714,
+            1.3158304839955808,
+            -0.21648905690608855
+          ],
+          "bind_world_bounds_max": [
+            -0.08996706550796725,
+            1.7036259621196583,
+            0.08197413436495715
+          ],
+          "triangle_count": 1415,
+          "vertex_count": 4245,
+          "byte_length": 135848,
+          "sha256": "f1628751e6bee2b8ab0614d5a841e0e14e0276899341a45b355a5d2188b6b51e",
+          "material_triangle_counts": {
+            "bare_arm_133": 89,
+            "tm_phoenix_v2_body_variante": 1326
+          }
+        },
+        "right_lower_arm": {
+          "mesh_id": "t_right_lower_arm",
+          "resource": "tactical_arsenal:cs2_npc_meshes/t_right_lower_arm.tam",
+          "texture": "tactical_arsenal:textures/cs2_npc/t_atlas.png",
+          "pivot_joint": "arm_lower_R",
+          "parent_part": "right_upper_arm",
+          "pivot_world_metres": [
+            -0.37341316139638636,
+            1.3374339277285685,
+            -0.1142780266178003
+          ],
+          "pivot_from_parent_metres": [
+            -0.19104215043643816,
+            -0.22861701266746226,
+            -0.029475329718317553
+          ],
+          "pivot_from_body_metres": [
+            -0.3734131678870052,
+            -0.15562128547825238,
+            -0.02609729091930338
+          ],
+          "minecraft_neutral_pivot_pixels": [
+            -5.974610686192083,
+            2.489940567652038,
+            0.41755665470885406
+          ],
+          "local_bounds_min": [
+            -0.18924107533012224,
+            -0.23567059891415143,
+            -0.055927642373972894
+          ],
+          "local_bounds_max": [
+            0.05076826172446158,
+            0.052243675239952436,
+            0.12891530648503727
+          ],
+          "bind_world_bounds_min": [
+            -0.5626542367265086,
+            1.101763328814417,
+            -0.1702056689917732
+          ],
+          "bind_world_bounds_max": [
+            -0.3226448996719248,
+            1.389677602968521,
+            0.014637279867236966
+          ],
+          "triangle_count": 601,
+          "vertex_count": 1803,
+          "byte_length": 57704,
+          "sha256": "22b9fde2aa47a298892ac6884ccb95a9a52b37dd0f9f41275941320f543dde2e",
+          "material_triangle_counts": {
+            "bare_arm_133": 460,
+            "glove_fullfinger": 141
+          }
+        },
+        "right_hand": {
+          "mesh_id": "t_right_hand",
+          "resource": "tactical_arsenal:cs2_npc_meshes/t_right_hand.tam",
+          "texture": "tactical_arsenal:textures/cs2_npc/t_atlas.png",
+          "pivot_joint": "hand_R",
+          "parent_part": "right_lower_arm",
+          "pivot_world_metres": [
+            -0.5324469551276894,
+            1.1204635509172116,
+            -0.03138877592878889
+          ],
+          "pivot_from_parent_metres": [
+            -0.159033793731303,
+            -0.2169703768113569,
+            0.08288925068901142
+          ],
+          "pivot_from_body_metres": [
+            -0.5324469616183082,
+            -0.37259166228960927,
+            0.056791959769708036
+          ],
+          "minecraft_neutral_pivot_pixels": [
+            -8.51915138589293,
+            5.961466596633748,
+            -0.9086713563153286
+          ],
+          "local_bounds_min": [
+            -0.08260862131672542,
+            -0.20189183111390918,
+            -0.04562462602894751
+          ],
+          "local_bounds_max": [
+            0.03108790801449024,
+            0.025889389112633054,
+            0.09207714090162931
+          ],
+          "bind_world_bounds_min": [
+            -0.6150555764444148,
+            0.9185717198033024,
+            -0.0770134019577364
+          ],
+          "bind_world_bounds_max": [
+            -0.5013590471131991,
+            1.1463529400298447,
+            0.06068836497284043
+          ],
+          "triangle_count": 1361,
+          "vertex_count": 4083,
+          "byte_length": 130664,
+          "sha256": "7c26ceec8ff1e54eb62d658554b66411fd21ada185a4a46d5303768948ad20ff",
+          "material_triangle_counts": {
+            "bare_arm_133": 3,
+            "glove_fullfinger": 1358
+          }
+        },
+        "left_upper_arm": {
+          "mesh_id": "t_left_upper_arm",
+          "resource": "tactical_arsenal:cs2_npc_meshes/t_left_upper_arm.tam",
+          "texture": "tactical_arsenal:textures/cs2_npc/t_atlas.png",
+          "pivot_joint": "arm_upper_L",
+          "parent_part": "body",
+          "pivot_world_metres": [
+            0.18237123023747104,
+            1.5660501809830834,
+            -0.0848026726499469
+          ],
+          "pivot_from_parent_metres": [
+            0.18237122374685225,
+            0.07299496777626246,
+            0.0033780630485500257
+          ],
+          "pivot_from_body_metres": [
+            0.18237122374685225,
+            0.07299496777626246,
+            0.0033780630485500257
+          ],
+          "minecraft_neutral_pivot_pixels": [
+            2.917939579949636,
+            -1.1679194844201994,
+            -0.05404900877680041
+          ],
+          "local_bounds_min": [
+            -0.10565447739582691,
+            -0.25022039520935335,
+            -0.13175256237860217
+          ],
+          "local_bounds_max": [
+            0.2339816715437011,
+            0.13669969851106978,
+            0.16060033656804545
+          ],
+          "bind_world_bounds_min": [
+            0.07671675284164413,
+            1.31582978577373,
+            -0.21655523502854906
+          ],
+          "bind_world_bounds_max": [
+            0.4163529017811721,
+            1.7027498794941531,
+            0.07579766391809856
+          ],
+          "triangle_count": 1404,
+          "vertex_count": 4212,
+          "byte_length": 134792,
+          "sha256": "2725cdd2416f5f874100bd13378e6ed94fe35b2589a4298c0f173e3cd2a42bb6",
+          "material_triangle_counts": {
+            "bare_arm_133": 89,
+            "tm_phoenix_v2_body_variante": 1315
+          }
+        },
+        "left_lower_arm": {
+          "mesh_id": "t_left_lower_arm",
+          "resource": "tactical_arsenal:cs2_npc_meshes/t_left_lower_arm.tam",
+          "texture": "tactical_arsenal:textures/cs2_npc/t_atlas.png",
+          "pivot_joint": "arm_lower_L",
+          "parent_part": "left_upper_arm",
+          "pivot_world_metres": [
+            0.3734132863730421,
+            1.3374319254270448,
+            -0.11427786215568751
+          ],
+          "pivot_from_parent_metres": [
+            0.19104205613557107,
+            -0.22861825555603854,
+            -0.029475189505740615
+          ],
+          "pivot_from_body_metres": [
+            0.3734132798824233,
+            -0.15562328777977608,
+            -0.02609712645719059
+          ],
+          "minecraft_neutral_pivot_pixels": [
+            5.974612478118773,
+            2.489972604476417,
+            0.4175540233150494
+          ],
+          "local_bounds_min": [
+            -0.050768726775199835,
+            -0.23566905553825945,
+            -0.055928012734407465
+          ],
+          "local_bounds_max": [
+            0.1892401625406454,
+            0.0522449007014858,
+            0.1289153418652305
+          ],
+          "bind_world_bounds_min": [
+            0.3226445595978423,
+            1.1017628698887854,
+            -0.17020587489009498
+          ],
+          "bind_world_bounds_max": [
+            0.5626534489136875,
+            1.3896768261285306,
+            0.014637479709542975
+          ],
+          "triangle_count": 601,
+          "vertex_count": 1803,
+          "byte_length": 57704,
+          "sha256": "2385793f7ba6a1903db34a5a846383512527f3fcc09835797a84a3ee55222e36",
+          "material_triangle_counts": {
+            "bare_arm_133": 460,
+            "glove_fullfinger": 141
+          }
+        },
+        "left_hand": {
+          "mesh_id": "t_left_hand",
+          "resource": "tactical_arsenal:cs2_npc_meshes/t_left_hand.tam",
+          "texture": "tactical_arsenal:textures/cs2_npc/t_atlas.png",
+          "pivot_joint": "hand_L",
+          "parent_part": "left_lower_arm",
+          "pivot_world_metres": [
+            0.53244573868811,
+            1.120459545951685,
+            -0.031388840017848516
+          ],
+          "pivot_from_parent_metres": [
+            0.15903245231506785,
+            -0.21697237947535974,
+            0.082889022137839
+          ],
+          "pivot_from_body_metres": [
+            0.5324457321974911,
+            -0.3725956672551358,
+            0.05679189568064841
+          ],
+          "minecraft_neutral_pivot_pixels": [
+            8.519131715159858,
+            5.961530676082173,
+            -0.9086703308903745
+          ],
+          "local_bounds_min": [
+            -0.031087466292545662,
+            -0.20188855656436255,
+            -0.04562431365093421
+          ],
+          "local_bounds_max": [
+            0.08260872636358507,
+            0.025892557625494694,
+            0.09207738666559451
+          ],
+          "bind_world_bounds_min": [
+            0.5013582723955643,
+            0.9185709893873225,
+            -0.07701315366878272
+          ],
+          "bind_world_bounds_max": [
+            0.615054465051695,
+            1.1463521035771798,
+            0.06068854664774599
+          ],
+          "triangle_count": 1361,
+          "vertex_count": 4083,
+          "byte_length": 130664,
+          "sha256": "5ebb96d47ea6d879f166c4d22d39ae059e3b410612c49a0520b2a23654a2c9b2",
+          "material_triangle_counts": {
+            "bare_arm_133": 3,
+            "glove_fullfinger": 1358
+          }
+        },
+        "right_leg": {
+          "mesh_id": "t_right_leg",
+          "resource": "tactical_arsenal:cs2_npc_meshes/t_right_leg.tam",
+          "texture": "tactical_arsenal:textures/cs2_npc/t_atlas.png",
+          "pivot_joint": "leg_upper_R",
+          "parent_part": "body",
+          "pivot_world_metres": [
+            -0.0938333619774614,
+            0.9919558446206452,
+            -0.04927766214934516
+          ],
+          "pivot_from_parent_metres": [
+            -0.0938333684680802,
+            -0.5010993685861757,
+            0.03890307354915176
+          ],
+          "pivot_from_body_metres": [
+            -0.0938333684680802,
+            -0.5010993685861757,
+            0.03890307354915176
+          ],
+          "minecraft_neutral_pivot_pixels": [
+            -1.5013338954892832,
+            8.01758989737881,
+            -0.6224491767864282
+          ],
+          "local_bounds_min": [
+            -0.16121135995305147,
+            -0.9947674847310697,
+            -0.15490202560740796
+          ],
+          "local_bounds_max": [
+            0.11912599838475303,
+            0.0656208860219113,
+            0.21709878944664873
+          ],
+          "bind_world_bounds_min": [
+            -0.25504472193051286,
+            -0.0028116401104244515,
+            -0.2041796877567531
+          ],
+          "bind_world_bounds_max": [
+            0.025292636407291638,
+            1.0575767306425565,
+            0.16782112729730359
+          ],
+          "triangle_count": 1387,
+          "vertex_count": 4161,
+          "byte_length": 133160,
+          "sha256": "6af9223aeefb4f69bdf05fe392a9e53766f8ca6fefc5662f6ab2e8f5214c03dd",
+          "material_triangle_counts": {
+            "tm_phoenix_v2_legs_variantb": 1387
+          }
+        },
+        "left_leg": {
+          "mesh_id": "t_left_leg",
+          "resource": "tactical_arsenal:cs2_npc_meshes/t_left_leg.tam",
+          "texture": "tactical_arsenal:textures/cs2_npc/t_atlas.png",
+          "pivot_joint": "leg_upper_L",
+          "parent_part": "body",
+          "pivot_world_metres": [
+            0.09383330704872932,
+            0.9919570277720766,
+            -0.04927764944920879
+          ],
+          "pivot_from_parent_metres": [
+            0.09383330055811051,
+            -0.5010981854347443,
+            0.038903086249288135
+          ],
+          "pivot_from_body_metres": [
+            0.09383330055811051,
+            -0.5010981854347443,
+            0.038903086249288135
+          ],
+          "minecraft_neutral_pivot_pixels": [
+            1.5013328089297682,
+            8.017570966955908,
+            -0.6224493799886102
+          ],
+          "local_bounds_min": [
+            -0.1054087923694111,
+            -0.996756260431046,
+            -0.15465859886085687
+          ],
+          "local_bounds_max": [
+            0.14521813806714307,
+            0.03772687854005996,
+            0.2163075094946426
+          ],
+          "bind_world_bounds_min": [
+            -0.011575485320681783,
+            -0.004799232658969421,
+            -0.20393624831006565
+          ],
+          "bind_world_bounds_max": [
+            0.2390514451158724,
+            1.0296839063121366,
+            0.16702986004543383
+          ],
+          "triangle_count": 1377,
+          "vertex_count": 4131,
+          "byte_length": 132200,
+          "sha256": "fb3005d99e68521a4b74a1c0d3818aad93fc34fdf4b8af8265c622af29c832ff",
+          "material_triangle_counts": {
+            "tm_phoenix_v2_legs_variantb": 1377
+          }
+        }
+      }
+    },
+    "ct": {
+      "display_name": "CS2 SAS Counter-Terrorist",
+      "source_resource": "agents/models/ctm_sas/ctm_sas.vmdl_c",
+      "source_crc": "00d9a1dcca",
+      "source_gltf": "C:\\Users\\cilgi\\Documents\\Codex\\2026-07-25\\peki-bunun-i-inde-d-enleme\\work\\cs2-character-assets\\raw_agents\\counter_terrorist\\agents\\models\\ctm_sas\\ctm_sas.gltf",
+      "source_gltf_sha256": "0f1f72b02db9e6f4c2acfc5a69328ca721fe1da263642a7e3ed532b0644bd15c",
+      "selected_thirdperson_meshes": [
+        "agents\\models\\ctm_sas\\ctm_sas.vmdl_c.thirdperson_body",
+        "agents\\models\\ctm_sas\\ctm_sas.vmdl_c.thirdperson_default_gloves"
+      ],
+      "atlas": {
+        "resource": "tactical_arsenal:textures/cs2_npc/ct_atlas.png",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "byte_length": 1052745,
+        "sha256": "37e3b2956f8941409043d7abd1a421fc922f4feaf62addfd2d3dca9ca9d9570b",
+        "materials": [
+          {
+            "material_index": 0,
+            "material_name": "ctm_sas_lenses",
+            "source_vmat": "characters/models/ctm_sas/materials/ctm_sas_lenses.vmat",
+            "source_texture": "ctm_sas_lenses_vmat_g_tcolor_d8915932.png",
+            "source_dimensions": [
+              1,
+              1
+            ],
+            "source_sha256": "3e4d85195e07dd181ea891a9fe6b3dc94d145196b92ca42698be466ee7883d80",
+            "atlas_rectangle": [
+              4,
+              4,
+              504,
+              504
+            ]
+          },
+          {
+            "material_index": 1,
+            "material_name": "ctm_sas_head_gasmask",
+            "source_vmat": "characters/models/ctm_sas/materials/ctm_sas_head_gasmask.vmat",
+            "source_texture": "ctm_sas_head_gasmask_color_psd_52d38e2c.png",
+            "source_dimensions": [
+              1024,
+              1024
+            ],
+            "source_sha256": "76dcfacd5196015c32ee26c768e72443e577a0ec176fc7f366b0a784f36e369e",
+            "atlas_rectangle": [
+              516,
+              4,
+              504,
+              504
+            ]
+          },
+          {
+            "material_index": 2,
+            "material_name": "ctm_sas_bodylegs",
+            "source_vmat": "characters/models/ctm_sas/materials/ctm_sas_bodylegs.vmat",
+            "source_texture": "ctm_sas_legs_color_psd_ae899bf2.png",
+            "source_dimensions": [
+              2048,
+              1024
+            ],
+            "source_sha256": "c4142fbf34cca22ba4a2f2a024d62567581a880c6816d247f78aa348a6fae5da",
+            "atlas_rectangle": [
+              1028,
+              130,
+              504,
+              252
+            ]
+          },
+          {
+            "material_index": 3,
+            "material_name": "ctm_sas_body",
+            "source_vmat": "characters/models/ctm_sas/materials/ctm_sas_body.vmat",
+            "source_texture": "ctm_sas_body_color_psd_d02da1ae.png",
+            "source_dimensions": [
+              2048,
+              2048
+            ],
+            "source_sha256": "d846453c4f3f1a35d40c4150661a3af8bb0d4615d0c894e28af2a9fd1742f23c",
+            "atlas_rectangle": [
+              4,
+              516,
+              504,
+              504
+            ]
+          },
+          {
+            "material_index": 4,
+            "material_name": "glove_hardknuckle_black",
+            "source_vmat": "characters/models/shared/arms/glove_hardknuckle/materials/glove_hardknuckle_black.vmat",
+            "source_texture": "glove_hardknuckle_black_color_psd_8f00aa00.png",
+            "source_dimensions": [
+              2048,
+              2048
+            ],
+            "source_sha256": "7113c5b135f14b8d04937fd699910b0f3bd64c31b7f14ce65017010168ff6f1f",
+            "atlas_rectangle": [
+              516,
+              516,
+              504,
+              504
+            ]
+          }
+        ]
+      },
+      "bind_world_bounds_min": [
+        -0.6166938004923714,
+        -0.0046046886383827035,
+        -0.32551894837325746
+      ],
+      "bind_world_bounds_max": [
+        0.6166930269104506,
+        1.996071650655983,
+        0.24290782455982457
+      ],
+      "bind_height_metres": 2.000676339294366,
+      "parts": {
+        "head": {
+          "mesh_id": "ct_head",
+          "resource": "tactical_arsenal:cs2_npc_meshes/ct_head.tam",
+          "texture": "tactical_arsenal:textures/cs2_npc/ct_atlas.png",
+          "pivot_joint": "neck_0",
+          "parent_part": "body",
+          "pivot_world_metres": [
+            -9.343894805965203e-09,
+            1.6582528557917096,
+            -0.07838594515997452
+          ],
+          "pivot_from_parent_metres": [
+            1.1678484418434364e-09,
+            0.16519743300083145,
+            0.009794823195633726
+          ],
+          "pivot_from_body_metres": [
+            1.1678484418434364e-09,
+            0.16519743300083145,
+            0.009794823195633726
+          ],
+          "minecraft_neutral_pivot_pixels": [
+            1.8685575069494983e-08,
+            -2.643158928013303,
+            -0.1567171711301396
+          ],
+          "local_bounds_min": [
+            -0.1382290396593339,
+            -0.03601182095081512,
+            -0.15100886468136906
+          ],
+          "local_bounds_max": [
+            0.16200010728720002,
+            0.33781879486427346,
+            0.2391863215218043
+          ],
+          "bind_world_bounds_min": [
+            -0.1382290490032287,
+            1.6222410348408944,
+            -0.22939480984134358
+          ],
+          "bind_world_bounds_max": [
+            0.16200009794330522,
+            1.996071650655983,
+            0.16080037636182978
+          ],
+          "triangle_count": 3371,
+          "vertex_count": 10113,
+          "byte_length": 323624,
+          "sha256": "ef8785fbb64c5c675397ca1328e7a82990f4c4b22f109e21ff7ba01d2910136d",
+          "material_triangle_counts": {
+            "ctm_sas_lenses": 140,
+            "ctm_sas_head_gasmask": 2784,
+            "ctm_sas_body": 447
+          }
+        },
+        "body": {
+          "mesh_id": "ct_body",
+          "resource": "tactical_arsenal:cs2_npc_meshes/ct_body.tam",
+          "texture": "tactical_arsenal:textures/cs2_npc/ct_atlas.png",
+          "pivot_joint": "spine_3",
+          "parent_part": null,
+          "pivot_world_metres": [
+            -1.051174324780864e-08,
+            1.493055422790878,
+            -0.08818076835560824
+          ],
+          "pivot_from_parent_metres": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "pivot_from_body_metres": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "minecraft_neutral_pivot_pixels": [
+            0.0,
+            -0.0,
+            -0.0
+          ],
+          "local_bounds_min": [
+            -0.30256275119597525,
+            -0.7499475841855705,
+            -0.23733818001764923
+          ],
+          "local_bounds_max": [
+            0.2541437794039176,
+            0.3782889877505977,
+            0.3310885929154328
+          ],
+          "bind_world_bounds_min": [
+            -0.3025627617077185,
+            0.7431078386053076,
+            -0.32551894837325746
+          ],
+          "bind_world_bounds_max": [
+            0.2541437688921743,
+            1.8713444105414758,
+            0.24290782455982457
+          ],
+          "triangle_count": 5663,
+          "vertex_count": 16989,
+          "byte_length": 543656,
+          "sha256": "4853dda127737f7e58e96690f5c7620b0cc0778e13d00a0c8ea9e29987f7a48b",
+          "material_triangle_counts": {
+            "ctm_sas_bodylegs": 974,
+            "ctm_sas_body": 4689
+          }
+        },
+        "right_upper_arm": {
+          "mesh_id": "ct_right_upper_arm",
+          "resource": "tactical_arsenal:cs2_npc_meshes/ct_right_upper_arm.tam",
+          "texture": "tactical_arsenal:textures/cs2_npc/ct_atlas.png",
+          "pivot_joint": "arm_upper_R",
+          "parent_part": "body",
+          "pivot_world_metres": [
+            -0.18237125293172024,
+            1.566051002445426,
+            -0.08480283576036712
+          ],
+          "pivot_from_parent_metres": [
+            -0.182371242419977,
+            0.07299557965454784,
+            0.0033779325952411204
+          ],
+          "pivot_from_body_metres": [
+            -0.182371242419977,
+            0.07299557965454784,
+            0.0033779325952411204
+          ],
+          "minecraft_neutral_pivot_pixels": [
+            -2.917939878719632,
+            -1.1679292744727654,
+            -0.05404692152385793
+          ],
+          "local_bounds_min": [
+            -0.26581587549158303,
+            -0.3033486626119837,
+            -0.12369755211337768
+          ],
+          "local_bounds_max": [
+            0.13230323779911204,
+            0.1542165782145688,
+            0.18355156553604446
+          ],
+          "bind_world_bounds_min": [
+            -0.44818712842330327,
+            1.2627023398334423,
+            -0.2085003878737448
+          ],
+          "bind_world_bounds_max": [
+            -0.050068015132608196,
+            1.7202675806599947,
+            0.09874872977567734
+          ],
+          "triangle_count": 638,
+          "vertex_count": 1914,
+          "byte_length": 61256,
+          "sha256": "67113a0d37092ca80015a892eeec4667e7e3f00af38c92dc1d7bb7e2963e79e5",
+          "material_triangle_counts": {
+            "ctm_sas_body": 638
+          }
+        },
+        "right_lower_arm": {
+          "mesh_id": "ct_right_lower_arm",
+          "resource": "tactical_arsenal:cs2_npc_meshes/ct_right_lower_arm.tam",
+          "texture": "tactical_arsenal:textures/cs2_npc/ct_atlas.png",
+          "pivot_joint": "arm_lower_R",
+          "parent_part": "right_upper_arm",
+          "pivot_world_metres": [
+            -0.37341348322255635,
+            1.3374340620470788,
+            -0.11427820846523323
+          ],
+          "pivot_from_parent_metres": [
+            -0.1910422302908361,
+            -0.22861694039834712,
+            -0.02947537270486611
+          ],
+          "pivot_from_body_metres": [
+            -0.3734134727108131,
+            -0.1556213607437993,
+            -0.02609744010962499
+          ],
+          "minecraft_neutral_pivot_pixels": [
+            -5.97461556337301,
+            2.4899417719007886,
+            0.4175590417539998
+          ],
+          "local_bounds_min": [
+            -0.20840716576970014,
+            -0.25131299074097346,
+            -0.07535607956691745
+          ],
+          "local_bounds_max": [
+            0.06197240071960586,
+            0.06968927177668505,
+            0.14272550258251288
+          ],
+          "bind_world_bounds_min": [
+            -0.5818206489922565,
+            1.0861210713061054,
+            -0.18963428803215068
+          ],
+          "bind_world_bounds_max": [
+            -0.3114410825029505,
+            1.4071233338237639,
+            0.028447294117279642
+          ],
+          "triangle_count": 398,
+          "vertex_count": 1194,
+          "byte_length": 38216,
+          "sha256": "727d918a528010ba05645088df8d53eb18ae6192d4fd731e09a0016ae9257e4e",
+          "material_triangle_counts": {
+            "ctm_sas_body": 197,
+            "glove_hardknuckle_black": 201
+          }
+        },
+        "right_hand": {
+          "mesh_id": "ct_right_hand",
+          "resource": "tactical_arsenal:cs2_npc_meshes/ct_right_hand.tam",
+          "texture": "tactical_arsenal:textures/cs2_npc/ct_atlas.png",
+          "pivot_joint": "hand_R",
+          "parent_part": "right_lower_arm",
+          "pivot_world_metres": [
+            -0.5324448466524284,
+            1.1204510420569203,
+            -0.031388580195932464
+          ],
+          "pivot_from_parent_metres": [
+            -0.15903136342987206,
+            -0.21698301999015857,
+            0.08288962826930077
+          ],
+          "pivot_from_body_metres": [
+            -0.5324448361406852,
+            -0.37260438073395785,
+            0.05679218815967578
+          ],
+          "minecraft_neutral_pivot_pixels": [
+            -8.519117378250963,
+            5.961670091743326,
+            -0.9086750105548125
+          ],
+          "local_bounds_min": [
+            -0.08424895383994302,
+            -0.20137218283230518,
+            -0.056392955625531926
+          ],
+          "local_bounds_max": [
+            0.06496211735304552,
+            0.04077802155459098,
+            0.09317567301565169
+          ],
+          "bind_world_bounds_min": [
+            -0.6166938004923714,
+            0.9190788592246151,
+            -0.08778153582146439
+          ],
+          "bind_world_bounds_max": [
+            -0.4674827292993829,
+            1.1612290636115112,
+            0.061787092819719225
+          ],
+          "triangle_count": 1363,
+          "vertex_count": 4089,
+          "byte_length": 130856,
+          "sha256": "48b299b14a2f6ed2aa689c4c4c4b071a5d9f101ef05f117182a9fe18bf9795b6",
+          "material_triangle_counts": {
+            "ctm_sas_body": 81,
+            "glove_hardknuckle_black": 1282
+          }
+        },
+        "left_upper_arm": {
+          "mesh_id": "ct_left_upper_arm",
+          "resource": "tactical_arsenal:cs2_npc_meshes/ct_left_upper_arm.tam",
+          "texture": "tactical_arsenal:textures/cs2_npc/ct_atlas.png",
+          "pivot_joint": "arm_upper_L",
+          "parent_part": "body",
+          "pivot_world_metres": [
+            0.1823711751375121,
+            1.5660503073025607,
+            -0.08480270545532018
+          ],
+          "pivot_from_parent_metres": [
+            0.18237118564925536,
+            0.07299488451168257,
+            0.0033780629002880674
+          ],
+          "pivot_from_body_metres": [
+            0.18237118564925536,
+            0.07299488451168257,
+            0.0033780629002880674
+          ],
+          "minecraft_neutral_pivot_pixels": [
+            2.917938970388086,
+            -1.167918152186921,
+            -0.05404900640460908
+          ],
+          "local_bounds_min": [
+            -0.12570758008980776,
+            -0.2927766354114054,
+            -0.19334049203416645
+          ],
+          "local_bounds_max": [
+            0.2620733199124616,
+            0.1619902813130467,
+            0.1695628660045419
+          ],
+          "bind_world_bounds_min": [
+            0.05666359504770435,
+            1.2732736718911553,
+            -0.2781431974894866
+          ],
+          "bind_world_bounds_max": [
+            0.4444444950499737,
+            1.7280405886156074,
+            0.08476016054922172
+          ],
+          "triangle_count": 823,
+          "vertex_count": 2469,
+          "byte_length": 79016,
+          "sha256": "1081fe084e199f742f1f03c9bfa4e5ec5878c07d993c9a8c9aacb486f344dd31",
+          "material_triangle_counts": {
+            "ctm_sas_body": 823
+          }
+        },
+        "left_lower_arm": {
+          "mesh_id": "ct_left_lower_arm",
+          "resource": "tactical_arsenal:cs2_npc_meshes/ct_left_lower_arm.tam",
+          "texture": "tactical_arsenal:textures/cs2_npc/ct_atlas.png",
+          "pivot_joint": "arm_lower_L",
+          "parent_part": "left_upper_arm",
+          "pivot_world_metres": [
+            0.3734130639297125,
+            1.337432407558349,
+            -0.11427786948206553
+          ],
+          "pivot_from_parent_metres": [
+            0.1910418887922004,
+            -0.22861789974421165,
+            -0.029475164026745354
+          ],
+          "pivot_from_body_metres": [
+            0.3734130744414558,
+            -0.15562301523252908,
+            -0.026097101126457287
+          ],
+          "minecraft_neutral_pivot_pixels": [
+            5.974609191063292,
+            2.4899682437204653,
+            0.4175536180233166
+          ],
+          "local_bounds_min": [
+            -0.04592005456857051,
+            -0.25131112151756874,
+            -0.07705576982928886
+          ],
+          "local_bounds_max": [
+            0.20840743111316973,
+            0.07403030003804556,
+            0.14101586748239506
+          ],
+          "bind_world_bounds_min": [
+            0.327493009361142,
+            1.0861212860407803,
+            -0.1913336393113544
+          ],
+          "bind_world_bounds_max": [
+            0.5818204950428822,
+            1.4114627075963946,
+            0.026737998000329527
+          ],
+          "triangle_count": 405,
+          "vertex_count": 1215,
+          "byte_length": 38888,
+          "sha256": "3b246bdb7fc535a9f673faa0daa85b35697656398f42249597e0456c5e6d4d15",
+          "material_triangle_counts": {
+            "ctm_sas_body": 204,
+            "glove_hardknuckle_black": 201
+          }
+        },
+        "left_hand": {
+          "mesh_id": "ct_left_hand",
+          "resource": "tactical_arsenal:cs2_npc_meshes/ct_left_hand.tam",
+          "texture": "tactical_arsenal:textures/cs2_npc/ct_atlas.png",
+          "pivot_joint": "hand_L",
+          "parent_part": "left_lower_arm",
+          "pivot_world_metres": [
+            0.5324443310137026,
+            1.1204492203347438,
+            -0.03138838295008205
+          ],
+          "pivot_from_parent_metres": [
+            0.15903126708399007,
+            -0.2169831872236052,
+            0.08288948653198348
+          ],
+          "pivot_from_body_metres": [
+            0.5324443415254458,
+            -0.3726062024561343,
+            0.0567923854055262
+          ],
+          "minecraft_neutral_pivot_pixels": [
+            8.519109464407133,
+            5.961699239298149,
+            -0.9086781664884191
+          ],
+          "local_bounds_min": [
+            -0.06477716639426934,
+            -0.2013703162072441,
+            -0.056393413272101886
+          ],
+          "local_bounds_max": [
+            0.084248695896748,
+            0.04078220617776673,
+            0.09317573617050925
+          ],
+          "bind_world_bounds_min": [
+            0.46766716461943325,
+            0.9190789041274997,
+            -0.08778179622218393
+          ],
+          "bind_world_bounds_max": [
+            0.6166930269104506,
+            1.1612314265125105,
+            0.06178735322042721
+          ],
+          "triangle_count": 1369,
+          "vertex_count": 4107,
+          "byte_length": 131432,
+          "sha256": "9cfd1b53191be31dc49e37f8e2d881d77aa3d1df9c25127bf5110d468428e299",
+          "material_triangle_counts": {
+            "ctm_sas_body": 87,
+            "glove_hardknuckle_black": 1282
+          }
+        },
+        "right_leg": {
+          "mesh_id": "ct_right_leg",
+          "resource": "tactical_arsenal:cs2_npc_meshes/ct_right_leg.tam",
+          "texture": "tactical_arsenal:textures/cs2_npc/ct_atlas.png",
+          "pivot_joint": "leg_upper_R",
+          "parent_part": "body",
+          "pivot_world_metres": [
+            -0.09383339753745067,
+            0.9919554560007022,
+            -0.04927761896939829
+          ],
+          "pivot_from_parent_metres": [
+            -0.09383338702570741,
+            -0.5010999667901759,
+            0.03890314938620995
+          ],
+          "pivot_from_body_metres": [
+            -0.09383338702570741,
+            -0.5010999667901759,
+            0.03890314938620995
+          ],
+          "minecraft_neutral_pivot_pixels": [
+            -1.5013341924113186,
+            8.017599468642814,
+            -0.6224503901793592
+          ],
+          "local_bounds_min": [
+            -0.1563827356714685,
+            -0.9965601446390849,
+            -0.14455431375868844
+          ],
+          "local_bounds_max": [
+            0.11718632066976573,
+            0.059146473620982354,
+            0.23736802491005854
+          ],
+          "bind_world_bounds_min": [
+            -0.25021613320891917,
+            -0.0046046886383827035,
+            -0.19383193272808674
+          ],
+          "bind_world_bounds_max": [
+            0.02335292313231506,
+            1.0511019296216846,
+            0.18809040594066023
+          ],
+          "triangle_count": 1350,
+          "vertex_count": 4050,
+          "byte_length": 129608,
+          "sha256": "6ddfc984509d94c83e84149a2a6994a534c87d6c7a5b9d1237d29ccedb8a29fa",
+          "material_triangle_counts": {
+            "ctm_sas_bodylegs": 1350
+          }
+        },
+        "left_leg": {
+          "mesh_id": "ct_left_leg",
+          "resource": "tactical_arsenal:cs2_npc_meshes/ct_left_leg.tam",
+          "texture": "tactical_arsenal:textures/cs2_npc/ct_atlas.png",
+          "pivot_joint": "leg_upper_L",
+          "parent_part": "body",
+          "pivot_world_metres": [
+            0.09383332736873186,
+            0.9919563521321854,
+            -0.04927760118929693
+          ],
+          "pivot_from_parent_metres": [
+            0.09383333788047511,
+            -0.5010990706586927,
+            0.038903167166311314
+          ],
+          "pivot_from_body_metres": [
+            0.09383333788047511,
+            -0.5010990706586927,
+            0.038903167166311314
+          ],
+          "minecraft_neutral_pivot_pixels": [
+            1.5013334060876018,
+            8.017585130539084,
+            -0.622450674660981
+          ],
+          "local_bounds_min": [
+            -0.09933676932133503,
+            -0.9959743278344231,
+            -0.1322979268176801
+          ],
+          "local_bounds_max": [
+            0.1545855194422428,
+            0.04504668179779603,
+            0.23477075813158071
+          ],
+          "bind_world_bounds_min": [
+            -0.005503441952603175,
+            -0.004017975702237719,
+            -0.18157552800697702
+          ],
+          "bind_world_bounds_max": [
+            0.24841884681097465,
+            1.0370030339299814,
+            0.1854931569422838
+          ],
+          "triangle_count": 1090,
+          "vertex_count": 3270,
+          "byte_length": 104648,
+          "sha256": "877b24706dfa37aa981c729e70e7fa62bfc74af70eb7ad0c6d525a82d3a8c654",
+          "material_triangle_counts": {
+            "ctm_sas_bodylegs": 1090
+          }
+        }
+      }
+    }
+  }
+}

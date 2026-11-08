@@ -1,0 +1,19 @@
+{
+  "model": {
+    "type": "minecraft:composite",
+    "models": [
+      {
+        "type": "minecraft:model",
+        "model": "tactical_arsenal:item/p250_body"
+      },
+      {
+        "type": "minecraft:model",
+        "model": "tactical_arsenal:item/p250_magazine"
+      },
+      {
+        "type": "minecraft:model",
+        "model": "tactical_arsenal:item/p250_action"
+      }
+    ]
+  }
+}

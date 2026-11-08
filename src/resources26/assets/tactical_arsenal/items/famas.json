@@ -1,0 +1,19 @@
+{
+  "model": {
+    "type": "minecraft:composite",
+    "models": [
+      {
+        "type": "minecraft:model",
+        "model": "tactical_arsenal:item/famas_body"
+      },
+      {
+        "type": "minecraft:model",
+        "model": "tactical_arsenal:item/famas_magazine"
+      },
+      {
+        "type": "minecraft:model",
+        "model": "tactical_arsenal:item/famas_action"
+      }
+    ]
+  }
+}

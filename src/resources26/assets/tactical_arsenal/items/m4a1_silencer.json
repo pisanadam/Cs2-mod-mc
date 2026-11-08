@@ -1,0 +1,19 @@
+{
+  "model": {
+    "type": "minecraft:composite",
+    "models": [
+      {
+        "type": "minecraft:model",
+        "model": "tactical_arsenal:item/m4a1_silencer_body"
+      },
+      {
+        "type": "minecraft:model",
+        "model": "tactical_arsenal:item/m4a1_silencer_magazine"
+      },
+      {
+        "type": "minecraft:model",
+        "model": "tactical_arsenal:item/m4a1_silencer_action"
+      }
+    ]
+  }
+}

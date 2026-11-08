@@ -1,0 +1,2702 @@
+{
+  "weapon.ak47.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/ak47/fire_1"
+      },
+      {
+        "name": "tactical_arsenal:cs2/ak47/fire_2"
+      },
+      {
+        "name": "tactical_arsenal:cs2/ak47/fire_3"
+      }
+    ]
+  },
+  "weapon.ak47.reload_start": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.ak47.clip_out": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/ak47/clip_out_1"
+      }
+    ]
+  },
+  "weapon.ak47.clip_in": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/ak47/clip_in_1"
+      }
+    ]
+  },
+  "weapon.ak47.clip_hit": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.ak47.add_ammo": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/ak47/add_ammo_1"
+      }
+    ]
+  },
+  "weapon.ak47.action_back": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/ak47/action_back_1"
+      }
+    ]
+  },
+  "weapon.ak47.action_forward": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.ak47.shell_insert": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.m4a1_silencer.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/m4a1_silencer/fire_1"
+      }
+    ]
+  },
+  "weapon.m4a1_silencer.reload_start": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.m4a1_silencer.clip_out": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/m4a1_silencer/clip_out_1"
+      }
+    ]
+  },
+  "weapon.m4a1_silencer.clip_in": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/m4a1_silencer/clip_in_1"
+      }
+    ]
+  },
+  "weapon.m4a1_silencer.clip_hit": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/m4a1_silencer/clip_hit_1"
+      }
+    ]
+  },
+  "weapon.m4a1_silencer.add_ammo": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/m4a1_silencer/add_ammo_1"
+      }
+    ]
+  },
+  "weapon.m4a1_silencer.action_back": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/m4a1_silencer/action_back_1"
+      }
+    ]
+  },
+  "weapon.m4a1_silencer.action_forward": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/m4a1_silencer/action_forward_1"
+      }
+    ]
+  },
+  "weapon.m4a1_silencer.shell_insert": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.awp.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/awp/fire_1"
+      },
+      {
+        "name": "tactical_arsenal:cs2/awp/fire_2"
+      }
+    ]
+  },
+  "weapon.awp.reload_start": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.awp.clip_out": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/awp/clip_out_1"
+      }
+    ]
+  },
+  "weapon.awp.clip_in": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/awp/clip_in_1"
+      }
+    ]
+  },
+  "weapon.awp.clip_hit": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/awp/clip_hit_1"
+      }
+    ]
+  },
+  "weapon.awp.add_ammo": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.awp.action_back": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/awp/action_back_1"
+      }
+    ]
+  },
+  "weapon.awp.action_forward": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/awp/action_forward_1"
+      }
+    ]
+  },
+  "weapon.awp.shell_insert": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.desert_eagle.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/desert_eagle/fire_1"
+      },
+      {
+        "name": "tactical_arsenal:cs2/desert_eagle/fire_2"
+      }
+    ]
+  },
+  "weapon.desert_eagle.reload_start": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.desert_eagle.clip_out": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/desert_eagle/clip_out_1"
+      }
+    ]
+  },
+  "weapon.desert_eagle.clip_in": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/desert_eagle/clip_in_1"
+      }
+    ]
+  },
+  "weapon.desert_eagle.clip_hit": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.desert_eagle.add_ammo": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/desert_eagle/add_ammo_1"
+      }
+    ]
+  },
+  "weapon.desert_eagle.action_back": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/desert_eagle/action_back_1"
+      }
+    ]
+  },
+  "weapon.desert_eagle.action_forward": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/desert_eagle/action_forward_1"
+      }
+    ]
+  },
+  "weapon.desert_eagle.shell_insert": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.glock.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/glock/fire_1"
+      }
+    ]
+  },
+  "weapon.glock.reload_start": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.glock.clip_out": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/glock/clip_out_1"
+      }
+    ]
+  },
+  "weapon.glock.clip_in": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/glock/clip_in_1"
+      }
+    ]
+  },
+  "weapon.glock.clip_hit": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.glock.add_ammo": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.glock.action_back": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/glock/action_back_1"
+      }
+    ]
+  },
+  "weapon.glock.action_forward": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/glock/action_forward_1"
+      }
+    ]
+  },
+  "weapon.glock.shell_insert": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.hkp2000.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/hkp2000/fire_1"
+      },
+      {
+        "name": "tactical_arsenal:cs2/hkp2000/fire_2"
+      },
+      {
+        "name": "tactical_arsenal:cs2/hkp2000/fire_3"
+      }
+    ]
+  },
+  "weapon.hkp2000.reload_start": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.hkp2000.clip_out": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/hkp2000/clip_out_1"
+      }
+    ]
+  },
+  "weapon.hkp2000.clip_in": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/hkp2000/clip_in_1"
+      }
+    ]
+  },
+  "weapon.hkp2000.clip_hit": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.hkp2000.add_ammo": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/hkp2000/add_ammo_1"
+      }
+    ]
+  },
+  "weapon.hkp2000.action_back": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/hkp2000/action_back_1"
+      }
+    ]
+  },
+  "weapon.hkp2000.action_forward": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/hkp2000/action_forward_1"
+      }
+    ]
+  },
+  "weapon.hkp2000.shell_insert": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.usp_silencer.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/usp_silencer/fire_1"
+      },
+      {
+        "name": "tactical_arsenal:cs2/usp_silencer/fire_2"
+      },
+      {
+        "name": "tactical_arsenal:cs2/usp_silencer/fire_3"
+      }
+    ]
+  },
+  "weapon.usp_silencer.reload_start": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.usp_silencer.clip_out": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/usp_silencer/clip_out_1"
+      }
+    ]
+  },
+  "weapon.usp_silencer.clip_in": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/usp_silencer/clip_in_1"
+      }
+    ]
+  },
+  "weapon.usp_silencer.clip_hit": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.usp_silencer.add_ammo": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/usp_silencer/add_ammo_1"
+      }
+    ]
+  },
+  "weapon.usp_silencer.action_back": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/usp_silencer/action_back_1"
+      }
+    ]
+  },
+  "weapon.usp_silencer.action_forward": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/usp_silencer/action_forward_1"
+      }
+    ]
+  },
+  "weapon.usp_silencer.shell_insert": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.p250.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/p250/fire_1"
+      }
+    ]
+  },
+  "weapon.p250.reload_start": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.p250.clip_out": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/p250/clip_out_1"
+      }
+    ]
+  },
+  "weapon.p250.clip_in": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/p250/clip_in_1"
+      }
+    ]
+  },
+  "weapon.p250.clip_hit": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.p250.add_ammo": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/p250/add_ammo_1"
+      }
+    ]
+  },
+  "weapon.p250.action_back": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/p250/action_back_1"
+      }
+    ]
+  },
+  "weapon.p250.action_forward": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/p250/action_forward_1"
+      }
+    ]
+  },
+  "weapon.p250.shell_insert": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.elite.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/elite/fire_1"
+      },
+      {
+        "name": "tactical_arsenal:cs2/elite/fire_2"
+      },
+      {
+        "name": "tactical_arsenal:cs2/elite/fire_3"
+      },
+      {
+        "name": "tactical_arsenal:cs2/elite/fire_4"
+      }
+    ]
+  },
+  "weapon.elite.reload_start": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/elite/reload_start_1"
+      }
+    ]
+  },
+  "weapon.elite.clip_out": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/elite/clip_out_1"
+      }
+    ]
+  },
+  "weapon.elite.clip_in": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/elite/clip_in_1"
+      }
+    ]
+  },
+  "weapon.elite.clip_hit": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/elite/clip_hit_1"
+      }
+    ]
+  },
+  "weapon.elite.add_ammo": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/elite/add_ammo_1"
+      }
+    ]
+  },
+  "weapon.elite.action_back": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.elite.action_forward": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/elite/action_forward_1"
+      },
+      {
+        "name": "tactical_arsenal:cs2/elite/action_forward_2"
+      }
+    ]
+  },
+  "weapon.elite.shell_insert": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.fiveseven.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/fiveseven/fire_1"
+      }
+    ]
+  },
+  "weapon.fiveseven.reload_start": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.fiveseven.clip_out": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/fiveseven/clip_out_1"
+      }
+    ]
+  },
+  "weapon.fiveseven.clip_in": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/fiveseven/clip_in_1"
+      }
+    ]
+  },
+  "weapon.fiveseven.clip_hit": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.fiveseven.add_ammo": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/fiveseven/add_ammo_1"
+      }
+    ]
+  },
+  "weapon.fiveseven.action_back": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/fiveseven/action_back_1"
+      }
+    ]
+  },
+  "weapon.fiveseven.action_forward": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/fiveseven/action_forward_1"
+      }
+    ]
+  },
+  "weapon.fiveseven.shell_insert": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.tec9.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/tec9/fire_1"
+      }
+    ]
+  },
+  "weapon.tec9.reload_start": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.tec9.clip_out": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/tec9/clip_out_1"
+      }
+    ]
+  },
+  "weapon.tec9.clip_in": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/tec9/clip_in_1"
+      }
+    ]
+  },
+  "weapon.tec9.clip_hit": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.tec9.add_ammo": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/tec9/add_ammo_1"
+      }
+    ]
+  },
+  "weapon.tec9.action_back": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/tec9/action_back_1"
+      }
+    ]
+  },
+  "weapon.tec9.action_forward": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/tec9/action_forward_1"
+      }
+    ]
+  },
+  "weapon.tec9.shell_insert": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.cz75a.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/cz75a/fire_1"
+      },
+      {
+        "name": "tactical_arsenal:cs2/cz75a/fire_2"
+      },
+      {
+        "name": "tactical_arsenal:cs2/cz75a/fire_3"
+      }
+    ]
+  },
+  "weapon.cz75a.reload_start": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.cz75a.clip_out": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/cz75a/clip_out_1"
+      },
+      {
+        "name": "tactical_arsenal:cs2/cz75a/clip_out_2"
+      }
+    ]
+  },
+  "weapon.cz75a.clip_in": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/cz75a/clip_in_1"
+      }
+    ]
+  },
+  "weapon.cz75a.clip_hit": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/cz75a/clip_hit_1"
+      }
+    ]
+  },
+  "weapon.cz75a.add_ammo": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/cz75a/add_ammo_1"
+      }
+    ]
+  },
+  "weapon.cz75a.action_back": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/cz75a/action_back_1"
+      }
+    ]
+  },
+  "weapon.cz75a.action_forward": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/cz75a/action_forward_1"
+      }
+    ]
+  },
+  "weapon.cz75a.shell_insert": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.revolver.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/revolver/fire_1"
+      }
+    ]
+  },
+  "weapon.revolver.reload_start": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/revolver/reload_start_1"
+      }
+    ]
+  },
+  "weapon.revolver.clip_out": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/revolver/clip_out_1"
+      }
+    ]
+  },
+  "weapon.revolver.clip_in": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/revolver/clip_in_1"
+      }
+    ]
+  },
+  "weapon.revolver.clip_hit": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.revolver.add_ammo": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/revolver/add_ammo_1"
+      }
+    ]
+  },
+  "weapon.revolver.action_back": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/revolver/action_back_1"
+      }
+    ]
+  },
+  "weapon.revolver.action_forward": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/revolver/action_forward_1"
+      }
+    ]
+  },
+  "weapon.revolver.shell_insert": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.mac10.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mac10/fire_1"
+      },
+      {
+        "name": "tactical_arsenal:cs2/mac10/fire_2"
+      }
+    ]
+  },
+  "weapon.mac10.reload_start": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.mac10.clip_out": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mac10/clip_out_1"
+      }
+    ]
+  },
+  "weapon.mac10.clip_in": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mac10/clip_in_1"
+      }
+    ]
+  },
+  "weapon.mac10.clip_hit": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mac10/clip_hit_1"
+      }
+    ]
+  },
+  "weapon.mac10.add_ammo": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mac10/add_ammo_1"
+      }
+    ]
+  },
+  "weapon.mac10.action_back": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mac10/action_back_1"
+      }
+    ]
+  },
+  "weapon.mac10.action_forward": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mac10/action_forward_1"
+      }
+    ]
+  },
+  "weapon.mac10.shell_insert": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.mp9.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mp9/fire_1"
+      },
+      {
+        "name": "tactical_arsenal:cs2/mp9/fire_2"
+      },
+      {
+        "name": "tactical_arsenal:cs2/mp9/fire_3"
+      },
+      {
+        "name": "tactical_arsenal:cs2/mp9/fire_4"
+      }
+    ]
+  },
+  "weapon.mp9.reload_start": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.mp9.clip_out": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mp9/clip_out_1"
+      }
+    ]
+  },
+  "weapon.mp9.clip_in": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mp9/clip_in_1"
+      }
+    ]
+  },
+  "weapon.mp9.clip_hit": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mp9/clip_hit_1"
+      }
+    ]
+  },
+  "weapon.mp9.add_ammo": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mp9/add_ammo_1"
+      }
+    ]
+  },
+  "weapon.mp9.action_back": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mp9/action_back_1"
+      }
+    ]
+  },
+  "weapon.mp9.action_forward": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mp9/action_forward_1"
+      }
+    ]
+  },
+  "weapon.mp9.shell_insert": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.mp7.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mp7/fire_1"
+      },
+      {
+        "name": "tactical_arsenal:cs2/mp7/fire_2"
+      },
+      {
+        "name": "tactical_arsenal:cs2/mp7/fire_3"
+      }
+    ]
+  },
+  "weapon.mp7.reload_start": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.mp7.clip_out": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mp7/clip_out_1"
+      }
+    ]
+  },
+  "weapon.mp7.clip_in": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mp7/clip_in_1"
+      }
+    ]
+  },
+  "weapon.mp7.clip_hit": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.mp7.add_ammo": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mp7/add_ammo_1"
+      }
+    ]
+  },
+  "weapon.mp7.action_back": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mp7/action_back_1"
+      }
+    ]
+  },
+  "weapon.mp7.action_forward": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mp7/action_forward_1"
+      }
+    ]
+  },
+  "weapon.mp7.shell_insert": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.mp5sd.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mp5sd/fire_1"
+      }
+    ]
+  },
+  "weapon.mp5sd.reload_start": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mp5sd/reload_start_1"
+      }
+    ]
+  },
+  "weapon.mp5sd.clip_out": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mp5sd/clip_out_1"
+      }
+    ]
+  },
+  "weapon.mp5sd.clip_in": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mp5sd/clip_in_1"
+      }
+    ]
+  },
+  "weapon.mp5sd.clip_hit": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mp5sd/clip_hit_1"
+      }
+    ]
+  },
+  "weapon.mp5sd.add_ammo": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mp5sd/add_ammo_1"
+      }
+    ]
+  },
+  "weapon.mp5sd.action_back": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mp5sd/action_back_1"
+      }
+    ]
+  },
+  "weapon.mp5sd.action_forward": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mp5sd/action_forward_1"
+      }
+    ]
+  },
+  "weapon.mp5sd.shell_insert": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.ump45.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/ump45/fire_1"
+      }
+    ]
+  },
+  "weapon.ump45.reload_start": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.ump45.clip_out": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/ump45/clip_out_1"
+      }
+    ]
+  },
+  "weapon.ump45.clip_in": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/ump45/clip_in_1"
+      }
+    ]
+  },
+  "weapon.ump45.clip_hit": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.ump45.add_ammo": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/ump45/add_ammo_1"
+      }
+    ]
+  },
+  "weapon.ump45.action_back": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/ump45/action_back_1"
+      }
+    ]
+  },
+  "weapon.ump45.action_forward": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/ump45/action_forward_1"
+      }
+    ]
+  },
+  "weapon.ump45.shell_insert": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.p90.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/p90/fire_1"
+      },
+      {
+        "name": "tactical_arsenal:cs2/p90/fire_2"
+      }
+    ]
+  },
+  "weapon.p90.reload_start": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/p90/reload_start_1"
+      }
+    ]
+  },
+  "weapon.p90.clip_out": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/p90/clip_out_1"
+      }
+    ]
+  },
+  "weapon.p90.clip_in": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/p90/clip_in_1"
+      }
+    ]
+  },
+  "weapon.p90.clip_hit": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/p90/clip_hit_1"
+      }
+    ]
+  },
+  "weapon.p90.add_ammo": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.p90.action_back": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/p90/action_back_1"
+      }
+    ]
+  },
+  "weapon.p90.action_forward": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/p90/action_forward_1"
+      }
+    ]
+  },
+  "weapon.p90.shell_insert": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.bizon.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/bizon/fire_1"
+      },
+      {
+        "name": "tactical_arsenal:cs2/bizon/fire_2"
+      }
+    ]
+  },
+  "weapon.bizon.reload_start": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.bizon.clip_out": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/bizon/clip_out_1"
+      }
+    ]
+  },
+  "weapon.bizon.clip_in": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/bizon/clip_in_1"
+      }
+    ]
+  },
+  "weapon.bizon.clip_hit": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.bizon.add_ammo": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/bizon/add_ammo_1"
+      }
+    ]
+  },
+  "weapon.bizon.action_back": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/bizon/action_back_1"
+      }
+    ]
+  },
+  "weapon.bizon.action_forward": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/bizon/action_forward_1"
+      }
+    ]
+  },
+  "weapon.bizon.shell_insert": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.nova.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/nova/fire_1"
+      }
+    ]
+  },
+  "weapon.nova.reload_start": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.nova.clip_out": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.nova.clip_in": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.nova.clip_hit": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.nova.add_ammo": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/nova/add_ammo_1"
+      },
+      {
+        "name": "tactical_arsenal:cs2/nova/add_ammo_2"
+      },
+      {
+        "name": "tactical_arsenal:cs2/nova/add_ammo_3"
+      }
+    ]
+  },
+  "weapon.nova.action_back": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.nova.action_forward": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/nova/action_forward_1"
+      }
+    ]
+  },
+  "weapon.nova.shell_insert": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/nova/shell_insert_1"
+      },
+      {
+        "name": "tactical_arsenal:cs2/nova/shell_insert_2"
+      },
+      {
+        "name": "tactical_arsenal:cs2/nova/shell_insert_3"
+      }
+    ]
+  },
+  "weapon.xm1014.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/xm1014/fire_1"
+      }
+    ]
+  },
+  "weapon.xm1014.reload_start": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/xm1014/reload_start_1"
+      }
+    ]
+  },
+  "weapon.xm1014.clip_out": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.xm1014.clip_in": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.xm1014.clip_hit": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.xm1014.add_ammo": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/xm1014/add_ammo_1"
+      },
+      {
+        "name": "tactical_arsenal:cs2/xm1014/add_ammo_2"
+      },
+      {
+        "name": "tactical_arsenal:cs2/xm1014/add_ammo_3"
+      }
+    ]
+  },
+  "weapon.xm1014.action_back": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.xm1014.action_forward": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.xm1014.shell_insert": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/xm1014/shell_insert_1"
+      },
+      {
+        "name": "tactical_arsenal:cs2/xm1014/shell_insert_2"
+      },
+      {
+        "name": "tactical_arsenal:cs2/xm1014/shell_insert_3"
+      }
+    ]
+  },
+  "weapon.mag7.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mag7/fire_1"
+      },
+      {
+        "name": "tactical_arsenal:cs2/mag7/fire_2"
+      }
+    ]
+  },
+  "weapon.mag7.reload_start": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.mag7.clip_out": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mag7/clip_out_1"
+      }
+    ]
+  },
+  "weapon.mag7.clip_in": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mag7/clip_in_1"
+      }
+    ]
+  },
+  "weapon.mag7.clip_hit": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mag7/clip_hit_1"
+      }
+    ]
+  },
+  "weapon.mag7.add_ammo": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mag7/add_ammo_1"
+      }
+    ]
+  },
+  "weapon.mag7.action_back": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mag7/action_back_1"
+      }
+    ]
+  },
+  "weapon.mag7.action_forward": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/mag7/action_forward_1"
+      }
+    ]
+  },
+  "weapon.mag7.shell_insert": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.sawedoff.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/sawedoff/fire_1"
+      }
+    ]
+  },
+  "weapon.sawedoff.reload_start": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.sawedoff.clip_out": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.sawedoff.clip_in": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.sawedoff.clip_hit": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.sawedoff.add_ammo": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/sawedoff/add_ammo_1"
+      },
+      {
+        "name": "tactical_arsenal:cs2/sawedoff/add_ammo_2"
+      },
+      {
+        "name": "tactical_arsenal:cs2/sawedoff/add_ammo_3"
+      },
+      {
+        "name": "tactical_arsenal:cs2/sawedoff/add_ammo_4"
+      }
+    ]
+  },
+  "weapon.sawedoff.action_back": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.sawedoff.action_forward": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/sawedoff/action_forward_1"
+      }
+    ]
+  },
+  "weapon.sawedoff.shell_insert": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/sawedoff/shell_insert_1"
+      },
+      {
+        "name": "tactical_arsenal:cs2/sawedoff/shell_insert_2"
+      }
+    ]
+  },
+  "weapon.m249.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/m249/fire_1"
+      },
+      {
+        "name": "tactical_arsenal:cs2/m249/fire_2"
+      },
+      {
+        "name": "tactical_arsenal:cs2/m249/fire_3"
+      }
+    ]
+  },
+  "weapon.m249.reload_start": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/m249/reload_start_1"
+      }
+    ]
+  },
+  "weapon.m249.clip_out": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/m249/clip_out_1"
+      }
+    ]
+  },
+  "weapon.m249.clip_in": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/m249/clip_in_1"
+      }
+    ]
+  },
+  "weapon.m249.clip_hit": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.m249.add_ammo": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/m249/add_ammo_1"
+      }
+    ]
+  },
+  "weapon.m249.action_back": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/m249/action_back_1"
+      }
+    ]
+  },
+  "weapon.m249.action_forward": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/m249/action_forward_1"
+      }
+    ]
+  },
+  "weapon.m249.shell_insert": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.negev.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/negev/fire_1"
+      },
+      {
+        "name": "tactical_arsenal:cs2/negev/fire_2"
+      }
+    ]
+  },
+  "weapon.negev.reload_start": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/negev/reload_start_1"
+      }
+    ]
+  },
+  "weapon.negev.clip_out": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/negev/clip_out_1"
+      }
+    ]
+  },
+  "weapon.negev.clip_in": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/negev/clip_in_1"
+      }
+    ]
+  },
+  "weapon.negev.clip_hit": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.negev.add_ammo": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/negev/add_ammo_1"
+      }
+    ]
+  },
+  "weapon.negev.action_back": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/negev/action_back_1"
+      }
+    ]
+  },
+  "weapon.negev.action_forward": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/negev/action_forward_1"
+      }
+    ]
+  },
+  "weapon.negev.shell_insert": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.galilar.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/galilar/fire_1"
+      }
+    ]
+  },
+  "weapon.galilar.reload_start": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.galilar.clip_out": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/galilar/clip_out_1"
+      }
+    ]
+  },
+  "weapon.galilar.clip_in": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/galilar/clip_in_1"
+      }
+    ]
+  },
+  "weapon.galilar.clip_hit": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.galilar.add_ammo": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/galilar/add_ammo_1"
+      }
+    ]
+  },
+  "weapon.galilar.action_back": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/galilar/action_back_1"
+      }
+    ]
+  },
+  "weapon.galilar.action_forward": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/galilar/action_forward_1"
+      }
+    ]
+  },
+  "weapon.galilar.shell_insert": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.famas.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/famas/fire_1"
+      },
+      {
+        "name": "tactical_arsenal:cs2/famas/fire_2"
+      },
+      {
+        "name": "tactical_arsenal:cs2/famas/fire_3"
+      }
+    ]
+  },
+  "weapon.famas.reload_start": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.famas.clip_out": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/famas/clip_out_1"
+      }
+    ]
+  },
+  "weapon.famas.clip_in": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/famas/clip_in_1"
+      }
+    ]
+  },
+  "weapon.famas.clip_hit": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/famas/clip_hit_1"
+      }
+    ]
+  },
+  "weapon.famas.add_ammo": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/famas/add_ammo_1"
+      }
+    ]
+  },
+  "weapon.famas.action_back": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/famas/action_back_1"
+      }
+    ]
+  },
+  "weapon.famas.action_forward": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/famas/action_forward_1"
+      }
+    ]
+  },
+  "weapon.famas.shell_insert": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.m4a4.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/m4a4/fire_1"
+      },
+      {
+        "name": "tactical_arsenal:cs2/m4a4/fire_2"
+      }
+    ]
+  },
+  "weapon.m4a4.reload_start": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.m4a4.clip_out": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/m4a4/clip_out_1"
+      }
+    ]
+  },
+  "weapon.m4a4.clip_in": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/m4a4/clip_in_1"
+      }
+    ]
+  },
+  "weapon.m4a4.clip_hit": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/m4a4/clip_hit_1"
+      }
+    ]
+  },
+  "weapon.m4a4.add_ammo": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/m4a4/add_ammo_1"
+      }
+    ]
+  },
+  "weapon.m4a4.action_back": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/m4a4/action_back_1"
+      }
+    ]
+  },
+  "weapon.m4a4.action_forward": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/m4a4/action_forward_1"
+      }
+    ]
+  },
+  "weapon.m4a4.shell_insert": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.ssg08.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/ssg08/fire_1"
+      }
+    ]
+  },
+  "weapon.ssg08.reload_start": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.ssg08.clip_out": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/ssg08/clip_out_1"
+      }
+    ]
+  },
+  "weapon.ssg08.clip_in": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/ssg08/clip_in_1"
+      }
+    ]
+  },
+  "weapon.ssg08.clip_hit": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/ssg08/clip_hit_1"
+      },
+      {
+        "name": "tactical_arsenal:cs2/ssg08/clip_hit_2"
+      }
+    ]
+  },
+  "weapon.ssg08.add_ammo": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/ssg08/add_ammo_1"
+      }
+    ]
+  },
+  "weapon.ssg08.action_back": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/ssg08/action_back_1"
+      }
+    ]
+  },
+  "weapon.ssg08.action_forward": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/ssg08/action_forward_1"
+      }
+    ]
+  },
+  "weapon.ssg08.shell_insert": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.sg556.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/sg556/fire_1"
+      },
+      {
+        "name": "tactical_arsenal:cs2/sg556/fire_2"
+      },
+      {
+        "name": "tactical_arsenal:cs2/sg556/fire_3"
+      },
+      {
+        "name": "tactical_arsenal:cs2/sg556/fire_4"
+      }
+    ]
+  },
+  "weapon.sg556.reload_start": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.sg556.clip_out": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/sg556/clip_out_1"
+      }
+    ]
+  },
+  "weapon.sg556.clip_in": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/sg556/clip_in_1"
+      }
+    ]
+  },
+  "weapon.sg556.clip_hit": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/sg556/clip_hit_1"
+      }
+    ]
+  },
+  "weapon.sg556.add_ammo": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.sg556.action_back": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/sg556/action_back_1"
+      }
+    ]
+  },
+  "weapon.sg556.action_forward": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/sg556/action_forward_1"
+      }
+    ]
+  },
+  "weapon.sg556.shell_insert": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.aug.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/aug/fire_1"
+      },
+      {
+        "name": "tactical_arsenal:cs2/aug/fire_2"
+      },
+      {
+        "name": "tactical_arsenal:cs2/aug/fire_3"
+      },
+      {
+        "name": "tactical_arsenal:cs2/aug/fire_4"
+      }
+    ]
+  },
+  "weapon.aug.reload_start": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.aug.clip_out": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/aug/clip_out_1"
+      }
+    ]
+  },
+  "weapon.aug.clip_in": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/aug/clip_in_1"
+      }
+    ]
+  },
+  "weapon.aug.clip_hit": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/aug/clip_hit_1"
+      }
+    ]
+  },
+  "weapon.aug.add_ammo": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/aug/add_ammo_1"
+      }
+    ]
+  },
+  "weapon.aug.action_back": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/aug/action_back_1"
+      }
+    ]
+  },
+  "weapon.aug.action_forward": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/aug/action_forward_1"
+      }
+    ]
+  },
+  "weapon.aug.shell_insert": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.g3sg1.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/g3sg1/fire_1"
+      },
+      {
+        "name": "tactical_arsenal:cs2/g3sg1/fire_2"
+      },
+      {
+        "name": "tactical_arsenal:cs2/g3sg1/fire_3"
+      }
+    ]
+  },
+  "weapon.g3sg1.reload_start": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.g3sg1.clip_out": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/g3sg1/clip_out_1"
+      }
+    ]
+  },
+  "weapon.g3sg1.clip_in": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/g3sg1/clip_in_1"
+      }
+    ]
+  },
+  "weapon.g3sg1.clip_hit": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.g3sg1.add_ammo": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/g3sg1/add_ammo_1"
+      }
+    ]
+  },
+  "weapon.g3sg1.action_back": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/g3sg1/action_back_1"
+      }
+    ]
+  },
+  "weapon.g3sg1.action_forward": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/g3sg1/action_forward_1"
+      }
+    ]
+  },
+  "weapon.g3sg1.shell_insert": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "weapon.scar20.fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/scar20/fire_1"
+      },
+      {
+        "name": "tactical_arsenal:cs2/scar20/fire_2"
+      },
+      {
+        "name": "tactical_arsenal:cs2/scar20/fire_3"
+      }
+    ]
+  },
+  "weapon.scar20.reload_start": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/scar20/reload_start_1"
+      }
+    ]
+  },
+  "weapon.scar20.clip_out": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/scar20/clip_out_1"
+      }
+    ]
+  },
+  "weapon.scar20.clip_in": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/scar20/clip_in_1"
+      }
+    ]
+  },
+  "weapon.scar20.clip_hit": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/scar20/clip_hit_1"
+      },
+      {
+        "name": "tactical_arsenal:cs2/scar20/clip_hit_2"
+      }
+    ]
+  },
+  "weapon.scar20.add_ammo": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/scar20/add_ammo_1"
+      }
+    ]
+  },
+  "weapon.scar20.action_back": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/scar20/action_back_1"
+      }
+    ]
+  },
+  "weapon.scar20.action_forward": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "tactical_arsenal:cs2/scar20/action_forward_1"
+      }
+    ]
+  },
+  "weapon.scar20.shell_insert": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.firework_rocket.blast",
+        "type": "event"
+      }
+    ]
+  },
+  "combat.bullet.body": {
+    "replace": true,
+    "sounds": [
+      "tactical_arsenal:cs2/combat/body_1",
+      "tactical_arsenal:cs2/combat/body_2",
+      "tactical_arsenal:cs2/combat/body_3",
+      "tactical_arsenal:cs2/combat/body_4",
+      "tactical_arsenal:cs2/combat/body_5",
+      "tactical_arsenal:cs2/combat/body_6",
+      "tactical_arsenal:cs2/combat/body_7",
+      "tactical_arsenal:cs2/combat/body_8"
+    ]
+  },
+  "combat.bullet.kevlar": {
+    "replace": true,
+    "sounds": [
+      "tactical_arsenal:cs2/combat/kevlar_1",
+      "tactical_arsenal:cs2/combat/kevlar_2",
+      "tactical_arsenal:cs2/combat/kevlar_3",
+      "tactical_arsenal:cs2/combat/kevlar_4",
+      "tactical_arsenal:cs2/combat/kevlar_5",
+      "tactical_arsenal:cs2/combat/kevlar_6",
+      "tactical_arsenal:cs2/combat/kevlar_7",
+      "tactical_arsenal:cs2/combat/kevlar_8"
+    ]
+  },
+  "combat.bullet.headshot": {
+    "replace": true,
+    "sounds": [
+      "tactical_arsenal:cs2/combat/headshot_1",
+      "tactical_arsenal:cs2/combat/headshot_2",
+      "tactical_arsenal:cs2/combat/headshot_3",
+      "tactical_arsenal:cs2/combat/headshot_4",
+      "tactical_arsenal:cs2/combat/headshot_5"
+    ]
+  },
+  "combat.bullet.headshot_armor": {
+    "replace": true,
+    "sounds": [
+      "tactical_arsenal:cs2/combat/headshot_armor_1"
+    ]
+  },
+  "combat.bullet.headshot_armor_flesh": {
+    "replace": true,
+    "sounds": [
+      "tactical_arsenal:cs2/combat/headshot_armor_flesh_1"
+    ]
+  },
+  "weapon.knife.swing": {
+    "replace": true,
+    "sounds": [
+      "tactical_arsenal:cs2/knife/knife_slash1",
+      "tactical_arsenal:cs2/knife/knife_slash2"
+    ]
+  },
+  "weapon.knife.hit_flesh": {
+    "replace": true,
+    "sounds": [
+      "tactical_arsenal:cs2/knife/knife_hit_light_flesh_01",
+      "tactical_arsenal:cs2/knife/knife_hit_light_flesh_02",
+      "tactical_arsenal:cs2/knife/knife_hit_light_flesh_03",
+      "tactical_arsenal:cs2/knife/knife_hit_light_flesh_04",
+      "tactical_arsenal:cs2/knife/knife_hit_light_flesh_06",
+      "tactical_arsenal:cs2/knife/knife_hit_light_flesh_07",
+      "tactical_arsenal:cs2/knife/knife_hit_light_flesh_08",
+      "tactical_arsenal:cs2/knife/knife_hit_light_flesh_09",
+      "tactical_arsenal:cs2/knife/knife_hit_light_flesh_10"
+    ]
+  },
+  "weapon.knife.hit_wall": {
+    "replace": true,
+    "sounds": [
+      "tactical_arsenal:cs2/knife/knife_hit_01",
+      "tactical_arsenal:cs2/knife/knife_hit_02",
+      "tactical_arsenal:cs2/knife/knife_hit_03",
+      "tactical_arsenal:cs2/knife/knife_hit_04",
+      "tactical_arsenal:cs2/knife/knife_hit_05"
+    ]
+  },
+  "weapon.knife.backstab_flesh": {
+    "replace": true,
+    "sounds": [
+      "tactical_arsenal:cs2/knife/knife_hit_light_backstab_flesh_01",
+      "tactical_arsenal:cs2/knife/knife_hit_light_backstab_flesh_02",
+      "tactical_arsenal:cs2/knife/knife_hit_light_backstab_flesh_03",
+      "tactical_arsenal:cs2/knife/knife_hit_light_backstab_flesh_04",
+      "tactical_arsenal:cs2/knife/knife_hit_light_backstab_flesh_05",
+      "tactical_arsenal:cs2/knife/knife_hit_light_backstab_flesh_06"
+    ]
+  }
+}

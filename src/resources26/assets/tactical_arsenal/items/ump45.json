@@ -1,0 +1,19 @@
+{
+  "model": {
+    "type": "minecraft:composite",
+    "models": [
+      {
+        "type": "minecraft:model",
+        "model": "tactical_arsenal:item/ump45_body"
+      },
+      {
+        "type": "minecraft:model",
+        "model": "tactical_arsenal:item/ump45_magazine"
+      },
+      {
+        "type": "minecraft:model",
+        "model": "tactical_arsenal:item/ump45_action"
+      }
+    ]
+  }
+}

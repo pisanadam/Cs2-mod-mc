@@ -1,0 +1,19 @@
+{
+  "model": {
+    "type": "minecraft:composite",
+    "models": [
+      {
+        "type": "minecraft:model",
+        "model": "tactical_arsenal:item/scar20_body"
+      },
+      {
+        "type": "minecraft:model",
+        "model": "tactical_arsenal:item/scar20_magazine"
+      },
+      {
+        "type": "minecraft:model",
+        "model": "tactical_arsenal:item/scar20_action"
+      }
+    ]
+  }
+}

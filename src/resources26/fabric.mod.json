@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "tactical_arsenal",
+  "version": "${version}",
+  "name": "Tactical Arsenal",
+  "description": "All 34 standard CS2 firearms, three 30-damage knives, regional hit damage, CS-style combat audio, armor, HUD, and two three-tier tactical NPC teams with locally imported CS2 agent visuals. Unofficial and not affiliated with Valve.",
+  "authors": [
+    "Codex"
+  ],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.codex.tacticalarsenal.TacticalArsenal"
+    ],
+    "client": [
+      "dev.codex.tacticalarsenal.client.TacticalArsenalClient"
+    ]
+  },
+  "mixins": [
+    "tactical_arsenal.mixins.json",
+    {
+      "config": "tactical_arsenal.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "${minecraft_range}",
+    "java": ">=${java_version}",
+    "fabric-api": "*"
+  }
+}

@@ -1,0 +1,13 @@
+plugins {
+    id 'net.fabricmc.fabric-loom' version "${loom_version}" apply false
+    id 'fabric-loom' version "${loom_version}" apply false
+}
+
+// Collect every version's remapped/finished jar into build/all-jars
+tasks.register('collectJars', Copy) {
+    subprojects.each { p -> dependsOn(p.tasks.named('build')) }
+    from(subprojects.collect { it.layout.buildDirectory.dir('libs') }) {
+        exclude '*-sources.jar'
+    }
+    into layout.buildDirectory.dir('all-jars')
+}

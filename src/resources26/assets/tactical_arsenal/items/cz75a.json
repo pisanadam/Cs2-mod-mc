@@ -1,0 +1,19 @@
+{
+  "model": {
+    "type": "minecraft:composite",
+    "models": [
+      {
+        "type": "minecraft:model",
+        "model": "tactical_arsenal:item/cz75a_body"
+      },
+      {
+        "type": "minecraft:model",
+        "model": "tactical_arsenal:item/cz75a_magazine"
+      },
+      {
+        "type": "minecraft:model",
+        "model": "tactical_arsenal:item/cz75a_action"
+      }
+    ]
+  }
+}

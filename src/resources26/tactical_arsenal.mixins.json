@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "dev.codex.tacticalarsenal.mixin",
+  "compatibilityLevel": "${mixin_java}",
+  "mixins": [
+    "PlayerKnifeCombatMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "required": true,
+  "package": "dev.codex.tacticalarsenal.client.mixin",
+  "compatibilityLevel": "${mixin_java}",
+  "client": [
+    "AvatarRendererMixin",
+    "CameraMixin",
+    "Cs2KnifeThirdPersonScaleMixin",
+    "Cs2MeshManagerFirearmScaleMixin",
+    "GunAnimationLibraryMixin",
+    "GunViewmodelRendererMixin",
+    "ItemInHandRendererMixin",
+    "KeyboardInputMixin",
+    "MinecraftInputMixin",
+    "PauseScreenMixin",
+    "PlayerModelMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

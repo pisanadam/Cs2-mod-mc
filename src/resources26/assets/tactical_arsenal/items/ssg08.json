@@ -1,0 +1,19 @@
+{
+  "model": {
+    "type": "minecraft:composite",
+    "models": [
+      {
+        "type": "minecraft:model",
+        "model": "tactical_arsenal:item/ssg08_body"
+      },
+      {
+        "type": "minecraft:model",
+        "model": "tactical_arsenal:item/ssg08_magazine"
+      },
+      {
+        "type": "minecraft:model",
+        "model": "tactical_arsenal:item/ssg08_action"
+      }
+    ]
+  }
+}

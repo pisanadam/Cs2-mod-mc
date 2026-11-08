@@ -1,0 +1,17 @@
+pluginManagement {
+    repositories {
+        maven { url = 'https://maven.fabricmc.net/' }
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+rootProject.name = 'tactical-arsenal-multiversion'
+
+// Every Minecraft version gets its own subproject under versions/<mc>.
+file('versions').eachDir { dir ->
+    if (new File(dir, 'build.gradle').exists() || new File(dir, 'gradle.properties').exists()) {
+        include(":${dir.name}")
+        project(":${dir.name}").projectDir = dir
+    }
+}

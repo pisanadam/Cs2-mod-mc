@@ -1,0 +1,19 @@
+{
+  "model": {
+    "type": "minecraft:composite",
+    "models": [
+      {
+        "type": "minecraft:model",
+        "model": "tactical_arsenal:item/xm1014_body"
+      },
+      {
+        "type": "minecraft:model",
+        "model": "tactical_arsenal:item/xm1014_magazine"
+      },
+      {
+        "type": "minecraft:model",
+        "model": "tactical_arsenal:item/xm1014_action"
+      }
+    ]
+  }
+}
