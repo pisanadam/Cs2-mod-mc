@@ -34,8 +34,10 @@ import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.ClipContext.Block;
 import net.minecraft.world.level.ClipContext.Fluid;
 import net.minecraft.world.level.pathfinder.Path;
+//#if MC >= 1.21.6
 import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.storage.ValueOutput;
+//#endif
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.HitResult.Type;
@@ -78,7 +80,11 @@ public final class CombatantEntity extends Zombie {
       this.combatantTier = tier;
       this.xpReward = 0;
       this.setPersistenceRequired();
+      //#if MC >= 1.21.11
       this.getNavigation().setCanOpenDoors(true);
+      //#else
+      ((net.minecraft.world.entity.ai.navigation.GroundPathNavigation)this.getNavigation()).setCanOpenDoors(true);
+      //#endif
       if (!level.isClientSide()) {
          this.equipFreshLoadout();
       }
@@ -123,9 +129,16 @@ public final class CombatantEntity extends Zombie {
       return super.canBeSeenAsEnemy();
    }
 
+   //#if MC >= 1.20.5
    public boolean isInvertedHealAndHarm() {
       return this.combatantTeam == CombatantTeam.NATURAL && super.isInvertedHealAndHarm();
    }
+   //#else
+   public net.minecraft.world.entity.MobType getMobType() {
+      // Newer versions decide this by entity-type tag, which these entity types are not in.
+      return net.minecraft.world.entity.MobType.UNDEFINED;
+   }
+   //#endif
 
    protected SoundEvent getAmbientSound() {
       return this.combatantTeam == CombatantTeam.NATURAL ? super.getAmbientSound() : null;
@@ -154,8 +167,13 @@ public final class CombatantEntity extends Zombie {
    protected void populateDefaultEquipmentSlots(RandomSource random, DifficultyInstance difficulty) {
    }
 
+   //#if MC >= 1.20.5
    public SpawnGroupData finalizeSpawn(ServerLevelAccessor level, DifficultyInstance difficulty, EntitySpawnReason reason, SpawnGroupData spawnData) {
       SpawnGroupData result = super.finalizeSpawn(level, difficulty, reason, spawnData);
+   //#else
+   public SpawnGroupData finalizeSpawn(ServerLevelAccessor level, DifficultyInstance difficulty, EntitySpawnReason reason, SpawnGroupData spawnData, net.minecraft.nbt.CompoundTag tag) {
+      SpawnGroupData result = super.finalizeSpawn(level, difficulty, reason, spawnData, tag);
+   //#endif
       this.setBaby(false);
       this.equipFreshLoadout();
       return result;
@@ -169,12 +187,23 @@ public final class CombatantEntity extends Zombie {
       return this.isEnemy(target) && super.canAttack(target);
    }
 
+   //#if MC >= 1.21.2
    public boolean hurtServer(ServerLevel level, DamageSource source, float amount) {
+   //#else
+   public boolean hurt(DamageSource source, float amount) {
+      if (!(this.level() instanceof ServerLevel level)) {
+         return super.hurt(source, amount);
+      }
+   //#endif
       Entity attacker = source.getEntity();
       if (attacker instanceof CombatantEntity combatant && this.isFriendlyTo(combatant)) {
          return false;
       } else {
+         //#if MC >= 1.21.2
          boolean hurt = super.hurtServer(level, source, amount);
+         //#else
+         boolean hurt = super.hurt(source, amount);
+         //#endif
          if (hurt && attacker instanceof LivingEntity living && this.isEnemy(living)) {
             boolean acquiredNewTarget = this.getTarget() != living;
             this.setTarget(living);
@@ -191,8 +220,14 @@ public final class CombatantEntity extends Zombie {
       }
    }
 
+   //#if MC >= 1.21.2
    protected void customServerAiStep(ServerLevel level) {
       super.customServerAiStep(level);
+   //#else
+   protected void customServerAiStep() {
+      super.customServerAiStep();
+      ServerLevel level = (ServerLevel)this.level();
+   //#endif
       long now = level.getGameTime();
       LivingEntity target = this.getTarget();
       if (!this.isValidTarget(target)) {
@@ -283,7 +318,7 @@ public final class CombatantEntity extends Zombie {
          this.nextMeleeGameTime = now + 10L;
          SoundSource soundSource = this.combatantTeam == CombatantTeam.NATURAL ? SoundSource.HOSTILE : SoundSource.PLAYERS;
          level.playSound(null, this.getX(), this.getEyeY(), this.getZ(), ModSounds.KNIFE_SWING, soundSource, 0.3F, 1.01F);
-         boolean hurt = target.hurtServer(level, this.damageSources().mobAttack(this), 30.0F);
+         boolean hurt = dev.codex.tacticalarsenal.compat.CommonCompat.hurt(target, level, this.damageSources().mobAttack(this), 30.0F);
          if (hurt) {
             level.playSound(null, target.getX(), target.getEyeY(), target.getZ(), ModSounds.KNIFE_HIT_FLESH, soundSource, 1.0F, 1.4F);
          }
@@ -649,6 +684,7 @@ public final class CombatantEntity extends Zombie {
       this.setItemSlot(EquipmentSlot.MAINHAND, this.activeStack());
    }
 
+   //#if MC >= 1.21.6
    protected void addAdditionalSaveData(ValueOutput output) {
       super.addAdditionalSaveData(output);
       output.store("TacticalPrimary", ItemStack.OPTIONAL_CODEC, this.primaryStack);
@@ -662,9 +698,28 @@ public final class CombatantEntity extends Zombie {
       this.primaryStack = input.read("TacticalPrimary", ItemStack.OPTIONAL_CODEC).orElse(ItemStack.EMPTY);
       this.pistolStack = input.read("TacticalPistol", ItemStack.OPTIONAL_CODEC).orElse(ItemStack.EMPTY);
       this.knifeStack = input.read("TacticalKnife", ItemStack.OPTIONAL_CODEC).orElseGet(() -> new ItemStack(ModItems.KNIFE));
+      String activeSlotName = input.getStringOr("TacticalActiveSlot", this.activeSlot.name());
+   //#else
+   public void addAdditionalSaveData(net.minecraft.nbt.CompoundTag output) {
+      super.addAdditionalSaveData(output);
+      output.put("TacticalPrimary", dev.codex.tacticalarsenal.compat.CommonCompat.saveStack(this.primaryStack, this.registryAccess()));
+      output.put("TacticalPistol", dev.codex.tacticalarsenal.compat.CommonCompat.saveStack(this.pistolStack, this.registryAccess()));
+      output.put("TacticalKnife", dev.codex.tacticalarsenal.compat.CommonCompat.saveStack(this.knifeStack, this.registryAccess()));
+      output.putString("TacticalActiveSlot", this.activeSlot.name());
+   }
+
+   public void readAdditionalSaveData(net.minecraft.nbt.CompoundTag input) {
+      super.readAdditionalSaveData(input);
+      this.primaryStack = dev.codex.tacticalarsenal.compat.CommonCompat.loadStack(input, "TacticalPrimary", this.registryAccess());
+      this.pistolStack = dev.codex.tacticalarsenal.compat.CommonCompat.loadStack(input, "TacticalPistol", this.registryAccess());
+      this.knifeStack = input.contains("TacticalKnife")
+         ? dev.codex.tacticalarsenal.compat.CommonCompat.loadStack(input, "TacticalKnife", this.registryAccess())
+         : new ItemStack(ModItems.KNIFE);
+      String activeSlotName = input.contains("TacticalActiveSlot") ? input.getString("TacticalActiveSlot") : this.activeSlot.name();
+   //#endif
 
       try {
-         this.activeSlot = CombatantEntity.WeaponSlot.valueOf(input.getStringOr("TacticalActiveSlot", this.activeSlot.name()));
+         this.activeSlot = CombatantEntity.WeaponSlot.valueOf(activeSlotName);
       } catch (IllegalArgumentException var3) {
          this.activeSlot = CombatantEntity.WeaponSlot.KNIFE;
       }

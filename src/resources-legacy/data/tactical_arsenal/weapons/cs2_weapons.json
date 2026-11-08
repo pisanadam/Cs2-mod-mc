@@ -1,0 +1,3208 @@
+{
+  "metadata": {
+    "source": "Local installed Counter-Strike 2 scripts/weapons.vdata_c",
+    "steamBuildId": 24074625,
+    "compiledSourceSha256": "FC4E867B4EFB16E3DEF328564D85ECA84F6627AA325F5CF7797F4A49092D0F28",
+    "generatedOn": "2026-07-13",
+    "weaponCount": 34,
+    "containsValveAssets": false
+  },
+  "weapons": [
+    {
+      "id": "desert_eagle",
+      "internalId": "weapon_deagle",
+      "displayName": "Desert Eagle",
+      "category": "PISTOL",
+      "fireMode": "SEMI_AUTOMATIC",
+      "projectiles": 1,
+      "damage": 53.0,
+      "magazineSize": 7,
+      "reserveAmount": 3,
+      "reserveAsMagazines": true,
+      "cycleTimeSeconds": 0.225,
+      "alternateCycleTimeSeconds": 0.225,
+      "sourceRangeUnits": 4096.0,
+      "rangeModifier": 0.85,
+      "headMultiplier": 3.9,
+      "armorRatio": 1.864,
+      "penetrationPower": 2.0,
+      "accuracy": {
+        "spread": [
+          0.002,
+          0.002
+        ],
+        "crouch": [
+          0.00218,
+          0.00218
+        ],
+        "stand": [
+          0.0042,
+          0.0042
+        ],
+        "jump": [
+          0.04055,
+          0.37155
+        ],
+        "land": [
+          4.3e-05,
+          0.00073
+        ],
+        "fire": [
+          0.07223,
+          0.07223
+        ],
+        "move": [
+          0.0481,
+          0.0481
+        ],
+        "maxSpeed": [
+          230.0,
+          230.0
+        ],
+        "jumpInitial": 0.54882,
+        "jumpApex": 0.33155,
+        "recoveryCrouch": 0.449927,
+        "recoveryStand": 0.8112,
+        "recoveryCrouchFinal": 0.449927,
+        "recoveryStandFinal": 0.8112,
+        "recoveryTransitionStart": 3,
+        "recoveryTransitionEnd": 10
+      },
+      "recoil": {
+        "seed": 1454,
+        "angleVariance": [
+          60.0,
+          60.0
+        ],
+        "magnitude": [
+          48.200001,
+          48.200001
+        ],
+        "magnitudeVariance": [
+          18.0,
+          18.0
+        ]
+      },
+      "alternateModeByDefault": false,
+      "burstCapable": false,
+      "burstCycleTimeSeconds": 0.0,
+      "burstShotIntervalSeconds": 0.0,
+      "revolver": false,
+      "zoomLevels": 0,
+      "zoomFov1": 90.0,
+      "zoomFov2": 90.0,
+      "zoomSeconds": 0.0,
+      "unzoomsAfterShot": false,
+      "hideViewmodelWhenZoomed": false,
+      "suppressed": false,
+      "reloadSeconds": 2.2,
+      "reloadAnimationSeconds": 2.2,
+      "emptyReloadAnimationSeconds": 2.2,
+      "reloadInsertSeconds": 0.767,
+      "emptyReloadInsertSeconds": 1.033,
+      "deploySeconds": 1.0
+    },
+    {
+      "id": "revolver",
+      "internalId": "weapon_revolver",
+      "displayName": "R8 Revolver",
+      "category": "PISTOL",
+      "fireMode": "AUTOMATIC",
+      "projectiles": 1,
+      "damage": 86.0,
+      "magazineSize": 8,
+      "reserveAmount": 2,
+      "reserveAsMagazines": true,
+      "cycleTimeSeconds": 0.5,
+      "alternateCycleTimeSeconds": 0.4,
+      "sourceRangeUnits": 4096.0,
+      "rangeModifier": 0.94,
+      "headMultiplier": 4.0,
+      "armorRatio": 1.864,
+      "penetrationPower": 2.0,
+      "accuracy": {
+        "spread": [
+          0.00052,
+          0.068
+        ],
+        "crouch": [
+          0.001,
+          0.005
+        ],
+        "stand": [
+          0.002,
+          0.012
+        ],
+        "jump": [
+          0.05323,
+          0.05323
+        ],
+        "land": [
+          0.00013,
+          0.00015
+        ],
+        "fire": [
+          0.05,
+          0.055
+        ],
+        "move": [
+          0.0065,
+          0.036
+        ],
+        "maxSpeed": [
+          180.0,
+          220.0
+        ],
+        "jumpInitial": 0.01865,
+        "jumpApex": 0.0,
+        "recoveryCrouch": 0.7,
+        "recoveryStand": 0.9,
+        "recoveryCrouchFinal": 0.449927,
+        "recoveryStandFinal": 0.8112,
+        "recoveryTransitionStart": 3,
+        "recoveryTransitionEnd": 10
+      },
+      "recoil": {
+        "seed": 12345,
+        "angleVariance": [
+          40.0,
+          50.0
+        ],
+        "magnitude": [
+          20.0,
+          45.0
+        ],
+        "magnitudeVariance": [
+          0.0,
+          6.0
+        ]
+      },
+      "alternateModeByDefault": false,
+      "burstCapable": false,
+      "burstCycleTimeSeconds": 0.0,
+      "burstShotIntervalSeconds": 0.0,
+      "revolver": true,
+      "zoomLevels": 0,
+      "zoomFov1": 90.0,
+      "zoomFov2": 90.0,
+      "zoomSeconds": 0.0,
+      "unzoomsAfterShot": false,
+      "hideViewmodelWhenZoomed": false,
+      "suppressed": false,
+      "reloadSeconds": 2.266667,
+      "reloadAnimationSeconds": 2.266667,
+      "emptyReloadAnimationSeconds": 2.266667,
+      "reloadInsertSeconds": 1.24666685,
+      "emptyReloadInsertSeconds": 1.3600002,
+      "deploySeconds": 1.166667
+    },
+    {
+      "id": "elite",
+      "internalId": "weapon_elite",
+      "displayName": "Dual Berettas",
+      "category": "PISTOL",
+      "fireMode": "SEMI_AUTOMATIC",
+      "projectiles": 1,
+      "damage": 38.0,
+      "magazineSize": 30,
+      "reserveAmount": 2,
+      "reserveAsMagazines": true,
+      "cycleTimeSeconds": 0.12,
+      "alternateCycleTimeSeconds": 0.12,
+      "sourceRangeUnits": 4096.0,
+      "rangeModifier": 0.79,
+      "headMultiplier": 4.0,
+      "armorRatio": 1.15,
+      "penetrationPower": 1.0,
+      "accuracy": {
+        "spread": [
+          0.002,
+          0.002
+        ],
+        "crouch": [
+          0.00525,
+          0.0075
+        ],
+        "stand": [
+          0.007,
+          0.01
+        ],
+        "jump": [
+          0.15842,
+          0.15842
+        ],
+        "land": [
+          0.000255,
+          0.000255
+        ],
+        "fire": [
+          0.01116,
+          0.01196
+        ],
+        "move": [
+          0.01785,
+          0.01785
+        ],
+        "maxSpeed": [
+          240.0,
+          240.0
+        ],
+        "jumpInitial": 0.09586,
+        "jumpApex": 0.0,
+        "recoveryCrouch": 0.437491,
+        "recoveryStand": 0.524989,
+        "recoveryCrouchFinal": 0.437491,
+        "recoveryStandFinal": 0.524989,
+        "recoveryTransitionStart": 3,
+        "recoveryTransitionEnd": 10
+      },
+      "recoil": {
+        "seed": 24563,
+        "angleVariance": [
+          20.0,
+          20.0
+        ],
+        "magnitude": [
+          27.0,
+          27.0
+        ],
+        "magnitudeVariance": [
+          4.0,
+          4.0
+        ]
+      },
+      "alternateModeByDefault": false,
+      "burstCapable": false,
+      "burstCycleTimeSeconds": 0.0,
+      "burstShotIntervalSeconds": 0.0,
+      "revolver": false,
+      "zoomLevels": 0,
+      "zoomFov1": 90.0,
+      "zoomFov2": 90.0,
+      "zoomSeconds": 0.0,
+      "unzoomsAfterShot": false,
+      "hideViewmodelWhenZoomed": false,
+      "suppressed": false,
+      "reloadSeconds": 3.766667,
+      "reloadAnimationSeconds": 3.766667,
+      "emptyReloadAnimationSeconds": 3.766667,
+      "reloadInsertSeconds": 2.933333,
+      "emptyReloadInsertSeconds": 2.933333,
+      "deploySeconds": 1.0
+    },
+    {
+      "id": "fiveseven",
+      "internalId": "weapon_fiveseven",
+      "displayName": "Five-SeveN",
+      "category": "PISTOL",
+      "fireMode": "SEMI_AUTOMATIC",
+      "projectiles": 1,
+      "damage": 32.0,
+      "magazineSize": 20,
+      "reserveAmount": 2,
+      "reserveAsMagazines": true,
+      "cycleTimeSeconds": 0.15,
+      "alternateCycleTimeSeconds": 0.3,
+      "sourceRangeUnits": 4096.0,
+      "rangeModifier": 0.81,
+      "headMultiplier": 4.0,
+      "armorRatio": 1.823,
+      "penetrationPower": 1.0,
+      "accuracy": {
+        "spread": [
+          0.002,
+          0.002
+        ],
+        "crouch": [
+          0.00683,
+          0.00683
+        ],
+        "stand": [
+          0.0091,
+          0.0091
+        ],
+        "jump": [
+          0.0897,
+          0.0897
+        ],
+        "land": [
+          0.00019,
+          0.00019
+        ],
+        "fire": [
+          0.025,
+          0.03245
+        ],
+        "move": [
+          0.04,
+          0.01341
+        ],
+        "maxSpeed": [
+          240.0,
+          240.0
+        ],
+        "jumpInitial": 0.09988,
+        "jumpApex": 0.0,
+        "recoveryCrouch": 0.2,
+        "recoveryStand": 0.2,
+        "recoveryCrouchFinal": 0.5,
+        "recoveryStandFinal": 0.5,
+        "recoveryTransitionStart": 0,
+        "recoveryTransitionEnd": 5
+      },
+      "recoil": {
+        "seed": 33244,
+        "angleVariance": [
+          5.0,
+          5.0
+        ],
+        "magnitude": [
+          25.0,
+          25.0
+        ],
+        "magnitudeVariance": [
+          4.0,
+          4.0
+        ]
+      },
+      "alternateModeByDefault": false,
+      "burstCapable": false,
+      "burstCycleTimeSeconds": 0.0,
+      "burstShotIntervalSeconds": 0.0,
+      "revolver": false,
+      "zoomLevels": 0,
+      "zoomFov1": 90.0,
+      "zoomFov2": 90.0,
+      "zoomSeconds": 0.0,
+      "unzoomsAfterShot": false,
+      "hideViewmodelWhenZoomed": false,
+      "suppressed": false,
+      "reloadSeconds": 2.266667,
+      "reloadAnimationSeconds": 2.266667,
+      "emptyReloadAnimationSeconds": 2.266667,
+      "reloadInsertSeconds": 1.24666685,
+      "emptyReloadInsertSeconds": 1.3600002,
+      "deploySeconds": 1.0
+    },
+    {
+      "id": "cz75a",
+      "internalId": "weapon_cz75a",
+      "displayName": "CZ75-Auto",
+      "category": "PISTOL",
+      "fireMode": "AUTOMATIC",
+      "projectiles": 1,
+      "damage": 31.0,
+      "magazineSize": 12,
+      "reserveAmount": 2,
+      "reserveAsMagazines": true,
+      "cycleTimeSeconds": 0.1,
+      "alternateCycleTimeSeconds": 0.1,
+      "sourceRangeUnits": 4096.0,
+      "rangeModifier": 0.85,
+      "headMultiplier": 4.0,
+      "armorRatio": 1.553,
+      "penetrationPower": 1.0,
+      "accuracy": {
+        "spread": [
+          0.003,
+          0.003
+        ],
+        "crouch": [
+          0.0076,
+          0.0076
+        ],
+        "stand": [
+          0.01043,
+          0.01043
+        ],
+        "jump": [
+          0.09296,
+          0.09296
+        ],
+        "land": [
+          0.00019,
+          0.00019
+        ],
+        "fire": [
+          0.035,
+          0.025
+        ],
+        "move": [
+          0.01341,
+          0.01341
+        ],
+        "maxSpeed": [
+          240.0,
+          240.0
+        ],
+        "jumpInitial": 0.09662,
+        "jumpApex": 0.0,
+        "recoveryCrouch": 0.2275,
+        "recoveryStand": 0.2425,
+        "recoveryCrouchFinal": 0.287823,
+        "recoveryStandFinal": 0.345388,
+        "recoveryTransitionStart": 3,
+        "recoveryTransitionEnd": 10
+      },
+      "recoil": {
+        "seed": 9788,
+        "angleVariance": [
+          120.0,
+          180.0
+        ],
+        "magnitude": [
+          31.0,
+          27.0
+        ],
+        "magnitudeVariance": [
+          6.0,
+          12.0
+        ]
+      },
+      "alternateModeByDefault": false,
+      "burstCapable": false,
+      "burstCycleTimeSeconds": 0.0,
+      "burstShotIntervalSeconds": 0.0,
+      "revolver": false,
+      "zoomLevels": 0,
+      "zoomFov1": 90.0,
+      "zoomFov2": 90.0,
+      "zoomSeconds": 0.0,
+      "unzoomsAfterShot": false,
+      "hideViewmodelWhenZoomed": false,
+      "suppressed": false,
+      "reloadSeconds": 2.733333,
+      "reloadAnimationSeconds": 2.733333,
+      "emptyReloadAnimationSeconds": 2.733333,
+      "reloadInsertSeconds": 1.5033331500000002,
+      "emptyReloadInsertSeconds": 1.6399998,
+      "deploySeconds": 1.83333
+    },
+    {
+      "id": "glock",
+      "internalId": "weapon_glock",
+      "displayName": "Glock-18",
+      "category": "PISTOL",
+      "fireMode": "SEMI_AUTOMATIC",
+      "projectiles": 1,
+      "damage": 30.0,
+      "magazineSize": 20,
+      "reserveAmount": 3,
+      "reserveAsMagazines": true,
+      "cycleTimeSeconds": 0.15,
+      "alternateCycleTimeSeconds": 0.3,
+      "sourceRangeUnits": 4096.0,
+      "rangeModifier": 0.85,
+      "headMultiplier": 4.0,
+      "armorRatio": 0.94,
+      "penetrationPower": 1.0,
+      "accuracy": {
+        "spread": [
+          0.002,
+          0.015
+        ],
+        "crouch": [
+          0.0042,
+          0.003
+        ],
+        "stand": [
+          0.0056,
+          0.0056
+        ],
+        "jump": [
+          0.08787,
+          0.08787
+        ],
+        "land": [
+          0.000185,
+          0.000185
+        ],
+        "fire": [
+          0.056,
+          0.045
+        ],
+        "move": [
+          0.01,
+          0.01295
+        ],
+        "maxSpeed": [
+          240.0,
+          240.0
+        ],
+        "jumpInitial": 0.09662,
+        "jumpApex": 0.0,
+        "recoveryCrouch": 0.2,
+        "recoveryStand": 0.2,
+        "recoveryCrouchFinal": 0.33,
+        "recoveryStandFinal": 0.33,
+        "recoveryTransitionStart": 0,
+        "recoveryTransitionEnd": 5
+      },
+      "recoil": {
+        "seed": 4484,
+        "angleVariance": [
+          20.0,
+          20.0
+        ],
+        "magnitude": [
+          18.0,
+          30.0
+        ],
+        "magnitudeVariance": [
+          0.0,
+          5.0
+        ]
+      },
+      "alternateModeByDefault": false,
+      "burstCapable": true,
+      "burstCycleTimeSeconds": 0.5,
+      "burstShotIntervalSeconds": 0.05,
+      "revolver": false,
+      "zoomLevels": 0,
+      "zoomFov1": 90.0,
+      "zoomFov2": 90.0,
+      "zoomSeconds": 0.0,
+      "unzoomsAfterShot": false,
+      "hideViewmodelWhenZoomed": false,
+      "suppressed": false,
+      "reloadSeconds": 2.266667,
+      "reloadAnimationSeconds": 2.266667,
+      "emptyReloadAnimationSeconds": 2.266667,
+      "reloadInsertSeconds": 1.24666685,
+      "emptyReloadInsertSeconds": 1.3600002,
+      "deploySeconds": 1.0
+    },
+    {
+      "id": "tec9",
+      "internalId": "weapon_tec9",
+      "displayName": "Tec-9",
+      "category": "PISTOL",
+      "fireMode": "SEMI_AUTOMATIC",
+      "projectiles": 1,
+      "damage": 33.0,
+      "magazineSize": 18,
+      "reserveAmount": 3,
+      "reserveAsMagazines": true,
+      "cycleTimeSeconds": 0.12,
+      "alternateCycleTimeSeconds": 0.12,
+      "sourceRangeUnits": 4096.0,
+      "rangeModifier": 0.79,
+      "headMultiplier": 4.0,
+      "armorRatio": 1.812,
+      "penetrationPower": 1.0,
+      "accuracy": {
+        "spread": [
+          0.002,
+          0.0018
+        ],
+        "crouch": [
+          0.00368,
+          0.00727
+        ],
+        "stand": [
+          0.0049,
+          0.00903
+        ],
+        "jump": [
+          0.07978,
+          0.07978
+        ],
+        "land": [
+          0.000211,
+          0.000211
+        ],
+        "fire": [
+          0.045,
+          0.03688
+        ],
+        "move": [
+          0.00381,
+          0.00381
+        ],
+        "maxSpeed": [
+          240.0,
+          240.0
+        ],
+        "jumpInitial": 0.07117,
+        "jumpApex": 0.0,
+        "recoveryCrouch": 0.315,
+        "recoveryStand": 0.391,
+        "recoveryCrouchFinal": 0.315,
+        "recoveryStandFinal": 0.391,
+        "recoveryTransitionStart": 3,
+        "recoveryTransitionEnd": 10
+      },
+      "recoil": {
+        "seed": 789,
+        "angleVariance": [
+          60.0,
+          60.0
+        ],
+        "magnitude": [
+          23.0,
+          23.0
+        ],
+        "magnitudeVariance": [
+          3.0,
+          3.0
+        ]
+      },
+      "alternateModeByDefault": false,
+      "burstCapable": false,
+      "burstCycleTimeSeconds": 0.0,
+      "burstShotIntervalSeconds": 0.0,
+      "revolver": false,
+      "zoomLevels": 0,
+      "zoomFov1": 90.0,
+      "zoomFov2": 90.0,
+      "zoomSeconds": 0.0,
+      "unzoomsAfterShot": false,
+      "hideViewmodelWhenZoomed": false,
+      "suppressed": false,
+      "reloadSeconds": 2.566667,
+      "reloadAnimationSeconds": 2.566667,
+      "emptyReloadAnimationSeconds": 2.566667,
+      "reloadInsertSeconds": 1.41166685,
+      "emptyReloadInsertSeconds": 1.5400002,
+      "deploySeconds": 1.0
+    },
+    {
+      "id": "hkp2000",
+      "internalId": "weapon_hkp2000",
+      "displayName": "P2000",
+      "category": "PISTOL",
+      "fireMode": "SEMI_AUTOMATIC",
+      "projectiles": 1,
+      "damage": 35.0,
+      "magazineSize": 13,
+      "reserveAmount": 4,
+      "reserveAsMagazines": true,
+      "cycleTimeSeconds": 0.17,
+      "alternateCycleTimeSeconds": 0.17,
+      "sourceRangeUnits": 4096.0,
+      "rangeModifier": 0.91,
+      "headMultiplier": 4.0,
+      "armorRatio": 1.01,
+      "penetrationPower": 1.0,
+      "accuracy": {
+        "spread": [
+          0.002,
+          0.0015
+        ],
+        "crouch": [
+          0.00368,
+          0.00368
+        ],
+        "stand": [
+          0.0049,
+          0.0049
+        ],
+        "jump": [
+          0.09448,
+          0.09448
+        ],
+        "land": [
+          0.000191,
+          0.000198
+        ],
+        "fire": [
+          0.05,
+          0.01315
+        ],
+        "move": [
+          0.013,
+          0.01387
+        ],
+        "maxSpeed": [
+          240.0,
+          240.0
+        ],
+        "jumpInitial": 0.0966,
+        "jumpApex": 0.0,
+        "recoveryCrouch": 0.291277,
+        "recoveryStand": 0.349532,
+        "recoveryCrouchFinal": 0.291277,
+        "recoveryStandFinal": 0.349532,
+        "recoveryTransitionStart": 3,
+        "recoveryTransitionEnd": 10
+      },
+      "recoil": {
+        "seed": 5426,
+        "angleVariance": [
+          0.0,
+          0.0
+        ],
+        "magnitude": [
+          26.0,
+          26.0
+        ],
+        "magnitudeVariance": [
+          0.0,
+          0.0
+        ]
+      },
+      "alternateModeByDefault": false,
+      "burstCapable": false,
+      "burstCycleTimeSeconds": 0.0,
+      "burstShotIntervalSeconds": 0.0,
+      "revolver": false,
+      "zoomLevels": 0,
+      "zoomFov1": 90.0,
+      "zoomFov2": 90.0,
+      "zoomSeconds": 0.0,
+      "unzoomsAfterShot": false,
+      "hideViewmodelWhenZoomed": false,
+      "suppressed": false,
+      "reloadSeconds": 2.266667,
+      "reloadAnimationSeconds": 2.266667,
+      "emptyReloadAnimationSeconds": 2.266667,
+      "reloadInsertSeconds": 1.24666685,
+      "emptyReloadInsertSeconds": 1.3600002,
+      "deploySeconds": 1.0
+    },
+    {
+      "id": "usp_silencer",
+      "internalId": "weapon_usp_silencer",
+      "displayName": "USP-S",
+      "category": "PISTOL",
+      "fireMode": "SEMI_AUTOMATIC",
+      "projectiles": 1,
+      "damage": 35.0,
+      "magazineSize": 12,
+      "reserveAmount": 2,
+      "reserveAsMagazines": true,
+      "cycleTimeSeconds": 0.17,
+      "alternateCycleTimeSeconds": 0.17,
+      "sourceRangeUnits": 4096.0,
+      "rangeModifier": 0.91,
+      "headMultiplier": 4.0,
+      "armorRatio": 1.01,
+      "penetrationPower": 1.0,
+      "accuracy": {
+        "spread": [
+          0.0025,
+          0.0015
+        ],
+        "crouch": [
+          0.00368,
+          0.00368
+        ],
+        "stand": [
+          0.0049,
+          0.0049
+        ],
+        "jump": [
+          0.09448,
+          0.09448
+        ],
+        "land": [
+          0.000191,
+          0.000198
+        ],
+        "fire": [
+          0.071,
+          0.052
+        ],
+        "move": [
+          0.01387,
+          0.01387
+        ],
+        "maxSpeed": [
+          240.0,
+          240.0
+        ],
+        "jumpInitial": 0.0966,
+        "jumpApex": 0.0,
+        "recoveryCrouch": 0.291277,
+        "recoveryStand": 0.349532,
+        "recoveryCrouchFinal": 0.291277,
+        "recoveryStandFinal": 0.349532,
+        "recoveryTransitionStart": 3,
+        "recoveryTransitionEnd": 10
+      },
+      "recoil": {
+        "seed": 5426,
+        "angleVariance": [
+          0.0,
+          0.0
+        ],
+        "magnitude": [
+          29.0,
+          23.0
+        ],
+        "magnitudeVariance": [
+          0.0,
+          0.0
+        ]
+      },
+      "alternateModeByDefault": true,
+      "burstCapable": false,
+      "burstCycleTimeSeconds": 0.0,
+      "burstShotIntervalSeconds": 0.0,
+      "revolver": false,
+      "zoomLevels": 0,
+      "zoomFov1": 90.0,
+      "zoomFov2": 90.0,
+      "zoomSeconds": 0.0,
+      "unzoomsAfterShot": false,
+      "hideViewmodelWhenZoomed": false,
+      "suppressed": true,
+      "reloadSeconds": 2.2,
+      "reloadAnimationSeconds": 2.2,
+      "emptyReloadAnimationSeconds": 2.2,
+      "reloadInsertSeconds": 1.2100000000000002,
+      "emptyReloadInsertSeconds": 1.32,
+      "deploySeconds": 1.0
+    },
+    {
+      "id": "p250",
+      "internalId": "weapon_p250",
+      "displayName": "P250",
+      "category": "PISTOL",
+      "fireMode": "SEMI_AUTOMATIC",
+      "projectiles": 1,
+      "damage": 38.0,
+      "magazineSize": 13,
+      "reserveAmount": 3,
+      "reserveAsMagazines": true,
+      "cycleTimeSeconds": 0.15,
+      "alternateCycleTimeSeconds": 0.3,
+      "sourceRangeUnits": 4096.0,
+      "rangeModifier": 0.9,
+      "headMultiplier": 4.0,
+      "armorRatio": 1.28,
+      "penetrationPower": 1.0,
+      "accuracy": {
+        "spread": [
+          0.002,
+          0.002
+        ],
+        "crouch": [
+          0.00683,
+          0.00683
+        ],
+        "stand": [
+          0.0091,
+          0.0091
+        ],
+        "jump": [
+          0.09296,
+          0.09296
+        ],
+        "land": [
+          0.00019,
+          0.00019
+        ],
+        "fire": [
+          0.05245,
+          0.05245
+        ],
+        "move": [
+          0.02,
+          0.01341
+        ],
+        "maxSpeed": [
+          240.0,
+          240.0
+        ],
+        "jumpInitial": 0.09662,
+        "jumpApex": 0.0,
+        "recoveryCrouch": 0.287823,
+        "recoveryStand": 0.345388,
+        "recoveryCrouchFinal": 0.287823,
+        "recoveryStandFinal": 0.345388,
+        "recoveryTransitionStart": 3,
+        "recoveryTransitionEnd": 10
+      },
+      "recoil": {
+        "seed": 9788,
+        "angleVariance": [
+          10.0,
+          10.0
+        ],
+        "magnitude": [
+          26.0,
+          26.0
+        ],
+        "magnitudeVariance": [
+          3.0,
+          3.0
+        ]
+      },
+      "alternateModeByDefault": false,
+      "burstCapable": false,
+      "burstCycleTimeSeconds": 0.0,
+      "burstShotIntervalSeconds": 0.0,
+      "revolver": false,
+      "zoomLevels": 0,
+      "zoomFov1": 90.0,
+      "zoomFov2": 90.0,
+      "zoomSeconds": 0.0,
+      "unzoomsAfterShot": false,
+      "hideViewmodelWhenZoomed": false,
+      "suppressed": false,
+      "reloadSeconds": 2.266667,
+      "reloadAnimationSeconds": 2.266667,
+      "emptyReloadAnimationSeconds": 2.266667,
+      "reloadInsertSeconds": 1.24666685,
+      "emptyReloadInsertSeconds": 1.3600002,
+      "deploySeconds": 1.0
+    },
+    {
+      "id": "mac10",
+      "internalId": "weapon_mac10",
+      "displayName": "MAC-10",
+      "category": "SMG",
+      "fireMode": "AUTOMATIC",
+      "projectiles": 1,
+      "damage": 29.0,
+      "magazineSize": 30,
+      "reserveAmount": 3,
+      "reserveAsMagazines": true,
+      "cycleTimeSeconds": 0.075,
+      "alternateCycleTimeSeconds": 0.075,
+      "sourceRangeUnits": 3600.0,
+      "rangeModifier": 0.8,
+      "headMultiplier": 4.0,
+      "armorRatio": 1.15,
+      "penetrationPower": 1.0,
+      "accuracy": {
+        "spread": [
+          0.0006,
+          0.0006
+        ],
+        "crouch": [
+          0.00998,
+          0.00998
+        ],
+        "stand": [
+          0.0133,
+          0.0133
+        ],
+        "jump": [
+          0.0333,
+          0.0333
+        ],
+        "land": [
+          6.9e-05,
+          6.9e-05
+        ],
+        "fire": [
+          0.00476,
+          0.00476
+        ],
+        "move": [
+          0.01399,
+          0.01399
+        ],
+        "maxSpeed": [
+          240.0,
+          240.0
+        ],
+        "jumpInitial": 0.03499,
+        "jumpApex": 0.0,
+        "recoveryCrouch": 0.285521,
+        "recoveryStand": 0.399729,
+        "recoveryCrouchFinal": 0.285521,
+        "recoveryStandFinal": 0.399729,
+        "recoveryTransitionStart": 2,
+        "recoveryTransitionEnd": 5
+      },
+      "recoil": {
+        "seed": 34079,
+        "angleVariance": [
+          70.0,
+          70.0
+        ],
+        "magnitude": [
+          18.0,
+          18.0
+        ],
+        "magnitudeVariance": [
+          1.0,
+          1.0
+        ]
+      },
+      "alternateModeByDefault": false,
+      "burstCapable": false,
+      "burstCycleTimeSeconds": 0.0,
+      "burstShotIntervalSeconds": 0.0,
+      "revolver": false,
+      "zoomLevels": 0,
+      "zoomFov1": 90.0,
+      "zoomFov2": 90.0,
+      "zoomSeconds": 0.0,
+      "unzoomsAfterShot": false,
+      "hideViewmodelWhenZoomed": false,
+      "suppressed": false,
+      "reloadSeconds": 2.566667,
+      "reloadAnimationSeconds": 2.566667,
+      "emptyReloadAnimationSeconds": 2.566667,
+      "reloadInsertSeconds": 1.41166685,
+      "emptyReloadInsertSeconds": 1.5400002,
+      "deploySeconds": 1.0
+    },
+    {
+      "id": "p90",
+      "internalId": "weapon_p90",
+      "displayName": "P90",
+      "category": "SMG",
+      "fireMode": "AUTOMATIC",
+      "projectiles": 1,
+      "damage": 26.0,
+      "magazineSize": 50,
+      "reserveAmount": 2,
+      "reserveAsMagazines": true,
+      "cycleTimeSeconds": 0.07,
+      "alternateCycleTimeSeconds": 0.07,
+      "sourceRangeUnits": 3700.0,
+      "rangeModifier": 0.86,
+      "headMultiplier": 4.0,
+      "armorRatio": 1.38,
+      "penetrationPower": 1.0,
+      "accuracy": {
+        "spread": [
+          0.001,
+          0.001
+        ],
+        "crouch": [
+          0.01024,
+          0.01024
+        ],
+        "stand": [
+          0.01365,
+          0.01365
+        ],
+        "jump": [
+          0.09008,
+          0.09008
+        ],
+        "land": [
+          8.2e-05,
+          8.2e-05
+        ],
+        "fire": [
+          0.00285,
+          0.00285
+        ],
+        "move": [
+          0.031,
+          0.031
+        ],
+        "maxSpeed": [
+          230.0,
+          230.0
+        ],
+        "jumpInitial": 0.1046,
+        "jumpApex": 0.0,
+        "recoveryCrouch": 0.265784,
+        "recoveryStand": 0.372098,
+        "recoveryCrouchFinal": 0.265784,
+        "recoveryStandFinal": 0.372098,
+        "recoveryTransitionStart": 2,
+        "recoveryTransitionEnd": 5
+      },
+      "recoil": {
+        "seed": 6213,
+        "angleVariance": [
+          70.0,
+          70.0
+        ],
+        "magnitude": [
+          16.0,
+          16.0
+        ],
+        "magnitudeVariance": [
+          1.0,
+          1.0
+        ]
+      },
+      "alternateModeByDefault": false,
+      "burstCapable": false,
+      "burstCycleTimeSeconds": 0.0,
+      "burstShotIntervalSeconds": 0.0,
+      "revolver": false,
+      "zoomLevels": 0,
+      "zoomFov1": 90.0,
+      "zoomFov2": 90.0,
+      "zoomSeconds": 0.0,
+      "unzoomsAfterShot": false,
+      "hideViewmodelWhenZoomed": false,
+      "suppressed": false,
+      "reloadSeconds": 3.366667,
+      "reloadAnimationSeconds": 3.366667,
+      "emptyReloadAnimationSeconds": 3.366667,
+      "reloadInsertSeconds": 1.8516668500000002,
+      "emptyReloadInsertSeconds": 2.0200002,
+      "deploySeconds": 1.0
+    },
+    {
+      "id": "ump45",
+      "internalId": "weapon_ump45",
+      "displayName": "UMP-45",
+      "category": "SMG",
+      "fireMode": "AUTOMATIC",
+      "projectiles": 1,
+      "damage": 35.0,
+      "magazineSize": 25,
+      "reserveAmount": 3,
+      "reserveAsMagazines": true,
+      "cycleTimeSeconds": 0.09,
+      "alternateCycleTimeSeconds": 0.09,
+      "sourceRangeUnits": 3700.0,
+      "rangeModifier": 0.75,
+      "headMultiplier": 4.0,
+      "armorRatio": 1.3,
+      "penetrationPower": 1.0,
+      "accuracy": {
+        "spread": [
+          0.001,
+          0.001
+        ],
+        "crouch": [
+          0.01007,
+          0.01007
+        ],
+        "stand": [
+          0.01343,
+          0.01343
+        ],
+        "jump": [
+          0.03725,
+          0.03725
+        ],
+        "land": [
+          8.5e-05,
+          8.5e-05
+        ],
+        "fire": [
+          0.00342,
+          0.00342
+        ],
+        "move": [
+          0.02876,
+          0.02876
+        ],
+        "maxSpeed": [
+          230.0,
+          230.0
+        ],
+        "jumpInitial": 0.04721,
+        "jumpApex": 0.0,
+        "recoveryCrouch": 0.249995,
+        "recoveryStand": 0.349993,
+        "recoveryCrouchFinal": 0.249995,
+        "recoveryStandFinal": 0.349993,
+        "recoveryTransitionStart": 2,
+        "recoveryTransitionEnd": 5
+      },
+      "recoil": {
+        "seed": 59299,
+        "angleVariance": [
+          40.0,
+          40.0
+        ],
+        "magnitude": [
+          23.0,
+          23.0
+        ],
+        "magnitudeVariance": [
+          1.0,
+          1.0
+        ]
+      },
+      "alternateModeByDefault": false,
+      "burstCapable": false,
+      "burstCycleTimeSeconds": 0.0,
+      "burstShotIntervalSeconds": 0.0,
+      "revolver": false,
+      "zoomLevels": 0,
+      "zoomFov1": 90.0,
+      "zoomFov2": 90.0,
+      "zoomSeconds": 0.0,
+      "unzoomsAfterShot": false,
+      "hideViewmodelWhenZoomed": false,
+      "suppressed": false,
+      "reloadSeconds": 3.466667,
+      "reloadAnimationSeconds": 3.466667,
+      "emptyReloadAnimationSeconds": 3.466667,
+      "reloadInsertSeconds": 1.9066668500000001,
+      "emptyReloadInsertSeconds": 2.0800002,
+      "deploySeconds": 1.0
+    },
+    {
+      "id": "bizon",
+      "internalId": "weapon_bizon",
+      "displayName": "PP-Bizon",
+      "category": "SMG",
+      "fireMode": "AUTOMATIC",
+      "projectiles": 1,
+      "damage": 27.0,
+      "magazineSize": 64,
+      "reserveAmount": 2,
+      "reserveAsMagazines": true,
+      "cycleTimeSeconds": 0.08,
+      "alternateCycleTimeSeconds": 0.08,
+      "sourceRangeUnits": 3600.0,
+      "rangeModifier": 0.8,
+      "headMultiplier": 4.0,
+      "armorRatio": 1.26,
+      "penetrationPower": 1.0,
+      "accuracy": {
+        "spread": [
+          0.001,
+          0.001
+        ],
+        "crouch": [
+          0.0105,
+          0.0105
+        ],
+        "stand": [
+          0.014,
+          0.014
+        ],
+        "jump": [
+          0.03347,
+          0.03347
+        ],
+        "land": [
+          8e-05,
+          8e-05
+        ],
+        "fire": [
+          0.00288,
+          0.00288
+        ],
+        "move": [
+          0.02757,
+          0.02757
+        ],
+        "maxSpeed": [
+          240.0,
+          240.0
+        ],
+        "jumpInitial": 0.0459,
+        "jumpApex": 0.0,
+        "recoveryCrouch": 0.236837,
+        "recoveryStand": 0.331572,
+        "recoveryCrouchFinal": 0.236837,
+        "recoveryStandFinal": 0.331572,
+        "recoveryTransitionStart": 2,
+        "recoveryTransitionEnd": 5
+      },
+      "recoil": {
+        "seed": 36387,
+        "angleVariance": [
+          70.0,
+          70.0
+        ],
+        "magnitude": [
+          18.0,
+          18.0
+        ],
+        "magnitudeVariance": [
+          1.0,
+          1.0
+        ]
+      },
+      "alternateModeByDefault": false,
+      "burstCapable": false,
+      "burstCycleTimeSeconds": 0.0,
+      "burstShotIntervalSeconds": 0.0,
+      "revolver": false,
+      "zoomLevels": 0,
+      "zoomFov1": 90.0,
+      "zoomFov2": 90.0,
+      "zoomSeconds": 0.0,
+      "unzoomsAfterShot": false,
+      "hideViewmodelWhenZoomed": false,
+      "suppressed": false,
+      "reloadSeconds": 2.433333,
+      "reloadAnimationSeconds": 2.433333,
+      "emptyReloadAnimationSeconds": 2.433333,
+      "reloadInsertSeconds": 1.3383331500000002,
+      "emptyReloadInsertSeconds": 1.4599998,
+      "deploySeconds": 1.1
+    },
+    {
+      "id": "mp7",
+      "internalId": "weapon_mp7",
+      "displayName": "MP7",
+      "category": "SMG",
+      "fireMode": "AUTOMATIC",
+      "projectiles": 1,
+      "damage": 30.0,
+      "magazineSize": 30,
+      "reserveAmount": 3,
+      "reserveAsMagazines": true,
+      "cycleTimeSeconds": 0.08,
+      "alternateCycleTimeSeconds": 0.08,
+      "sourceRangeUnits": 3600.0,
+      "rangeModifier": 0.87,
+      "headMultiplier": 4.0,
+      "armorRatio": 1.25,
+      "penetrationPower": 1.0,
+      "accuracy": {
+        "spread": [
+          0.0006,
+          0.0006
+        ],
+        "crouch": [
+          0.0085,
+          0.0085
+        ],
+        "stand": [
+          0.01,
+          0.01
+        ],
+        "jump": [
+          0.0596,
+          0.0596
+        ],
+        "land": [
+          0.000115,
+          0.000115
+        ],
+        "fire": [
+          0.00218,
+          0.00218
+        ],
+        "move": [
+          0.01986,
+          0.01986
+        ],
+        "maxSpeed": [
+          220.0,
+          220.0
+        ],
+        "jumpInitial": 0.05541,
+        "jumpApex": 0.0,
+        "recoveryCrouch": 0.312494,
+        "recoveryStand": 0.437491,
+        "recoveryCrouchFinal": 0.312494,
+        "recoveryStandFinal": 0.437491,
+        "recoveryTransitionStart": 2,
+        "recoveryTransitionEnd": 5
+      },
+      "recoil": {
+        "seed": 61649,
+        "angleVariance": [
+          70.0,
+          70.0
+        ],
+        "magnitude": [
+          16.0,
+          16.0
+        ],
+        "magnitudeVariance": [
+          1.0,
+          1.0
+        ]
+      },
+      "alternateModeByDefault": false,
+      "burstCapable": false,
+      "burstCycleTimeSeconds": 0.0,
+      "burstShotIntervalSeconds": 0.0,
+      "revolver": false,
+      "zoomLevels": 0,
+      "zoomFov1": 90.0,
+      "zoomFov2": 90.0,
+      "zoomSeconds": 0.0,
+      "unzoomsAfterShot": false,
+      "hideViewmodelWhenZoomed": false,
+      "suppressed": false,
+      "reloadSeconds": 3.166667,
+      "reloadAnimationSeconds": 3.166667,
+      "emptyReloadAnimationSeconds": 3.166667,
+      "reloadInsertSeconds": 1.74166685,
+      "emptyReloadInsertSeconds": 1.9000001999999998,
+      "deploySeconds": 1.0
+    },
+    {
+      "id": "mp5sd",
+      "internalId": "weapon_mp5sd",
+      "displayName": "MP5-SD",
+      "category": "SMG",
+      "fireMode": "AUTOMATIC",
+      "projectiles": 1,
+      "damage": 28.0,
+      "magazineSize": 30,
+      "reserveAmount": 3,
+      "reserveAsMagazines": true,
+      "cycleTimeSeconds": 0.08,
+      "alternateCycleTimeSeconds": 0.08,
+      "sourceRangeUnits": 3600.0,
+      "rangeModifier": 0.87,
+      "headMultiplier": 4.0,
+      "armorRatio": 1.25,
+      "penetrationPower": 1.0,
+      "accuracy": {
+        "spread": [
+          0.0006,
+          0.0006
+        ],
+        "crouch": [
+          0.0085,
+          0.0085
+        ],
+        "stand": [
+          0.01,
+          0.01
+        ],
+        "jump": [
+          0.0596,
+          0.0596
+        ],
+        "land": [
+          0.000115,
+          0.000115
+        ],
+        "fire": [
+          0.00218,
+          0.00218
+        ],
+        "move": [
+          0.03,
+          0.01986
+        ],
+        "maxSpeed": [
+          235.0,
+          220.0
+        ],
+        "jumpInitial": 0.05541,
+        "jumpApex": 0.0,
+        "recoveryCrouch": 0.312494,
+        "recoveryStand": 0.437491,
+        "recoveryCrouchFinal": 0.312494,
+        "recoveryStandFinal": 0.437491,
+        "recoveryTransitionStart": 2,
+        "recoveryTransitionEnd": 5
+      },
+      "recoil": {
+        "seed": 61649,
+        "angleVariance": [
+          70.0,
+          70.0
+        ],
+        "magnitude": [
+          16.0,
+          16.0
+        ],
+        "magnitudeVariance": [
+          1.0,
+          1.0
+        ]
+      },
+      "alternateModeByDefault": false,
+      "burstCapable": false,
+      "burstCycleTimeSeconds": 0.0,
+      "burstShotIntervalSeconds": 0.0,
+      "revolver": false,
+      "zoomLevels": 0,
+      "zoomFov1": 90.0,
+      "zoomFov2": 90.0,
+      "zoomSeconds": 0.0,
+      "unzoomsAfterShot": false,
+      "hideViewmodelWhenZoomed": false,
+      "suppressed": true,
+      "reloadSeconds": 2.966667,
+      "reloadAnimationSeconds": 2.966667,
+      "emptyReloadAnimationSeconds": 2.966667,
+      "reloadInsertSeconds": 1.6316668500000002,
+      "emptyReloadInsertSeconds": 1.7800002000000001,
+      "deploySeconds": 1.0
+    },
+    {
+      "id": "mp9",
+      "internalId": "weapon_mp9",
+      "displayName": "MP9",
+      "category": "SMG",
+      "fireMode": "AUTOMATIC",
+      "projectiles": 1,
+      "damage": 26.0,
+      "magazineSize": 30,
+      "reserveAmount": 2,
+      "reserveAsMagazines": true,
+      "cycleTimeSeconds": 0.07,
+      "alternateCycleTimeSeconds": 0.07,
+      "sourceRangeUnits": 3600.0,
+      "rangeModifier": 0.87,
+      "headMultiplier": 4.0,
+      "armorRatio": 1.2,
+      "penetrationPower": 1.0,
+      "accuracy": {
+        "spread": [
+          0.0006,
+          0.0006
+        ],
+        "crouch": [
+          0.008,
+          0.008
+        ],
+        "stand": [
+          0.009,
+          0.009
+        ],
+        "jump": [
+          0.05,
+          0.05
+        ],
+        "land": [
+          5.6e-05,
+          5.6e-05
+        ],
+        "fire": [
+          0.0037,
+          0.0037
+        ],
+        "move": [
+          0.02904,
+          0.02904
+        ],
+        "maxSpeed": [
+          240.0,
+          240.0
+        ],
+        "jumpInitial": 0.03728,
+        "jumpApex": 0.0,
+        "recoveryCrouch": 0.184207,
+        "recoveryStand": 0.25789,
+        "recoveryCrouchFinal": 0.184207,
+        "recoveryStandFinal": 0.25789,
+        "recoveryTransitionStart": 2,
+        "recoveryTransitionEnd": 5
+      },
+      "recoil": {
+        "seed": 50729,
+        "angleVariance": [
+          70.0,
+          70.0
+        ],
+        "magnitude": [
+          21.0,
+          21.0
+        ],
+        "magnitudeVariance": [
+          1.0,
+          1.0
+        ]
+      },
+      "alternateModeByDefault": false,
+      "burstCapable": false,
+      "burstCycleTimeSeconds": 0.0,
+      "burstShotIntervalSeconds": 0.0,
+      "revolver": false,
+      "zoomLevels": 0,
+      "zoomFov1": 90.0,
+      "zoomFov2": 90.0,
+      "zoomSeconds": 0.0,
+      "unzoomsAfterShot": false,
+      "hideViewmodelWhenZoomed": false,
+      "suppressed": false,
+      "reloadSeconds": 2.133333,
+      "reloadAnimationSeconds": 2.133333,
+      "emptyReloadAnimationSeconds": 2.133333,
+      "reloadInsertSeconds": 1.1733331500000002,
+      "emptyReloadInsertSeconds": 1.2799998,
+      "deploySeconds": 1.2
+    },
+    {
+      "id": "ak47",
+      "internalId": "weapon_ak47",
+      "displayName": "AK-47",
+      "category": "RIFLE",
+      "fireMode": "AUTOMATIC",
+      "projectiles": 1,
+      "damage": 36.0,
+      "magazineSize": 30,
+      "reserveAmount": 3,
+      "reserveAsMagazines": true,
+      "cycleTimeSeconds": 0.1,
+      "alternateCycleTimeSeconds": 0.1,
+      "sourceRangeUnits": 8192.0,
+      "rangeModifier": 0.98,
+      "headMultiplier": 4.0,
+      "armorRatio": 1.55,
+      "penetrationPower": 2.0,
+      "accuracy": {
+        "spread": [
+          0.0006,
+          0.0006
+        ],
+        "crouch": [
+          0.00481,
+          0.00481
+        ],
+        "stand": [
+          0.00641,
+          0.00641
+        ],
+        "jump": [
+          0.14076,
+          0.14076
+        ],
+        "land": [
+          0.000242,
+          0.000242
+        ],
+        "fire": [
+          0.0078,
+          0.0078
+        ],
+        "move": [
+          0.17506,
+          0.17506
+        ],
+        "maxSpeed": [
+          215.0,
+          215.0
+        ],
+        "jumpInitial": 0.10094,
+        "jumpApex": 0.0,
+        "recoveryCrouch": 0.305257,
+        "recoveryStand": 0.368,
+        "recoveryCrouchFinal": 0.419728,
+        "recoveryStandFinal": 0.506,
+        "recoveryTransitionStart": 2,
+        "recoveryTransitionEnd": 5
+      },
+      "recoil": {
+        "seed": 223,
+        "angleVariance": [
+          70.0,
+          70.0
+        ],
+        "magnitude": [
+          30.0,
+          30.0
+        ],
+        "magnitudeVariance": [
+          0.0,
+          0.0
+        ]
+      },
+      "alternateModeByDefault": false,
+      "burstCapable": false,
+      "burstCycleTimeSeconds": 0.0,
+      "burstShotIntervalSeconds": 0.0,
+      "revolver": false,
+      "zoomLevels": 0,
+      "zoomFov1": 90.0,
+      "zoomFov2": 90.0,
+      "zoomSeconds": 0.0,
+      "unzoomsAfterShot": false,
+      "hideViewmodelWhenZoomed": false,
+      "suppressed": false,
+      "reloadSeconds": 2.466667,
+      "reloadAnimationSeconds": 2.433333,
+      "emptyReloadAnimationSeconds": 2.433333,
+      "reloadInsertSeconds": 1.1,
+      "emptyReloadInsertSeconds": 1.1,
+      "deploySeconds": 1.0
+    },
+    {
+      "id": "aug",
+      "internalId": "weapon_aug",
+      "displayName": "AUG",
+      "category": "RIFLE",
+      "fireMode": "AUTOMATIC",
+      "projectiles": 1,
+      "damage": 28.0,
+      "magazineSize": 30,
+      "reserveAmount": 3,
+      "reserveAsMagazines": true,
+      "cycleTimeSeconds": 0.1,
+      "alternateCycleTimeSeconds": 0.1,
+      "sourceRangeUnits": 8192.0,
+      "rangeModifier": 0.98,
+      "headMultiplier": 4.0,
+      "armorRatio": 1.8,
+      "penetrationPower": 2.0,
+      "accuracy": {
+        "spread": [
+          0.0005,
+          0.0003
+        ],
+        "crouch": [
+          0.00368,
+          0.00311
+        ],
+        "stand": [
+          0.0049,
+          0.00368
+        ],
+        "jump": [
+          0.10599,
+          0.10599
+        ],
+        "land": [
+          0.000208,
+          0.000208
+        ],
+        "fire": [
+          0.00729,
+          0.00729
+        ],
+        "move": [
+          0.13545,
+          0.10545
+        ],
+        "maxSpeed": [
+          220.0,
+          150.0
+        ],
+        "jumpInitial": 0.10156,
+        "jumpApex": 0.0,
+        "recoveryCrouch": 0.30552,
+        "recoveryStand": 0.429727,
+        "recoveryCrouchFinal": 0.30552,
+        "recoveryStandFinal": 0.429727,
+        "recoveryTransitionStart": 2,
+        "recoveryTransitionEnd": 5
+      },
+      "recoil": {
+        "seed": 24204,
+        "angleVariance": [
+          60.0,
+          60.0
+        ],
+        "magnitude": [
+          24.0,
+          16.0
+        ],
+        "magnitudeVariance": [
+          0.0,
+          0.0
+        ]
+      },
+      "alternateModeByDefault": false,
+      "burstCapable": false,
+      "burstCycleTimeSeconds": 0.0,
+      "burstShotIntervalSeconds": 0.0,
+      "revolver": false,
+      "zoomLevels": 1,
+      "zoomFov1": 45.0,
+      "zoomFov2": 90.0,
+      "zoomSeconds": 0.06,
+      "unzoomsAfterShot": false,
+      "hideViewmodelWhenZoomed": false,
+      "suppressed": false,
+      "reloadSeconds": 3.766667,
+      "reloadAnimationSeconds": 3.766667,
+      "emptyReloadAnimationSeconds": 3.766667,
+      "reloadInsertSeconds": 2.07166685,
+      "emptyReloadInsertSeconds": 2.2600002,
+      "deploySeconds": 1.16667
+    },
+    {
+      "id": "awp",
+      "internalId": "weapon_awp",
+      "displayName": "AWP",
+      "category": "SNIPER_RIFLE",
+      "fireMode": "SEMI_AUTOMATIC",
+      "projectiles": 1,
+      "damage": 115.0,
+      "magazineSize": 5,
+      "reserveAmount": 2,
+      "reserveAsMagazines": true,
+      "cycleTimeSeconds": 1.455,
+      "alternateCycleTimeSeconds": 1.455,
+      "sourceRangeUnits": 8192.0,
+      "rangeModifier": 0.99,
+      "headMultiplier": 4.0,
+      "armorRatio": 1.95,
+      "penetrationPower": 2.5,
+      "accuracy": {
+        "spread": [
+          0.0002,
+          0.0002
+        ],
+        "crouch": [
+          0.0606,
+          0.0015
+        ],
+        "stand": [
+          0.0808,
+          0.002
+        ],
+        "jump": [
+          0.13383,
+          0.13383
+        ],
+        "land": [
+          0.000307,
+          0.0001
+        ],
+        "fire": [
+          0.05385,
+          0.05385
+        ],
+        "move": [
+          0.17648,
+          0.17648
+        ],
+        "maxSpeed": [
+          200.0,
+          100.0
+        ],
+        "jumpInitial": 0.17286,
+        "jumpApex": 0.0,
+        "recoveryCrouch": 0.24671,
+        "recoveryStand": 0.34539,
+        "recoveryCrouchFinal": 0.24671,
+        "recoveryStandFinal": 0.34539,
+        "recoveryTransitionStart": 2,
+        "recoveryTransitionEnd": 5
+      },
+      "recoil": {
+        "seed": 4100,
+        "angleVariance": [
+          20.0,
+          20.0
+        ],
+        "magnitude": [
+          78.0,
+          25.0
+        ],
+        "magnitudeVariance": [
+          15.0,
+          2.0
+        ]
+      },
+      "alternateModeByDefault": false,
+      "burstCapable": false,
+      "burstCycleTimeSeconds": 0.0,
+      "burstShotIntervalSeconds": 0.0,
+      "revolver": false,
+      "zoomLevels": 2,
+      "zoomFov1": 40.0,
+      "zoomFov2": 10.0,
+      "zoomSeconds": 0.05,
+      "unzoomsAfterShot": true,
+      "hideViewmodelWhenZoomed": true,
+      "suppressed": false,
+      "reloadSeconds": 3.666667,
+      "reloadAnimationSeconds": 3.666667,
+      "emptyReloadAnimationSeconds": 3.666667,
+      "reloadInsertSeconds": 2.0,
+      "emptyReloadInsertSeconds": 2.0,
+      "deploySeconds": 1.266667
+    },
+    {
+      "id": "famas",
+      "internalId": "weapon_famas",
+      "displayName": "FAMAS",
+      "category": "RIFLE",
+      "fireMode": "AUTOMATIC",
+      "projectiles": 1,
+      "damage": 30.0,
+      "magazineSize": 25,
+      "reserveAmount": 4,
+      "reserveAsMagazines": true,
+      "cycleTimeSeconds": 0.09,
+      "alternateCycleTimeSeconds": 0.09,
+      "sourceRangeUnits": 8192.0,
+      "rangeModifier": 0.96,
+      "headMultiplier": 4.0,
+      "armorRatio": 1.4,
+      "penetrationPower": 2.0,
+      "accuracy": {
+        "spread": [
+          0.0006,
+          0.0006
+        ],
+        "crouch": [
+          0.0055,
+          0.00325
+        ],
+        "stand": [
+          0.00759,
+          0.00369
+        ],
+        "jump": [
+          0.11039,
+          0.11039
+        ],
+        "land": [
+          0.000205,
+          0.000205
+        ],
+        "fire": [
+          0.00605,
+          0.00335
+        ],
+        "move": [
+          0.09934,
+          0.09934
+        ],
+        "maxSpeed": [
+          220.0,
+          220.0
+        ],
+        "jumpInitial": 0.09477,
+        "jumpApex": 0.0,
+        "recoveryCrouch": 0.12,
+        "recoveryStand": 0.25,
+        "recoveryCrouchFinal": 0.48,
+        "recoveryStandFinal": 0.5,
+        "recoveryTransitionStart": 2,
+        "recoveryTransitionEnd": 5
+      },
+      "recoil": {
+        "seed": 39623,
+        "angleVariance": [
+          60.0,
+          50.0
+        ],
+        "magnitude": [
+          20.0,
+          20.0
+        ],
+        "magnitudeVariance": [
+          1.0,
+          1.0
+        ]
+      },
+      "alternateModeByDefault": false,
+      "burstCapable": true,
+      "burstCycleTimeSeconds": 0.55,
+      "burstShotIntervalSeconds": 0.075,
+      "revolver": false,
+      "zoomLevels": 0,
+      "zoomFov1": 90.0,
+      "zoomFov2": 90.0,
+      "zoomSeconds": 0.0,
+      "unzoomsAfterShot": false,
+      "hideViewmodelWhenZoomed": false,
+      "suppressed": false,
+      "reloadSeconds": 3.3,
+      "reloadAnimationSeconds": 3.3,
+      "emptyReloadAnimationSeconds": 3.3,
+      "reloadInsertSeconds": 1.815,
+      "emptyReloadInsertSeconds": 1.9799999999999998,
+      "deploySeconds": 1.0
+    },
+    {
+      "id": "g3sg1",
+      "internalId": "weapon_g3sg1",
+      "displayName": "G3SG1",
+      "category": "SNIPER_RIFLE",
+      "fireMode": "AUTOMATIC",
+      "projectiles": 1,
+      "damage": 80.0,
+      "magazineSize": 20,
+      "reserveAmount": 2,
+      "reserveAsMagazines": true,
+      "cycleTimeSeconds": 0.25,
+      "alternateCycleTimeSeconds": 0.25,
+      "sourceRangeUnits": 8192.0,
+      "rangeModifier": 0.98,
+      "headMultiplier": 4.0,
+      "armorRatio": 1.65,
+      "penetrationPower": 2.5,
+      "accuracy": {
+        "spread": [
+          0.0003,
+          0.0003
+        ],
+        "crouch": [
+          0.01935,
+          0.0015
+        ],
+        "stand": [
+          0.0258,
+          0.002
+        ],
+        "jump": [
+          0.15377,
+          0.15377
+        ],
+        "land": [
+          0.000262,
+          0.000262
+        ],
+        "fire": [
+          0.01861,
+          0.01861
+        ],
+        "move": [
+          0.15048,
+          0.15048
+        ],
+        "maxSpeed": [
+          215.0,
+          120.0
+        ],
+        "jumpInitial": 0.10769,
+        "jumpApex": 0.0,
+        "recoveryCrouch": 0.388808,
+        "recoveryStand": 0.544331,
+        "recoveryCrouchFinal": 0.388808,
+        "recoveryStandFinal": 0.544331,
+        "recoveryTransitionStart": 2,
+        "recoveryTransitionEnd": 5
+      },
+      "recoil": {
+        "seed": 29908,
+        "angleVariance": [
+          30.0,
+          30.0
+        ],
+        "magnitude": [
+          30.0,
+          30.0
+        ],
+        "magnitudeVariance": [
+          4.0,
+          4.0
+        ]
+      },
+      "alternateModeByDefault": false,
+      "burstCapable": false,
+      "burstCycleTimeSeconds": 0.0,
+      "burstShotIntervalSeconds": 0.0,
+      "revolver": false,
+      "zoomLevels": 2,
+      "zoomFov1": 40.0,
+      "zoomFov2": 15.0,
+      "zoomSeconds": 0.05,
+      "unzoomsAfterShot": false,
+      "hideViewmodelWhenZoomed": true,
+      "suppressed": false,
+      "reloadSeconds": 4.666667,
+      "reloadAnimationSeconds": 4.666667,
+      "emptyReloadAnimationSeconds": 4.666667,
+      "reloadInsertSeconds": 2.5666668500000003,
+      "emptyReloadInsertSeconds": 2.8000002,
+      "deploySeconds": 1.0
+    },
+    {
+      "id": "galilar",
+      "internalId": "weapon_galilar",
+      "displayName": "Galil AR",
+      "category": "RIFLE",
+      "fireMode": "AUTOMATIC",
+      "projectiles": 1,
+      "damage": 30.0,
+      "magazineSize": 35,
+      "reserveAmount": 4,
+      "reserveAsMagazines": true,
+      "cycleTimeSeconds": 0.09,
+      "alternateCycleTimeSeconds": 0.09,
+      "sourceRangeUnits": 8192.0,
+      "rangeModifier": 0.98,
+      "headMultiplier": 4.0,
+      "armorRatio": 1.55,
+      "penetrationPower": 2.0,
+      "accuracy": {
+        "spread": [
+          0.0006,
+          0.0006
+        ],
+        "crouch": [
+          0.00658,
+          0.00484
+        ],
+        "stand": [
+          0.00877,
+          0.00778
+        ],
+        "jump": [
+          0.14978,
+          0.14978
+        ],
+        "land": [
+          0.000256,
+          0.000256
+        ],
+        "fire": [
+          0.007,
+          0.00585
+        ],
+        "move": [
+          0.12356,
+          0.10652
+        ],
+        "maxSpeed": [
+          215.0,
+          215.0
+        ],
+        "jumpInitial": 0.10539,
+        "jumpApex": 0.0,
+        "recoveryCrouch": 0.15,
+        "recoveryStand": 0.3,
+        "recoveryCrouchFinal": 0.47,
+        "recoveryStandFinal": 0.5,
+        "recoveryTransitionStart": 2,
+        "recoveryTransitionEnd": 5
+      },
+      "recoil": {
+        "seed": 51191,
+        "angleVariance": [
+          70.0,
+          70.0
+        ],
+        "magnitude": [
+          21.0,
+          21.0
+        ],
+        "magnitudeVariance": [
+          1.0,
+          1.0
+        ]
+      },
+      "alternateModeByDefault": false,
+      "burstCapable": false,
+      "burstCycleTimeSeconds": 0.0,
+      "burstShotIntervalSeconds": 0.0,
+      "revolver": false,
+      "zoomLevels": 0,
+      "zoomFov1": 90.0,
+      "zoomFov2": 90.0,
+      "zoomSeconds": 0.0,
+      "unzoomsAfterShot": false,
+      "hideViewmodelWhenZoomed": false,
+      "suppressed": false,
+      "reloadSeconds": 3.033333,
+      "reloadAnimationSeconds": 3.033333,
+      "emptyReloadAnimationSeconds": 3.033333,
+      "reloadInsertSeconds": 1.66833315,
+      "emptyReloadInsertSeconds": 1.8199997999999997,
+      "deploySeconds": 1.1
+    },
+    {
+      "id": "m4a4",
+      "internalId": "weapon_m4a1",
+      "displayName": "M4A4",
+      "category": "RIFLE",
+      "fireMode": "AUTOMATIC",
+      "projectiles": 1,
+      "damage": 33.0,
+      "magazineSize": 30,
+      "reserveAmount": 4,
+      "reserveAsMagazines": true,
+      "cycleTimeSeconds": 0.09,
+      "alternateCycleTimeSeconds": 0.09,
+      "sourceRangeUnits": 8192.0,
+      "rangeModifier": 0.97,
+      "headMultiplier": 4.0,
+      "armorRatio": 1.4,
+      "penetrationPower": 2.0,
+      "accuracy": {
+        "spread": [
+          0.0006,
+          0.00045
+        ],
+        "crouch": [
+          0.0041,
+          0.00368
+        ],
+        "stand": [
+          0.0049,
+          0.0049
+        ],
+        "jump": [
+          0.09727,
+          0.09727
+        ],
+        "land": [
+          0.000192,
+          0.000197
+        ],
+        "fire": [
+          0.007,
+          0.00634
+        ],
+        "move": [
+          0.13788,
+          0.122
+        ],
+        "maxSpeed": [
+          225.0,
+          225.0
+        ],
+        "jumpInitial": 0.09441,
+        "jumpApex": 0.0,
+        "recoveryCrouch": 0.2421,
+        "recoveryStand": 0.338941,
+        "recoveryCrouchFinal": 0.332888,
+        "recoveryStandFinal": 0.466044,
+        "recoveryTransitionStart": 2,
+        "recoveryTransitionEnd": 5
+      },
+      "recoil": {
+        "seed": 38965,
+        "angleVariance": [
+          70.0,
+          70.0
+        ],
+        "magnitude": [
+          23.0,
+          23.0
+        ],
+        "magnitudeVariance": [
+          0.0,
+          0.0
+        ]
+      },
+      "alternateModeByDefault": false,
+      "burstCapable": false,
+      "burstCycleTimeSeconds": 0.0,
+      "burstShotIntervalSeconds": 0.0,
+      "revolver": false,
+      "zoomLevels": 0,
+      "zoomFov1": 90.0,
+      "zoomFov2": 90.0,
+      "zoomSeconds": 0.0,
+      "unzoomsAfterShot": false,
+      "hideViewmodelWhenZoomed": false,
+      "suppressed": false,
+      "reloadSeconds": 3.066667,
+      "reloadAnimationSeconds": 3.066667,
+      "emptyReloadAnimationSeconds": 3.066667,
+      "reloadInsertSeconds": 1.68666685,
+      "emptyReloadInsertSeconds": 1.8400001999999998,
+      "deploySeconds": 1.133333
+    },
+    {
+      "id": "m4a1_silencer",
+      "internalId": "weapon_m4a1_silencer",
+      "displayName": "M4A1-S",
+      "category": "RIFLE",
+      "fireMode": "AUTOMATIC",
+      "projectiles": 1,
+      "damage": 38.0,
+      "magazineSize": 20,
+      "reserveAmount": 3,
+      "reserveAsMagazines": true,
+      "cycleTimeSeconds": 0.1,
+      "alternateCycleTimeSeconds": 0.1,
+      "sourceRangeUnits": 8192.0,
+      "rangeModifier": 0.94,
+      "headMultiplier": 3.475,
+      "armorRatio": 1.4,
+      "penetrationPower": 2.0,
+      "accuracy": {
+        "spread": [
+          0.0006,
+          0.0005
+        ],
+        "crouch": [
+          0.0041,
+          0.0041
+        ],
+        "stand": [
+          0.0049,
+          0.0049
+        ],
+        "jump": [
+          0.0997,
+          0.0997
+        ],
+        "land": [
+          0.000197,
+          0.000197
+        ],
+        "fire": [
+          0.012,
+          0.007
+        ],
+        "move": [
+          0.09288,
+          0.122
+        ],
+        "maxSpeed": [
+          225.0,
+          225.0
+        ],
+        "jumpInitial": 0.09677,
+        "jumpApex": 0.0,
+        "recoveryCrouch": 0.2421,
+        "recoveryStand": 0.338941,
+        "recoveryCrouchFinal": 0.332888,
+        "recoveryStandFinal": 0.466044,
+        "recoveryTransitionStart": 2,
+        "recoveryTransitionEnd": 5
+      },
+      "recoil": {
+        "seed": 38965,
+        "angleVariance": [
+          65.0,
+          65.0
+        ],
+        "magnitude": [
+          25.0,
+          21.0
+        ],
+        "magnitudeVariance": [
+          3.0,
+          0.0
+        ]
+      },
+      "alternateModeByDefault": true,
+      "burstCapable": false,
+      "burstCycleTimeSeconds": 0.0,
+      "burstShotIntervalSeconds": 0.0,
+      "revolver": false,
+      "zoomLevels": 0,
+      "zoomFov1": 90.0,
+      "zoomFov2": 90.0,
+      "zoomSeconds": 0.0,
+      "unzoomsAfterShot": false,
+      "hideViewmodelWhenZoomed": false,
+      "suppressed": true,
+      "reloadSeconds": 3.066667,
+      "reloadAnimationSeconds": 3.066667,
+      "emptyReloadAnimationSeconds": 3.066667,
+      "reloadInsertSeconds": 1.367,
+      "emptyReloadInsertSeconds": 1.367,
+      "deploySeconds": 1.133333
+    },
+    {
+      "id": "scar20",
+      "internalId": "weapon_scar20",
+      "displayName": "SCAR-20",
+      "category": "SNIPER_RIFLE",
+      "fireMode": "AUTOMATIC",
+      "projectiles": 1,
+      "damage": 80.0,
+      "magazineSize": 20,
+      "reserveAmount": 2,
+      "reserveAsMagazines": true,
+      "cycleTimeSeconds": 0.25,
+      "alternateCycleTimeSeconds": 0.25,
+      "sourceRangeUnits": 8192.0,
+      "rangeModifier": 0.98,
+      "headMultiplier": 4.0,
+      "armorRatio": 1.65,
+      "penetrationPower": 2.5,
+      "accuracy": {
+        "spread": [
+          0.0003,
+          0.0003
+        ],
+        "crouch": [
+          0.01935,
+          0.0015
+        ],
+        "stand": [
+          0.0258,
+          0.002
+        ],
+        "jump": [
+          0.15377,
+          0.15377
+        ],
+        "land": [
+          0.000262,
+          0.000262
+        ],
+        "fire": [
+          0.01861,
+          0.01861
+        ],
+        "move": [
+          0.15048,
+          0.15048
+        ],
+        "maxSpeed": [
+          215.0,
+          120.0
+        ],
+        "jumpInitial": 0.10769,
+        "jumpApex": 0.0,
+        "recoveryCrouch": 0.388808,
+        "recoveryStand": 0.544331,
+        "recoveryCrouchFinal": 0.388808,
+        "recoveryStandFinal": 0.544331,
+        "recoveryTransitionStart": 2,
+        "recoveryTransitionEnd": 5
+      },
+      "recoil": {
+        "seed": 19364,
+        "angleVariance": [
+          30.0,
+          30.0
+        ],
+        "magnitude": [
+          31.0,
+          31.0
+        ],
+        "magnitudeVariance": [
+          4.0,
+          4.0
+        ]
+      },
+      "alternateModeByDefault": false,
+      "burstCapable": false,
+      "burstCycleTimeSeconds": 0.0,
+      "burstShotIntervalSeconds": 0.0,
+      "revolver": false,
+      "zoomLevels": 2,
+      "zoomFov1": 40.0,
+      "zoomFov2": 15.0,
+      "zoomSeconds": 0.05,
+      "unzoomsAfterShot": false,
+      "hideViewmodelWhenZoomed": true,
+      "suppressed": false,
+      "reloadSeconds": 3.066667,
+      "reloadAnimationSeconds": 3.066667,
+      "emptyReloadAnimationSeconds": 3.066667,
+      "reloadInsertSeconds": 1.68666685,
+      "emptyReloadInsertSeconds": 1.8400001999999998,
+      "deploySeconds": 1.0
+    },
+    {
+      "id": "sg556",
+      "internalId": "weapon_sg556",
+      "displayName": "SG 553",
+      "category": "RIFLE",
+      "fireMode": "AUTOMATIC",
+      "projectiles": 1,
+      "damage": 30.0,
+      "magazineSize": 30,
+      "reserveAmount": 3,
+      "reserveAsMagazines": true,
+      "cycleTimeSeconds": 0.11,
+      "alternateCycleTimeSeconds": 0.11,
+      "sourceRangeUnits": 8192.0,
+      "rangeModifier": 0.98,
+      "headMultiplier": 4.0,
+      "armorRatio": 2.0,
+      "penetrationPower": 2.0,
+      "accuracy": {
+        "spread": [
+          0.0006,
+          0.0003
+        ],
+        "crouch": [
+          0.00381,
+          0.00305
+        ],
+        "stand": [
+          0.00581,
+          0.00381
+        ],
+        "jump": [
+          0.109,
+          0.109
+        ],
+        "land": [
+          0.000188,
+          0.000188
+        ],
+        "fire": [
+          0.00795,
+          0.0092
+        ],
+        "move": [
+          0.13601,
+          0.13601
+        ],
+        "maxSpeed": [
+          210.0,
+          150.0
+        ],
+        "jumpInitial": 0.07879,
+        "jumpApex": 0.0,
+        "recoveryCrouch": 0.379204,
+        "recoveryStand": 0.452886,
+        "recoveryCrouchFinal": 0.379204,
+        "recoveryStandFinal": 0.452886,
+        "recoveryTransitionStart": 2,
+        "recoveryTransitionEnd": 5
+      },
+      "recoil": {
+        "seed": 43500,
+        "angleVariance": [
+          60.0,
+          60.0
+        ],
+        "magnitude": [
+          28.0,
+          19.0
+        ],
+        "magnitudeVariance": [
+          2.0,
+          2.0
+        ]
+      },
+      "alternateModeByDefault": false,
+      "burstCapable": false,
+      "burstCycleTimeSeconds": 0.0,
+      "burstShotIntervalSeconds": 0.0,
+      "revolver": false,
+      "zoomLevels": 1,
+      "zoomFov1": 45.0,
+      "zoomFov2": 90.0,
+      "zoomSeconds": 0.06,
+      "unzoomsAfterShot": false,
+      "hideViewmodelWhenZoomed": false,
+      "suppressed": false,
+      "reloadSeconds": 2.766667,
+      "reloadAnimationSeconds": 2.766667,
+      "emptyReloadAnimationSeconds": 2.766667,
+      "reloadInsertSeconds": 1.5216668500000001,
+      "emptyReloadInsertSeconds": 1.6600002,
+      "deploySeconds": 1.0
+    },
+    {
+      "id": "ssg08",
+      "internalId": "weapon_ssg08",
+      "displayName": "SSG 08",
+      "category": "SNIPER_RIFLE",
+      "fireMode": "SEMI_AUTOMATIC",
+      "projectiles": 1,
+      "damage": 88.0,
+      "magazineSize": 10,
+      "reserveAmount": 2,
+      "reserveAsMagazines": true,
+      "cycleTimeSeconds": 1.25,
+      "alternateCycleTimeSeconds": 1.25,
+      "sourceRangeUnits": 8192.0,
+      "rangeModifier": 0.98,
+      "headMultiplier": 4.0,
+      "armorRatio": 1.7,
+      "penetrationPower": 2.5,
+      "accuracy": {
+        "spread": [
+          0.00028,
+          0.00023
+        ],
+        "crouch": [
+          0.02378,
+          0.0028
+        ],
+        "stand": [
+          0.0317,
+          0.003
+        ],
+        "jump": [
+          0.00572,
+          0.00572
+        ],
+        "land": [
+          0.000215,
+          0.000215
+        ],
+        "fire": [
+          0.02292,
+          0.02292
+        ],
+        "move": [
+          0.12345,
+          0.12345
+        ],
+        "maxSpeed": [
+          230.0,
+          230.0
+        ],
+        "jumpInitial": 0.20872,
+        "jumpApex": 0.0,
+        "recoveryCrouch": 0.055783,
+        "recoveryStand": 0.142096,
+        "recoveryCrouchFinal": 0.055783,
+        "recoveryStandFinal": 0.142096,
+        "recoveryTransitionStart": 2,
+        "recoveryTransitionEnd": 5
+      },
+      "recoil": {
+        "seed": 1278,
+        "angleVariance": [
+          20.0,
+          20.0
+        ],
+        "magnitude": [
+          33.0,
+          25.0
+        ],
+        "magnitudeVariance": [
+          15.0,
+          2.0
+        ]
+      },
+      "alternateModeByDefault": false,
+      "burstCapable": false,
+      "burstCycleTimeSeconds": 0.0,
+      "burstShotIntervalSeconds": 0.0,
+      "revolver": false,
+      "zoomLevels": 2,
+      "zoomFov1": 40.0,
+      "zoomFov2": 15.0,
+      "zoomSeconds": 0.05,
+      "unzoomsAfterShot": true,
+      "hideViewmodelWhenZoomed": true,
+      "suppressed": false,
+      "reloadSeconds": 3.7,
+      "reloadAnimationSeconds": 3.7,
+      "emptyReloadAnimationSeconds": 3.7,
+      "reloadInsertSeconds": 2.035,
+      "emptyReloadInsertSeconds": 2.22,
+      "deploySeconds": 1.0
+    },
+    {
+      "id": "m249",
+      "internalId": "weapon_m249",
+      "displayName": "M249",
+      "category": "MACHINE_GUN",
+      "fireMode": "AUTOMATIC",
+      "projectiles": 1,
+      "damage": 32.0,
+      "magazineSize": 100,
+      "reserveAmount": 2,
+      "reserveAsMagazines": true,
+      "cycleTimeSeconds": 0.08,
+      "alternateCycleTimeSeconds": 0.08,
+      "sourceRangeUnits": 8192.0,
+      "rangeModifier": 0.97,
+      "headMultiplier": 4.0,
+      "armorRatio": 1.6,
+      "penetrationPower": 2.0,
+      "accuracy": {
+        "spread": [
+          0.002,
+          0.002
+        ],
+        "crouch": [
+          0.00534,
+          0.00534
+        ],
+        "stand": [
+          0.0077,
+          0.0077
+        ],
+        "jump": [
+          0.27947,
+          0.27947
+        ],
+        "land": [
+          0.000398,
+          0.000398
+        ],
+        "fire": [
+          0.00356,
+          0.00356
+        ],
+        "move": [
+          0.15625,
+          0.15625
+        ],
+        "maxSpeed": [
+          195.0,
+          195.0
+        ],
+        "jumpInitial": 0.11827,
+        "jumpApex": 0.0,
+        "recoveryCrouch": 0.592093,
+        "recoveryStand": 0.828931,
+        "recoveryCrouchFinal": 0.592093,
+        "recoveryStandFinal": 0.828931,
+        "recoveryTransitionStart": 2,
+        "recoveryTransitionEnd": 5
+      },
+      "recoil": {
+        "seed": 50310,
+        "angleVariance": [
+          50.0,
+          50.0
+        ],
+        "magnitude": [
+          25.0,
+          25.0
+        ],
+        "magnitudeVariance": [
+          2.0,
+          2.0
+        ]
+      },
+      "alternateModeByDefault": false,
+      "burstCapable": false,
+      "burstCycleTimeSeconds": 0.0,
+      "burstShotIntervalSeconds": 0.0,
+      "revolver": false,
+      "zoomLevels": 0,
+      "zoomFov1": 90.0,
+      "zoomFov2": 90.0,
+      "zoomSeconds": 0.0,
+      "unzoomsAfterShot": false,
+      "hideViewmodelWhenZoomed": false,
+      "suppressed": false,
+      "reloadSeconds": 5.7,
+      "reloadAnimationSeconds": 5.7,
+      "emptyReloadAnimationSeconds": 5.7,
+      "reloadInsertSeconds": 3.1350000000000002,
+      "emptyReloadInsertSeconds": 3.42,
+      "deploySeconds": 1.1
+    },
+    {
+      "id": "xm1014",
+      "internalId": "weapon_xm1014",
+      "displayName": "XM1014",
+      "category": "SHOTGUN",
+      "fireMode": "AUTOMATIC",
+      "projectiles": 6,
+      "damage": 20.0,
+      "magazineSize": 7,
+      "reserveAmount": 32,
+      "reserveAsMagazines": false,
+      "cycleTimeSeconds": 0.35,
+      "alternateCycleTimeSeconds": 0.35,
+      "sourceRangeUnits": 3000.0,
+      "rangeModifier": 0.7,
+      "headMultiplier": 4.0,
+      "armorRatio": 1.6,
+      "penetrationPower": 1.0,
+      "accuracy": {
+        "spread": [
+          0.038,
+          0.038
+        ],
+        "crouch": [
+          0.00525,
+          0.00525
+        ],
+        "stand": [
+          0.007,
+          0.007
+        ],
+        "jump": [
+          0.13083,
+          0.13083
+        ],
+        "land": [
+          0.000232,
+          0.000232
+        ],
+        "fire": [
+          0.00883,
+          0.00883
+        ],
+        "move": [
+          0.03603,
+          0.03603
+        ],
+        "maxSpeed": [
+          215.0,
+          215.0
+        ],
+        "jumpInitial": 0.10038,
+        "jumpApex": 0.0,
+        "recoveryCrouch": 0.361835,
+        "recoveryStand": 0.506569,
+        "recoveryCrouchFinal": 0.361835,
+        "recoveryStandFinal": 0.506569,
+        "recoveryTransitionStart": 2,
+        "recoveryTransitionEnd": 5
+      },
+      "recoil": {
+        "seed": 24862,
+        "angleVariance": [
+          20.0,
+          20.0
+        ],
+        "magnitude": [
+          80.0,
+          80.0
+        ],
+        "magnitudeVariance": [
+          20.0,
+          20.0
+        ]
+      },
+      "alternateModeByDefault": false,
+      "burstCapable": false,
+      "burstCycleTimeSeconds": 0.0,
+      "burstShotIntervalSeconds": 0.0,
+      "revolver": false,
+      "zoomLevels": 0,
+      "zoomFov1": 90.0,
+      "zoomFov2": 90.0,
+      "zoomSeconds": 0.0,
+      "unzoomsAfterShot": false,
+      "hideViewmodelWhenZoomed": false,
+      "suppressed": false,
+      "reloadSeconds": 0.6,
+      "reloadAnimationSeconds": 0.6,
+      "emptyReloadAnimationSeconds": 0.6,
+      "reloadInsertSeconds": 0.42,
+      "emptyReloadInsertSeconds": 0.42,
+      "deploySeconds": 1.0
+    },
+    {
+      "id": "mag7",
+      "internalId": "weapon_mag7",
+      "displayName": "MAG-7",
+      "category": "SHOTGUN",
+      "fireMode": "SEMI_AUTOMATIC",
+      "projectiles": 8,
+      "damage": 30.0,
+      "magazineSize": 5,
+      "reserveAmount": 3,
+      "reserveAsMagazines": true,
+      "cycleTimeSeconds": 0.85,
+      "alternateCycleTimeSeconds": 0.85,
+      "sourceRangeUnits": 1400.0,
+      "rangeModifier": 0.45,
+      "headMultiplier": 4.0,
+      "armorRatio": 1.5,
+      "penetrationPower": 1.0,
+      "accuracy": {
+        "spread": [
+          0.04,
+          0.04
+        ],
+        "crouch": [
+          0.00525,
+          0.00525
+        ],
+        "stand": [
+          0.007,
+          0.007
+        ],
+        "jump": [
+          0.05009,
+          0.05009
+        ],
+        "land": [
+          0.000103,
+          0.000103
+        ],
+        "fire": [
+          0.01119,
+          0.01119
+        ],
+        "move": [
+          0.01599,
+          0.01599
+        ],
+        "maxSpeed": [
+          225.0,
+          225.0
+        ],
+        "jumpInitial": 0.05264,
+        "jumpApex": 0.0,
+        "recoveryCrouch": 0.285521,
+        "recoveryStand": 0.399729,
+        "recoveryCrouchFinal": 0.285521,
+        "recoveryStandFinal": 0.399729,
+        "recoveryTransitionStart": 2,
+        "recoveryTransitionEnd": 5
+      },
+      "recoil": {
+        "seed": 12518,
+        "angleVariance": [
+          20.0,
+          20.0
+        ],
+        "magnitude": [
+          165.0,
+          165.0
+        ],
+        "magnitudeVariance": [
+          25.0,
+          25.0
+        ]
+      },
+      "alternateModeByDefault": false,
+      "burstCapable": false,
+      "burstCycleTimeSeconds": 0.0,
+      "burstShotIntervalSeconds": 0.0,
+      "revolver": false,
+      "zoomLevels": 0,
+      "zoomFov1": 90.0,
+      "zoomFov2": 90.0,
+      "zoomSeconds": 0.0,
+      "unzoomsAfterShot": false,
+      "hideViewmodelWhenZoomed": false,
+      "suppressed": false,
+      "reloadSeconds": 2.5,
+      "reloadAnimationSeconds": 2.5,
+      "emptyReloadAnimationSeconds": 2.5,
+      "reloadInsertSeconds": 1.375,
+      "emptyReloadInsertSeconds": 1.5,
+      "deploySeconds": 1.0
+    },
+    {
+      "id": "negev",
+      "internalId": "weapon_negev",
+      "displayName": "Negev",
+      "category": "MACHINE_GUN",
+      "fireMode": "AUTOMATIC",
+      "projectiles": 1,
+      "damage": 35.0,
+      "magazineSize": 150,
+      "reserveAmount": 2,
+      "reserveAsMagazines": true,
+      "cycleTimeSeconds": 0.075,
+      "alternateCycleTimeSeconds": 0.075,
+      "sourceRangeUnits": 8192.0,
+      "rangeModifier": 0.97,
+      "headMultiplier": 4.0,
+      "armorRatio": 1.42,
+      "penetrationPower": 2.0,
+      "accuracy": {
+        "spread": [
+          0.002,
+          0.002
+        ],
+        "crouch": [
+          0.00763,
+          0.00763
+        ],
+        "stand": [
+          0.01017,
+          0.01017
+        ],
+        "jump": [
+          0.29223,
+          0.29223
+        ],
+        "land": [
+          0.000409,
+          0.000409
+        ],
+        "fire": [
+          0.03,
+          0.00337
+        ],
+        "move": [
+          0.15914,
+          0.15914
+        ],
+        "maxSpeed": [
+          150.0,
+          150.0
+        ],
+        "jumpInitial": 0.11629,
+        "jumpApex": 0.0,
+        "recoveryCrouch": 0.25,
+        "recoveryStand": 0.3,
+        "recoveryCrouchFinal": 0.08,
+        "recoveryStandFinal": 0.1,
+        "recoveryTransitionStart": 9,
+        "recoveryTransitionEnd": 12
+      },
+      "recoil": {
+        "seed": 57966,
+        "angleVariance": [
+          0.0,
+          0.0
+        ],
+        "magnitude": [
+          20.0,
+          20.0
+        ],
+        "magnitudeVariance": [
+          2.0,
+          2.0
+        ]
+      },
+      "alternateModeByDefault": false,
+      "burstCapable": false,
+      "burstCycleTimeSeconds": 0.0,
+      "burstShotIntervalSeconds": 0.0,
+      "revolver": false,
+      "zoomLevels": 0,
+      "zoomFov1": 90.0,
+      "zoomFov2": 90.0,
+      "zoomSeconds": 0.0,
+      "unzoomsAfterShot": false,
+      "hideViewmodelWhenZoomed": false,
+      "suppressed": false,
+      "reloadSeconds": 5.7,
+      "reloadAnimationSeconds": 5.7,
+      "emptyReloadAnimationSeconds": 5.7,
+      "reloadInsertSeconds": 3.1350000000000002,
+      "emptyReloadInsertSeconds": 3.42,
+      "deploySeconds": 1.1
+    },
+    {
+      "id": "sawedoff",
+      "internalId": "weapon_sawedoff",
+      "displayName": "Sawed-Off",
+      "category": "SHOTGUN",
+      "fireMode": "SEMI_AUTOMATIC",
+      "projectiles": 8,
+      "damage": 32.0,
+      "magazineSize": 7,
+      "reserveAmount": 32,
+      "reserveAsMagazines": false,
+      "cycleTimeSeconds": 0.85,
+      "alternateCycleTimeSeconds": 0.85,
+      "sourceRangeUnits": 1400.0,
+      "rangeModifier": 0.45,
+      "headMultiplier": 4.0,
+      "armorRatio": 1.5,
+      "penetrationPower": 1.0,
+      "accuracy": {
+        "spread": [
+          0.062,
+          0.062
+        ],
+        "crouch": [
+          0.00525,
+          0.00525
+        ],
+        "stand": [
+          0.007,
+          0.007
+        ],
+        "jump": [
+          0.0577,
+          0.0577
+        ],
+        "land": [
+          0.000108,
+          0.000108
+        ],
+        "fire": [
+          0.00972,
+          0.00972
+        ],
+        "move": [
+          0.0168,
+          0.0168
+        ],
+        "maxSpeed": [
+          210.0,
+          210.0
+        ],
+        "jumpInitial": 0.05012,
+        "jumpApex": 0.0,
+        "recoveryCrouch": 0.328941,
+        "recoveryStand": 0.460517,
+        "recoveryCrouchFinal": 0.328941,
+        "recoveryStandFinal": 0.460517,
+        "recoveryTransitionStart": 2,
+        "recoveryTransitionEnd": 5
+      },
+      "recoil": {
+        "seed": 1089,
+        "angleVariance": [
+          20.0,
+          20.0
+        ],
+        "magnitude": [
+          143.0,
+          143.0
+        ],
+        "magnitudeVariance": [
+          22.0,
+          22.0
+        ]
+      },
+      "alternateModeByDefault": false,
+      "burstCapable": false,
+      "burstCycleTimeSeconds": 0.0,
+      "burstShotIntervalSeconds": 0.0,
+      "revolver": false,
+      "zoomLevels": 0,
+      "zoomFov1": 90.0,
+      "zoomFov2": 90.0,
+      "zoomSeconds": 0.0,
+      "unzoomsAfterShot": false,
+      "hideViewmodelWhenZoomed": false,
+      "suppressed": false,
+      "reloadSeconds": 0.466667,
+      "reloadAnimationSeconds": 0.466667,
+      "emptyReloadAnimationSeconds": 0.466667,
+      "reloadInsertSeconds": 0.3266669,
+      "emptyReloadInsertSeconds": 0.3266669,
+      "deploySeconds": 1.0
+    },
+    {
+      "id": "nova",
+      "internalId": "weapon_nova",
+      "displayName": "Nova",
+      "category": "SHOTGUN",
+      "fireMode": "SEMI_AUTOMATIC",
+      "projectiles": 9,
+      "damage": 26.0,
+      "magazineSize": 8,
+      "reserveAmount": 32,
+      "reserveAsMagazines": false,
+      "cycleTimeSeconds": 0.88,
+      "alternateCycleTimeSeconds": 0.88,
+      "sourceRangeUnits": 3000.0,
+      "rangeModifier": 0.7,
+      "headMultiplier": 4.0,
+      "armorRatio": 1.0,
+      "penetrationPower": 1.0,
+      "accuracy": {
+        "spread": [
+          0.04,
+          0.04
+        ],
+        "crouch": [
+          0.00525,
+          0.00525
+        ],
+        "stand": [
+          0.007,
+          0.007
+        ],
+        "jump": [
+          0.12631,
+          0.12631
+        ],
+        "land": [
+          0.000236,
+          0.000236
+        ],
+        "fire": [
+          0.00972,
+          0.00972
+        ],
+        "move": [
+          0.03675,
+          0.03675
+        ],
+        "maxSpeed": [
+          220.0,
+          220.0
+        ],
+        "jumpInitial": 0.1097,
+        "jumpApex": 0.0,
+        "recoveryCrouch": 0.328941,
+        "recoveryStand": 0.460517,
+        "recoveryCrouchFinal": 0.328941,
+        "recoveryStandFinal": 0.460517,
+        "recoveryTransitionStart": 2,
+        "recoveryTransitionEnd": 5
+      },
+      "recoil": {
+        "seed": 7763,
+        "angleVariance": [
+          20.0,
+          20.0
+        ],
+        "magnitude": [
+          143.0,
+          143.0
+        ],
+        "magnitudeVariance": [
+          22.0,
+          22.0
+        ]
+      },
+      "alternateModeByDefault": false,
+      "burstCapable": false,
+      "burstCycleTimeSeconds": 0.0,
+      "burstShotIntervalSeconds": 0.0,
+      "revolver": false,
+      "zoomLevels": 0,
+      "zoomFov1": 90.0,
+      "zoomFov2": 90.0,
+      "zoomSeconds": 0.0,
+      "unzoomsAfterShot": false,
+      "hideViewmodelWhenZoomed": false,
+      "suppressed": false,
+      "reloadSeconds": 0.466667,
+      "reloadAnimationSeconds": 0.466667,
+      "emptyReloadAnimationSeconds": 0.466667,
+      "reloadInsertSeconds": 0.3266669,
+      "emptyReloadInsertSeconds": 0.3266669,
+      "deploySeconds": 1.0
+    }
+  ]
+}

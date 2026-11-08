@@ -102,12 +102,12 @@ static String mcPreprocess(String text, String mc, String name) {
             stack.push([active, cond])
             active = active && cond
         } else if (t.startsWith('//#elif ')) {
-            def top = stack.last()
+            def top = stack.first()
             boolean cond = !top[1] && mcEval(t.substring(8), mc)
             if (cond) top[1] = true
             active = top[0] && cond
         } else if (t == '//#else') {
-            def top = stack.last()
+            def top = stack.first()
             active = top[0] && !top[1]
             top[1] = true
         } else if (t == '//#endif') {
@@ -129,6 +129,8 @@ def ppOut = layout.buildDirectory.dir('preprocessed/java')
 def mcVer = project.minecraft_version as String
 // Optional rename tables: lines "old.Name => new.Name" (whole-word, literal), applied in order.
 def remapFiles = (project.findProperty('remaps') ?: '').toString().tokenize(',').collect { rootProject.file(it.trim()) }
+// Shared source files this version must not compile (paths relative to the package root).
+def excludedJava = (project.findProperty('exclude_java') ?: '').toString().tokenize(',').collect { it.trim() }
 def runPreprocess = { List<File> roots, File outDir ->
     project.delete(outDir)
     def renames = []
@@ -136,7 +138,12 @@ def runPreprocess = { List<File> roots, File outDir ->
         rf.eachLine { l ->
             def t = l.trim()
             if (t.isEmpty() || t.startsWith('#')) return
-            def parts = t.split('=>')
+            def parts = t.split('=>', 2)
+            if (t.startsWith('re:')) {
+                // Regex entry: "re: <java regex> => <replacement with $1 groups>"
+                renames << [java.util.regex.Pattern.compile(parts[0].substring(3).trim()), parts[1].trim()]
+                return
+            }
             def from = parts[0].trim()
             def pre = Character.isJavaIdentifierPart(from.charAt(0)) ? '(?<![\\w$])' : ''
             def post = Character.isJavaIdentifierPart(from.charAt(from.length() - 1)) ? '(?![\\w$])' : ''
@@ -149,6 +156,7 @@ def runPreprocess = { List<File> roots, File outDir ->
         root.eachFileRecurse(groovy.io.FileType.FILES) { f ->
             if (!f.name.endsWith('.java')) return
             def rel = root.toPath().relativize(f.toPath()).toString()
+            if (excludedJava.any { rel.endsWith(it) }) return
             def dest = new File(outDir, rel)
             dest.parentFile.mkdirs()
             def text = mcPreprocess(f.getText('UTF-8'), mcVer, rel)

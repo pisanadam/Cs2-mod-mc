@@ -1,7 +1,9 @@
 package dev.codex.tacticalarsenal.gun;
 
 import java.util.function.Consumer;
+//#if MC >= 1.20.5
 import net.minecraft.core.component.DataComponents;
+//#endif
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
@@ -11,9 +13,13 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.Item.Properties;
+//#if MC >= 1.20.5
 import net.minecraft.world.item.Item.TooltipContext;
 import net.minecraft.world.item.component.CustomData;
+//#endif
+//#if MC >= 1.21.5
 import net.minecraft.world.item.component.TooltipDisplay;
+//#endif
 import net.minecraft.world.level.Level;
 
 public final class GunItem extends Item {
@@ -44,11 +50,22 @@ public final class GunItem extends Item {
    }
 
    public int reserveAmmo(ItemStack stack) {
+      //#if MC >= 1.21.5
       return ((CustomData)stack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY))
          .copyTag()
          .getInt("tactical_arsenal_reserve_ammo")
          .map(value -> Mth.clamp(value, 0, this.definition.reserveAmount()))
          .orElse(this.definition.reserveAmount());
+      //#else
+      //#if MC >= 1.20.5
+      net.minecraft.nbt.CompoundTag tag = ((CustomData)stack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY)).copyTag();
+      //#else
+      net.minecraft.nbt.CompoundTag tag = stack.getTag() == null ? new net.minecraft.nbt.CompoundTag() : stack.getTag();
+      //#endif
+      return tag.contains("tactical_arsenal_reserve_ammo", net.minecraft.nbt.Tag.TAG_INT)
+         ? Mth.clamp(tag.getInt("tactical_arsenal_reserve_ammo"), 0, this.definition.reserveAmount())
+         : this.definition.reserveAmount();
+      //#endif
    }
 
    public int plannedReloadUnits(ItemStack stack) {
@@ -69,16 +86,26 @@ public final class GunItem extends Item {
             stack.setDamageValue(Math.max(0, stack.getDamageValue() - 1));
          }
 
+         //#if MC >= 1.20.5
          CustomData.update(DataComponents.CUSTOM_DATA, stack, tag -> tag.putInt("tactical_arsenal_reserve_ammo", reserve - 1));
+         //#else
+         stack.getOrCreateTag().putInt("tactical_arsenal_reserve_ammo", reserve - 1);
+         //#endif
          return true;
       } else {
          return false;
       }
    }
 
+   //#if MC >= 1.21.2
    public InteractionResult use(Level level, Player player, InteractionHand hand) {
       return InteractionResult.CONSUME;
    }
+   //#else
+   public net.minecraft.world.InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
+      return net.minecraft.world.InteractionResultHolder.consume(player.getItemInHand(hand));
+   }
+   //#endif
 
    public boolean isBarVisible(ItemStack stack) {
       return this.ammo(stack) < this.definition.magazineSize();
@@ -93,7 +120,15 @@ public final class GunItem extends Item {
       return Mth.hsvToRgb(ratio * 0.33F, 0.95F, 1.0F);
    }
 
+   //#if MC >= 1.21.5
    public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag flag) {
+   //#elif MC >= 1.20.5
+   public void appendHoverText(ItemStack stack, TooltipContext context, java.util.List<Component> lines, TooltipFlag flag) {
+      Consumer<Component> builder = lines::add;
+   //#else
+   public void appendHoverText(ItemStack stack, Level level, java.util.List<Component> lines, TooltipFlag flag) {
+      Consumer<Component> builder = lines::add;
+   //#endif
       builder.accept(
          Component.translatable(
             "tooltip.tactical_arsenal.ammo",

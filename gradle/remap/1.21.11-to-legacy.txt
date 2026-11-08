@@ -1,0 +1,16 @@
+# Extra renames for Minecraft 1.21.1 and 1.20.1 (applied after 26.1-to-1.21.11.txt).
+net.minecraft.resources.Identifier => net.minecraft.resources.ResourceLocation
+Identifier => ResourceLocation
+net.minecraft.world.entity.monster.zombie.Zombie => net.minecraft.world.entity.monster.Zombie
+net.minecraft.world.entity.EntitySpawnReason => net.minecraft.world.entity.MobSpawnType
+EntitySpawnReason => MobSpawnType
+ServerLevel level = shooter.level(); => ServerLevel level = shooter.serverLevel();
+net.minecraft.client.renderer.rendertype.RenderTypes => net.minecraft.client.renderer.RenderType
+net.minecraft.client.renderer.rendertype.RenderType => net.minecraft.client.renderer.RenderType
+RenderTypes. => RenderType.
+net.minecraft.client.renderer.SubmitNodeCollector => dev.codex.tacticalarsenal.client.compat.SubmitNodeCollector
+net.minecraft.client.renderer.block.model.ItemTransform => dev.codex.tacticalarsenal.client.compat.ItemTransform
+re: (\w+)\.last\(\)\s*\.mulPose\( => dev.codex.tacticalarsenal.client.compat.PoseCompat.mulPose($1, 
+net.minecraft.client.model.player.PlayerModel => net.minecraft.client.model.PlayerModel
+SoundEvents.SHEARS_SNIP => SoundEvents.SHEEP_SHEAR
+SoundEvents.IRON_HIT => SoundEvents.CHAIN_HIT

@@ -46,8 +46,14 @@ public final class Cs2SettingsScreen extends Screen {
       int controlsHeight = rowHeight * 3 + gap * 2;
       int preferredTop = this.firstRun ? 70 : 48;
       this.controlsTop = Math.max(2, Math.min(preferredTop, Math.max(2, this.height - controlsHeight - 4)));
+      //#if MC >= 1.21.9
       this.modeButton = CycleButton.builder(HandRenderMode::displayName, this.selectedMode)
          .withValues(List.of(HandRenderMode.values()))
+      //#else
+      this.modeButton = CycleButton.builder(HandRenderMode::displayName)
+         .withValues(List.of(HandRenderMode.values()))
+         .withInitialValue(this.selectedMode)
+      //#endif
          .withTooltip(mode -> Tooltip.create(mode.tooltip()))
          .create(
             left,

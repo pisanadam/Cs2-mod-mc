@@ -16,7 +16,9 @@ import net.fabricmc.fabric.api.client.keymapping.v1.KeyMappingHelper;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
+//#if MC >= 1.21.9
 import net.minecraft.client.KeyMapping.Category;
+//#endif
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.ItemStack;
@@ -26,7 +28,11 @@ public final class GunClientController {
    private static final float SCOPE_OVERLAY_EXIT_THRESHOLD = 0.02F;
    private static final float ONE_CENTIMETRE_AT_ONE_METRE = 0.01F;
    private static final long PATTERN_RESET_NANOS = 400000000L;
+   //#if MC >= 1.21.9
    static final Category CATEGORY = Category.register(TacticalArsenal.id("weapons"));
+   //#else
+   static final String CATEGORY = "key.category.tactical_arsenal.weapons";
+   //#endif
    private static final KeyMapping RELOAD = KeyMappingHelper.registerKeyMapping(new KeyMapping("key.tactical_arsenal.reload", Type.KEYSYM, 82, CATEGORY));
    private static GunItem currentGun;
    private static boolean previousAttack;

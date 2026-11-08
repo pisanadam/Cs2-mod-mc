@@ -7,8 +7,14 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.Item.Properties;
+//#if MC >= 1.20.5
 import net.minecraft.world.item.Item.TooltipContext;
+//#else
+import net.minecraft.world.level.Level;
+//#endif
+//#if MC >= 1.21.5
 import net.minecraft.world.item.component.TooltipDisplay;
+//#endif
 
 public final class KnifeItem extends Item {
    public static final float ATTACK_DAMAGE = 30.0F;
@@ -36,7 +42,15 @@ public final class KnifeItem extends Item {
       return IDS.contains(id);
    }
 
+   //#if MC >= 1.21.5
    public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag flag) {
+   //#elif MC >= 1.20.5
+   public void appendHoverText(ItemStack stack, TooltipContext context, java.util.List<Component> lines, TooltipFlag flag) {
+      Consumer<Component> builder = lines::add;
+   //#else
+   public void appendHoverText(ItemStack stack, Level level, java.util.List<Component> lines, TooltipFlag flag) {
+      Consumer<Component> builder = lines::add;
+   //#endif
       builder.accept(Component.translatable("tooltip.tactical_arsenal.knife_damage", new Object[]{30}));
       builder.accept(Component.translatable("tooltip.tactical_arsenal.knife_controls"));
    }

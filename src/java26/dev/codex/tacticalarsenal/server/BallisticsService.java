@@ -178,7 +178,7 @@ public final class BallisticsService {
          damage *= gun.armoredDamageFactor();
       }
 
-      boolean accepted = target.hurtServer(level, ModDamageTypes.bullet(level, shooter), damage);
+      boolean accepted = dev.codex.tacticalarsenal.compat.CommonCompat.hurt(target, level, ModDamageTypes.bullet(level, shooter), damage);
       boolean killed = accepted && !target.isAlive();
       if (accepted) {
          level.sendParticles(ParticleTypes.CRIT, hitPosition.x, hitPosition.y, hitPosition.z, 4, 0.08, 0.08, 0.08, 0.04);
@@ -337,7 +337,11 @@ public final class BallisticsService {
    ) {
       for (ServerPlayer viewer : level.players()) {
          if (viewer != shooter) {
+            //#if MC >= 1.21.4
             level.sendParticles(viewer, particle, false, false, position.x, position.y, position.z, count, spread, spread, spread, speed);
+            //#else
+            level.sendParticles(viewer, particle, false, position.x, position.y, position.z, count, spread, spread, spread, speed);
+            //#endif
          }
       }
    }
