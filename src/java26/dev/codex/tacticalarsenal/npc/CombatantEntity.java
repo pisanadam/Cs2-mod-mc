@@ -702,18 +702,18 @@ public final class CombatantEntity extends Zombie {
    //#else
    public void addAdditionalSaveData(net.minecraft.nbt.CompoundTag output) {
       super.addAdditionalSaveData(output);
-      output.put("TacticalPrimary", dev.codex.tacticalarsenal.compat.CommonCompat.saveStack(this.primaryStack, this.registryAccess()));
-      output.put("TacticalPistol", dev.codex.tacticalarsenal.compat.CommonCompat.saveStack(this.pistolStack, this.registryAccess()));
-      output.put("TacticalKnife", dev.codex.tacticalarsenal.compat.CommonCompat.saveStack(this.knifeStack, this.registryAccess()));
+      output.put("TacticalPrimary", dev.codex.tacticalarsenal.compat.CommonCompat.saveStack(this.primaryStack, this.level().registryAccess()));
+      output.put("TacticalPistol", dev.codex.tacticalarsenal.compat.CommonCompat.saveStack(this.pistolStack, this.level().registryAccess()));
+      output.put("TacticalKnife", dev.codex.tacticalarsenal.compat.CommonCompat.saveStack(this.knifeStack, this.level().registryAccess()));
       output.putString("TacticalActiveSlot", this.activeSlot.name());
    }
 
    public void readAdditionalSaveData(net.minecraft.nbt.CompoundTag input) {
       super.readAdditionalSaveData(input);
-      this.primaryStack = dev.codex.tacticalarsenal.compat.CommonCompat.loadStack(input, "TacticalPrimary", this.registryAccess());
-      this.pistolStack = dev.codex.tacticalarsenal.compat.CommonCompat.loadStack(input, "TacticalPistol", this.registryAccess());
+      this.primaryStack = dev.codex.tacticalarsenal.compat.CommonCompat.loadStack(input, "TacticalPrimary", this.level().registryAccess());
+      this.pistolStack = dev.codex.tacticalarsenal.compat.CommonCompat.loadStack(input, "TacticalPistol", this.level().registryAccess());
       this.knifeStack = input.contains("TacticalKnife")
-         ? dev.codex.tacticalarsenal.compat.CommonCompat.loadStack(input, "TacticalKnife", this.registryAccess())
+         ? dev.codex.tacticalarsenal.compat.CommonCompat.loadStack(input, "TacticalKnife", this.level().registryAccess())
          : new ItemStack(ModItems.KNIFE);
       String activeSlotName = input.contains("TacticalActiveSlot") ? input.getString("TacticalActiveSlot") : this.activeSlot.name();
    //#endif

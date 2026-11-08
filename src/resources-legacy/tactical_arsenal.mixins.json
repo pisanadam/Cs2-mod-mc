@@ -4,7 +4,7 @@
   "compatibilityLevel": "${mixin_java}",
   "mixins": [
     "LivingEntityKnifeSwingMixin",
-    "PlayerKnifeCombatMixin"
+    "PlayerKnifeCombatMixin"${extra_common_mixins}
   ],
   "injectors": {
     "defaultRequire": 1

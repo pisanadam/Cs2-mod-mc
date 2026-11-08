@@ -270,7 +270,10 @@ public final class BallisticsService {
          return region == BallisticsService.HitRegion.LEGS
             ? false
             : providesArmor(entity.getItemBySlot(EquipmentSlot.CHEST), EquipmentSlot.CHEST)
-               || providesArmor(entity.getItemBySlot(EquipmentSlot.BODY), EquipmentSlot.BODY);
+               //#if MC >= 1.20.5
+               || providesArmor(entity.getItemBySlot(EquipmentSlot.BODY), EquipmentSlot.BODY)
+               //#endif
+               ;
       }
    }
 
@@ -278,6 +281,7 @@ public final class BallisticsService {
       if (stack.isEmpty()) {
          return false;
       } else {
+         //#if MC >= 1.20.5
          boolean[] armored = new boolean[]{false};
          stack.forEachModifier(slot, (attribute, modifier) -> {
             if (attribute.equals(Attributes.ARMOR) && modifier.amount() > 0.0) {
@@ -285,6 +289,9 @@ public final class BallisticsService {
             }
          });
          return armored[0];
+         //#else
+         return stack.getAttributeModifiers(slot).get(Attributes.ARMOR).stream().anyMatch(modifier -> modifier.getAmount() > 0.0);
+         //#endif
       }
    }
 

@@ -1,7 +1,6 @@
 package dev.codex.tacticalarsenal.client.compat;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 
@@ -21,7 +20,7 @@ public final class SubmitNodeCollector {
    }
 
    public void submitCustomGeometry(PoseStack poses, RenderType renderType, CustomGeometryRenderer renderer) {
-      VertexConsumer consumer = this.buffers.getBuffer(renderType);
+      com.mojang.blaze3d.vertex.VertexConsumer consumer = this.buffers.getBuffer(renderType);
       //#if MC >= 1.20.5
       renderer.render(poses.last(), consumer);
       //#else
@@ -34,7 +33,7 @@ public final class SubmitNodeCollector {
    @FunctionalInterface
    public interface CustomGeometryRenderer {
       //#if MC >= 1.20.5
-      void render(PoseStack.Pose pose, VertexConsumer buffer);
+      void render(PoseStack.Pose pose, com.mojang.blaze3d.vertex.VertexConsumer buffer);
       //#else
       void render(PoseStack.Pose pose, VertexWriter buffer);
       //#endif

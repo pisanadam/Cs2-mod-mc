@@ -34,6 +34,35 @@ public final class KnifeItem extends Item {
       }
    }
 
+   //#if MC < 1.20.5
+   private com.google.common.collect.Multimap<net.minecraft.world.entity.ai.attributes.Attribute, net.minecraft.world.entity.ai.attributes.AttributeModifier> mainHandModifiers;
+
+   /** Before 1.20.5 there are no item attribute components: same damage (+29) and speed (-1.5) as 26.x. */
+   @Override
+   public com.google.common.collect.Multimap<net.minecraft.world.entity.ai.attributes.Attribute, net.minecraft.world.entity.ai.attributes.AttributeModifier> getDefaultAttributeModifiers(
+      net.minecraft.world.entity.EquipmentSlot slot
+   ) {
+      if (slot != net.minecraft.world.entity.EquipmentSlot.MAINHAND) {
+         return super.getDefaultAttributeModifiers(slot);
+      }
+
+      if (this.mainHandModifiers == null) {
+         this.mainHandModifiers = com.google.common.collect.ImmutableMultimap.of(
+            net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE,
+            new net.minecraft.world.entity.ai.attributes.AttributeModifier(
+               BASE_ATTACK_DAMAGE_UUID, "Weapon modifier", 29.0, net.minecraft.world.entity.ai.attributes.AttributeModifier.Operation.ADDITION
+            ),
+            net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_SPEED,
+            new net.minecraft.world.entity.ai.attributes.AttributeModifier(
+               BASE_ATTACK_SPEED_UUID, "Weapon modifier", -1.5, net.minecraft.world.entity.ai.attributes.AttributeModifier.Operation.ADDITION
+            )
+         );
+      }
+
+      return this.mainHandModifiers;
+   }
+   //#endif
+
    public String id() {
       return this.id;
    }

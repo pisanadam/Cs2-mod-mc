@@ -65,7 +65,11 @@ public final class TracerRenderer {
    }
 
    public static void initialize() {
+      //#if MC >= 1.20.5
       ClientPlayNetworking.registerGlobalReceiver(TracerPayload.TYPE, (payload, context) -> accept(payload));
+      //#else
+      ClientPlayNetworking.registerGlobalReceiver(TracerPayload.TYPE, (payload, player, responseSender) -> accept(payload));
+      //#endif
       ClientPlayConnectionEvents.JOIN.register((Join)(handler, sender, client) -> clear());
       ClientPlayConnectionEvents.DISCONNECT.register((Disconnect)(handler, client) -> clear());
       // Before 1.21.9 there is no separate extraction pass: sample and draw in one world-render callback.

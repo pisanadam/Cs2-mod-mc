@@ -31,6 +31,37 @@ public final class GunItem extends Item {
       this.definition = definition;
    }
 
+   //#if MC < 1.20.5
+   private static final java.util.UUID HELD_WEAPON_SPEED_UUID = java.util.UUID.nameUUIDFromBytes(
+      "tactical_arsenal:held_weapon_speed".getBytes(java.nio.charset.StandardCharsets.UTF_8)
+   );
+   private com.google.common.collect.Multimap<net.minecraft.world.entity.ai.attributes.Attribute, net.minecraft.world.entity.ai.attributes.AttributeModifier> mainHandModifiers;
+
+   /** Before 1.20.5 there are no item attribute components: same held movement-speed modifier as 26.x. */
+   @Override
+   public com.google.common.collect.Multimap<net.minecraft.world.entity.ai.attributes.Attribute, net.minecraft.world.entity.ai.attributes.AttributeModifier> getDefaultAttributeModifiers(
+      net.minecraft.world.entity.EquipmentSlot slot
+   ) {
+      if (slot != net.minecraft.world.entity.EquipmentSlot.MAINHAND) {
+         return super.getDefaultAttributeModifiers(slot);
+      }
+
+      if (this.mainHandModifiers == null) {
+         this.mainHandModifiers = com.google.common.collect.ImmutableMultimap.of(
+            net.minecraft.world.entity.ai.attributes.Attributes.MOVEMENT_SPEED,
+            new net.minecraft.world.entity.ai.attributes.AttributeModifier(
+               HELD_WEAPON_SPEED_UUID,
+               "tactical_arsenal:held_weapon_speed",
+               this.definition.maximumMoveSpeed(false) / 250.0F - 1.0F,
+               net.minecraft.world.entity.ai.attributes.AttributeModifier.Operation.MULTIPLY_TOTAL
+            )
+         );
+      }
+
+      return this.mainHandModifiers;
+   }
+   //#endif
+
    public GunDefinition definition() {
       return this.definition;
    }

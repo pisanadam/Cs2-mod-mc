@@ -50,7 +50,13 @@ public final class ModArmorMaterials {
    public static final ArmorMaterial CS2_EQUIPMENT = new ArmorMaterial() {
       @Override
       public int getDurabilityForType(ArmorItem.Type type) {
-         return type.getDurability(DURABILITY_MULTIPLIER);
+         int base = switch (type) {
+            case HELMET -> 11;
+            case CHESTPLATE -> 16;
+            case LEGGINGS -> 15;
+            case BOOTS -> 13;
+         };
+         return base * DURABILITY_MULTIPLIER;
       }
 
       @Override

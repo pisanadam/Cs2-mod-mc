@@ -1,0 +1,8 @@
+# Extra renames for Minecraft 1.20.1 (applied after 1.21.11-to-legacy.txt).
+re: ResourceLocation\.fromNamespaceAndPath\( => new ResourceLocation(
+re: ResourceLocation\.withDefaultNamespace\( => new ResourceLocation(
+re: \(SoundEvent\)SoundEvents\.(\w+)\.value\(\) => SoundEvents.$1
+net.minecraft.client.DeltaTracker => dev.codex.tacticalarsenal.client.compat.DeltaTracker
+import com.mojang.blaze3d.vertex.VertexConsumer; => import dev.codex.tacticalarsenal.client.compat.VertexWriter;
+VertexConsumer buffer => VertexWriter buffer
+intersections.getFirst() => intersections.get(0)
